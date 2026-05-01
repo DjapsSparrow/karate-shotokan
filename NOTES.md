@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v0.8.2
-- **Objectif** : Mise à jour de l'image Hero avec l'asset officiel.
+- **Version** : v0.8.3
+- **Objectif** : Mise à jour intégrale du curriculum (modules et leçons) pour la Ceinture Jaune.
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
