@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.3.5
-- **Objectif** : Défilement des témoignages deux par deux (automatique et manuel).
+- **Version** : v1.3.6
+- **Objectif** : Ajout de 5 nouveaux témoignages (Harold, Santiago, Marie, Frédéric, Jean).
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
