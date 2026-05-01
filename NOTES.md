@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v0.7.5
-- **Objectif** : Modules de curriculum interactifs (accordéon) et textes CTA optimisés dans l'aperçu.
+- **Version** : v0.7.6
+- **Objectif** : Épurement final du texte du bandeau CTA dans l'aperçu.
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
