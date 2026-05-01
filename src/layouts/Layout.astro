@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { version } from '../../package.json';
+import ScrollToTop from '../components/ScrollToTop';
 
 interface Props {
 	title?: string;
@@ -49,6 +50,8 @@ const {
 	</head>
 	<body class="antialiased font-sans dark:bg-martial-deep-black dark:text-white">
 		<slot />
+    
+    <ScrollToTop client:load />
     
     {/* Version Indicator */}
     <div 

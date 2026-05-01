@@ -1,9 +1,9 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.7.1
-- **Objectif** : Cohérence visuelle de l'Animated Theme Toggler.
-- **Statut** : ✅ Terminé. Le picto du dark mode (et son fond au survol) adopte désormais dynamiquement la couleur de la ceinture de la page courante, suivant la même logique que le texte "Shotokan".
+- **Version** : v1.7.2
+- **Objectif** : Ajout d'un bouton de retour en haut (ScrollToTop).
+- **Statut** : ✅ Terminé. Implémentation d'un bouton flottant (composant React + Framer Motion) qui apparaît de manière fluide après avoir défilé 70% de la page et permet de remonter en douceur.
 - **Lien** : https://prod.karate-shotokan.fr
 
 ---
