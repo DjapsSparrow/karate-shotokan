@@ -50,7 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({ beltColor = "martial-red" }) => {
           <div className="w-12 h-12 flex items-center justify-center transform group-hover:scale-110 transition-transform">
             <img src="/logo.png" alt="Logo Karaté Shotokan" className="w-full h-full object-contain" />
           </div>
-          <span className="font-bold text-lg md:text-xl tracking-tight uppercase dark:text-white">
+          <span className="font-bold text-lg md:text-xl tracking-tight uppercase dark:text-martial-black">
             Karaté <span className={`text-${beltColor}`}>Shotokan</span>
           </span>
         </a>
@@ -66,7 +66,7 @@ const Navbar: React.FC<NavbarProps> = ({ beltColor = "martial-red" }) => {
             >
               <a 
                 href={link.href}
-                className={`text-sm font-semibold uppercase tracking-wider dark:text-white hover:text-${beltColor} transition-colors flex items-center gap-1`}
+                className={`text-sm font-semibold uppercase tracking-wider dark:text-martial-black hover:text-${beltColor} transition-colors flex items-center gap-1`}
               >
                 {link.name}
                 {link.submenu && (
@@ -112,7 +112,7 @@ const Navbar: React.FC<NavbarProps> = ({ beltColor = "martial-red" }) => {
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggle />
           <button 
-            className="text-martial-black dark:text-white p-2"
+            className="text-martial-black dark:text-black p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
             aria-expanded={isMobileMenuOpen}
