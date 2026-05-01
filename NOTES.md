@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v0.8.3
-- **Objectif** : Mise à jour intégrale du curriculum (modules et leçons) pour la Ceinture Jaune.
+- **Version** : v0.9.0
+- **Objectif** : Création des pages Ceinture Orange (Vente + Aperçu) et gestion dynamique des prix dans le StickyCTA.
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
