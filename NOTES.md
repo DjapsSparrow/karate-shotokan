@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v0.7.0
-- **Objectif** : Extraction et intégration des programmes officiels pour toutes les ceintures (Jaune à Noire) via SchoolMaker.
+- **Version** : v0.7.1
+- **Objectif** : Mise à jour détaillée Ceinture Jaune et création de la page d'aperçu native (transcription screenshot).
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
