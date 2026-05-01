@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { version } from '../../package.json';
 
 interface Props {
 	title?: string;
@@ -29,6 +30,16 @@ const {
 	</head>
 	<body class="bg-white text-slate-950 antialiased font-sans">
 		<slot />
+    
+    {/* Version Indicator */}
+    <div 
+      class="fixed bottom-4 left-4 z-[9999] pointer-events-none opacity-40 hover:opacity-100 transition-opacity"
+      title="Version actuelle du projet"
+    >
+      <div class="bg-martial-black text-white text-[10px] font-bold px-3 py-1 rounded-full border border-white/20 shadow-lg backdrop-blur-md">
+        v{version}
+      </div>
+    </div>
 	</body>
 </html>
 

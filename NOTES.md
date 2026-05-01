@@ -1,14 +1,26 @@
 # 📝 Notes de Projet — Karate Shotokan
 
-### État actuel
-- **Version** : v0.2.0
-- **Statut** : ✅ Redesign terminé et déployé.
+## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
+- **Version** : v0.3.0
+- **Objectif** : Refonte Conversion & Performance.
+- **Stack** : Astro v5, React 19, Tailwind CSS 4, Framer Motion.
+- **Statut** : ✅ Terminé. Site live, sécurisé et performant.
 - **Lien** : https://prod.karate-shotokan.fr
 
-### Historique des phases
-1. **Infrastructure (v0.1.0)** : Astro + Tailwind + SSH Fix.
-2. **Refonte Conversion (v0.2.0)** : Landing page + Pages Ceintures + SEO 301.
+---
 
-### Apprentissages clés
-- **SSH Secrets** : Toujours utiliser `env` + `sshpass -e` pour éviter la corruption shell des caractères spéciaux ($$).
-- **SEO Preservation** : Création de pages de vente internes pour transformer un site "vitrine" en machine à conversion tout en gardant les URLs WordPress historiques.
+## 🛠️ Historique & Configuration
+1. **Infrastructure & Déploiement** : GitHub Actions via Rsync. SSHPASS configuré pour gérer les secrets complexes ($$). IP Serveur : `128.65.195.221`.
+2. **Design System** : Thème martial (Noir/Blanc/Rouge), font 'Outfit'.
+3. **Sécurité** : `.htaccess` blindé (HSTS, CSP, Referrer-Policy strict). Audit "Blue" OK.
+4. **Performance** : Score PageSpeed ~90 (Mobile) / 99 (Desktop). Cache browser actif (1 an).
+
+## 📌 Prochaines étapes suggérées
+- Création de nouveaux articles de blog pour le SEO.
+- Mise en place d'un système de newsletter.
+- Test A/B sur les CTAs de la page d'accueil.
+
+## 🧠 Apprentissages Techniques
+- **Astro/React** : Utiliser `client:load` ou `client:visible` pour les composants Framer Motion.
+- **Security** : Toujours vérifier les doubles headers HSTS (Conflit Apache/Manager Infomaniak).
+- **Branding** : Intégration du logo en PNG avec `object-contain` pour préserver le ratio.
