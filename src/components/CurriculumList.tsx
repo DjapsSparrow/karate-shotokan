@@ -13,9 +13,10 @@ interface Module {
 
 interface Props {
   modules: Module[];
+  color?: string;
 }
 
-const CurriculumList: React.FC<Props> = ({ modules }) => {
+const CurriculumList: React.FC<Props> = ({ modules, color = "martial-red" }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0); // First one open by default
 
   return (
@@ -47,7 +48,7 @@ const CurriculumList: React.FC<Props> = ({ modules }) => {
                   {module.lessons.map((lesson, lIdx) => (
                     <li key={lIdx} className="flex items-center justify-between p-4 rounded-xl hover:bg-martial-gray transition-colors group">
                       <div className="flex items-center gap-4">
-                        <div className="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center text-gray-400 group-hover:bg-martial-red group-hover:text-white transition-colors">
+                        <div className={`w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center text-gray-400 group-hover:bg-${color} group-hover:text-white transition-colors`}>
                           <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M8 5v14l11-7z"></path>
                           </svg>
