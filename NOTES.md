@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v0.9.0
-- **Objectif** : Création des pages Ceinture Orange (Vente + Aperçu) et gestion dynamique des prix dans le StickyCTA.
+- **Version** : v0.9.1
+- **Objectif** : Correction du lien Ceinture Orange manquant dans le footer et validation du tunnel.
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
