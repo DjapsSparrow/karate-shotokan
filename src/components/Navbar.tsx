@@ -17,8 +17,21 @@ const Navbar: React.FC<NavbarProps> = ({ beltColor = "martial-red" }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const [isProgrammesOpen, setIsProgrammesOpen] = useState(false);
+
   const navLinks = [
-    { name: 'Programmes', href: '/#programmes' },
+    { 
+      name: 'Programmes', 
+      href: '/#programmes',
+      submenu: [
+        { name: 'Ceinture Jaune', href: '/ceinture-jaune' },
+        { name: 'Ceinture Orange', href: '/ceinture-orange' },
+        { name: 'Ceinture Verte', href: '/ceinture-verte' },
+        { name: 'Ceinture Bleue', href: '/ceinture-bleue' },
+        { name: 'Ceinture Marron', href: '/ceinture-marron' },
+        { name: 'Ceinture Noire', href: '/ceinture-noire' },
+      ]
+    },
     { name: 'Katas Supérieurs', href: '/katas-superieurs' },
     { name: 'Histoire', href: '/le-karate' },
     { name: 'Le Dojo', href: '/le-dojo' },
@@ -44,19 +57,47 @@ const Navbar: React.FC<NavbarProps> = ({ beltColor = "martial-red" }) => {
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a 
+            <div 
               key={link.name} 
-              href={link.href}
-              className={`text-sm font-semibold uppercase tracking-wider hover:text-${beltColor} transition-colors`}
+              className="relative group py-2"
+              onMouseEnter={() => link.submenu && setIsProgrammesOpen(true)}
+              onMouseLeave={() => link.submenu && setIsProgrammesOpen(false)}
             >
-              {link.name}
-            </a>
+              <a 
+                href={link.href}
+                className={`text-sm font-semibold uppercase tracking-wider hover:text-${beltColor} transition-colors flex items-center gap-1`}
+              >
+                {link.name}
+                {link.submenu && (
+                  <svg className={`w-4 h-4 transition-transform duration-300 ${isProgrammesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                )}
+              </a>
+
+              {/* Submenu Desktop */}
+              {link.submenu && (
+                <div className={`absolute top-full left-1/2 -translate-x-1/2 w-60 bg-white rounded-2xl shadow-xl border border-gray-100 p-2 transition-all duration-300 ${isProgrammesOpen ? 'opacity-100 translate-y-2 pointer-events-auto' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
+                  <div className="grid grid-cols-1 gap-1">
+                    {link.submenu.map((sub) => (
+                      <a 
+                        key={sub.name}
+                        href={sub.href}
+                        className={`px-4 py-3 rounded-xl text-xs font-bold uppercase tracking-widest text-gray-500 hover:bg-martial-gray hover:text-${beltColor} transition-all`}
+                      >
+                        {sub.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           ))}
           <a 
             href="https://fudoshin.schoolmaker.co/" 
             target="_blank"
             rel="noopener noreferrer"
-            className={`bg-martial-black text-white px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wide hover:bg-${beltColor} transition-all`}
+            className={`bg-martial-black text-white px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wide hover:bg-${beltColor} transition-all ml-4`}
           >
             Espace Élève
           </a>
@@ -90,18 +131,46 @@ const Navbar: React.FC<NavbarProps> = ({ beltColor = "martial-red" }) => {
           >
             <div className="container-custom py-8 flex flex-col gap-6">
               {navLinks.map((link) => (
-                <a 
-                  key={link.name} 
-                  href={link.href}
-                  className="text-lg font-bold uppercase tracking-widest"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {link.name}
-                </a>
+                <div key={link.name} className="flex flex-col gap-4">
+                  <div className="flex items-center justify-between">
+                    <a 
+                      href={link.href}
+                      className="text-lg font-bold uppercase tracking-widest"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {link.name}
+                    </a>
+                    {link.submenu && (
+                      <button 
+                        onClick={() => setIsProgrammesOpen(!isProgrammesOpen)}
+                        className={`w-10 h-10 rounded-full bg-martial-gray flex items-center justify-center transition-transform duration-300 ${isProgrammesOpen ? 'rotate-180' : ''}`}
+                      >
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </button>
+                    )}
+                  </div>
+                  
+                  {link.submenu && (
+                    <div className={`flex flex-col gap-2 pl-4 border-l-2 border-gray-100 overflow-hidden transition-all duration-300 ${isProgrammesOpen ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+                      {link.submenu.map((sub) => (
+                        <a 
+                          key={sub.name}
+                          href={sub.href}
+                          className={`py-2 text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-${beltColor}`}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          {sub.name}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
               <a 
                 href="https://fudoshin.schoolmaker.co/" 
-                className={`bg-${beltColor} text-white text-center py-4 rounded-xl font-bold uppercase`}
+                className={`bg-${beltColor} text-white text-center py-4 rounded-xl font-bold uppercase mt-4`}
               >
                 Espace Élève
               </a>
