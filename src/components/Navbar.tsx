@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const Navbar = () => {
+interface NavbarProps {
+  beltColor?: string;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ beltColor = "martial-red" }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -33,7 +37,7 @@ const Navbar = () => {
             <img src="/logo.png" alt="Logo Karaté Shotokan" className="w-full h-full object-contain" />
           </div>
           <span className="font-bold text-xl tracking-tight uppercase hidden sm:block">
-            Karaté <span className="text-martial-red">Shotokan</span>
+            Karaté <span className={`text-${beltColor}`}>Shotokan</span>
           </span>
         </a>
 
@@ -43,7 +47,7 @@ const Navbar = () => {
             <a 
               key={link.name} 
               href={link.href}
-              className="text-sm font-semibold uppercase tracking-wider hover:text-martial-red transition-colors"
+              className={`text-sm font-semibold uppercase tracking-wider hover:text-${beltColor} transition-colors`}
             >
               {link.name}
             </a>
@@ -52,7 +56,7 @@ const Navbar = () => {
             href="https://fudoshin.schoolmaker.co/" 
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-martial-black text-white px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wide hover:bg-martial-red transition-all"
+            className={`bg-martial-black text-white px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wide hover:bg-${beltColor} transition-all`}
           >
             Espace Élève
           </a>
@@ -97,7 +101,7 @@ const Navbar = () => {
               ))}
               <a 
                 href="https://fudoshin.schoolmaker.co/" 
-                className="bg-martial-red text-white text-center py-4 rounded-xl font-bold uppercase"
+                className={`bg-${beltColor} text-white text-center py-4 rounded-xl font-bold uppercase`}
               >
                 Espace Élève
               </a>
