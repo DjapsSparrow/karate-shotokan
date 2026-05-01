@@ -1,0 +1,142 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import CurriculumList from '../components/CurriculumList';
+import StickyCTA from '../components/StickyCTA';
+
+const modules = [
+  {
+    title: "Introduction",
+    stats: "2 leçons",
+    lessons: [
+      { name: "Introduction", duration: "5:30" },
+      { name: "Le déroulé de l'examen", duration: "10:15" }
+    ]
+  },
+  {
+    title: "Module 1, partie 1 : Kihon",
+    stats: "4 leçons",
+    lessons: [
+      { name: "Introduction", duration: "4:30" },
+      { name: "Techniques simples sur trois pas", duration: "12:15" },
+      { name: "Techniques simples avec retour à la position de départ", duration: "15:40" },
+      { name: "Maîtrise de la technique exécuté deux par deux", duration: "18:20" }
+    ]
+  },
+  {
+    title: "Module 1, partie 2 : Kata",
+    stats: "3 leçons",
+    lessons: [
+      { name: "Introduction", duration: "5:15" },
+      { name: "TEKKI SHODAN", duration: "12:30" },
+      { name: "Décomposition du kata", duration: "25:45" }
+    ]
+  },
+  {
+    title: "Module 1, partie 3 : Bunkaï",
+    stats: "7 leçons",
+    lessons: [
+      { name: "Introduction", duration: "4:45" },
+      { name: "1° Heian Shodan", duration: "8:20" },
+      { name: "2° Heian Nidan", duration: "9:15" },
+      { name: "3° Heian Sandan", duration: "10:30" },
+      { name: "4° Heian Yodan", duration: "11:45" },
+      { name: "5° Heian Godan", duration: "12:15" },
+      { name: "6° Tekki Shodan", duration: "15:30" }
+    ]
+  },
+  {
+    title: "Module 2, partie 1 : Kihon Ippon Kumite",
+    stats: "6 leçons",
+    lessons: [
+      { name: "Introduction", duration: "4:20" },
+      { name: "1° Oï Tsuki Jodan", duration: "8:40" },
+      { name: "2° Oï Tsuki Shudan", duration: "8:40" },
+      { name: "3° Mae Geri Shudan", duration: "10:15" },
+      { name: "4° Mawashi Geri (Shudan ou Jodan)", duration: "12:30" },
+      { name: "5° Yoko Geri Kekomi Shudan", duration: "14:20" }
+    ]
+  },
+  {
+    title: "Module 2, partie 2 : Jiyu Ippon Kumite",
+    stats: "2 leçons",
+    lessons: [
+      { name: "Introduction", duration: "5:10" },
+      { name: "Déroulé de l'exercice", duration: "15:45" }
+    ]
+  },
+  {
+    title: "Module 2, partie 3 : Ju Kumite",
+    stats: "2 leçons",
+    lessons: [
+      { name: "Introduction", duration: "4:40" },
+      { name: "Le Ju Kumite", duration: "18:20" }
+    ]
+  },
+  {
+    title: "Conclusion",
+    stats: "1 leçon",
+    lessons: [
+      { name: "Synthèse", duration: "12:30" }
+    ]
+  },
+  {
+    title: "BONUS : Et après... ?",
+    stats: "3 leçons",
+    lessons: [
+      { name: "La voie compétition", duration: "15:45" },
+      { name: "Le 2° dan", duration: "12:20" },
+      { name: "Le 3° dan", duration: "14:10" }
+    ]
+  }
+];
+
+const offerUrl = "https://ecole.fudoshin.solutions/offers/3b5f8766-1129-4b81-924a-a1f40d102724";
+---
+
+<Layout 
+  title="Aperçu du Programme — Ceinture Noire 1° Dan"
+  description="Découvrez le contenu détaillé de la formation ceinture noire : Tekki Shodan, Bunkai, Kihon Ippon Kumite et simulateur d'examen."
+>
+	<Navbar client:load />
+	
+  <main class="pt-32 pb-24 bg-[#FAFAFA]">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        
+        {/* Banner */}
+        <div class="relative h-64 md:h-80 rounded-[3rem] overflow-hidden mb-12 shadow-2xl">
+          <img 
+            src="https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80&w=2000" 
+            alt="Formation Ceinture Noire" 
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-martial-black/90 to-transparent flex flex-col justify-end p-10 md:p-16">
+            <h1 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter">Aperçu du Programme</h1>
+            <p class="text-white/60 font-bold uppercase tracking-widest text-xs mt-2">Karaté Shotokan — Ceinture Noire 1° Dan</p>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-2xl font-black uppercase tracking-tight mb-4 text-martial-black">Karaté Shotokan - Ceinture noire</h2>
+          <p class="text-gray-600 font-medium">Cette formation a pour but de vous préparer à votre examen de grade menant vers la ceinture Noire 1° Dan.</p>
+        </div>
+
+        {/* Curriculum List (Interactive) */}
+        <CurriculumList client:load modules={modules} />
+
+        {/* Dynamic Sticky CTA */}
+        <StickyCTA 
+          client:load 
+          offerUrl={offerUrl} 
+          priceMonthly="14,90€" 
+          priceYearly="149€" 
+        />
+
+      </div>
+    </div>
+  </main>
+
+	<Footer client:visible />
+</Layout>
