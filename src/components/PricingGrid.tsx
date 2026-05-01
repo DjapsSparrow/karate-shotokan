@@ -45,10 +45,10 @@ const PricingGrid = () => {
               className="group relative bg-martial-gray rounded-3xl p-10 flex flex-col items-center text-center transition-all hover:bg-white dark:hover:bg-white/5 hover:shadow-xl hover:shadow-black/5 overflow-hidden border border-gray-100 dark:border-white/5"
             >
               <ShineBorder 
-                borderWidth={1.5} 
-                duration={12} 
-                shineColor={belt.color === 'Noire' ? ["#E31B23", "#050505", "#FFFFFF"] : belt.hex}
-                className="opacity-0 group-hover:opacity-100 transition-opacity"
+                borderWidth={2} 
+                duration={10} 
+                shineColor={belt.color === 'Noire' ? ["#E31B23", "#FFD700", "#FFFFFF"] : belt.hex}
+                className="opacity-40 group-hover:opacity-100 transition-opacity"
               />
               {/* Belt Visual */}
               <div 
