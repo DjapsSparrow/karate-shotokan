@@ -1,0 +1,32 @@
+# ----------------------------------------------------------------------
+# | Sécurité Antigravity - Karate Shotokan
+# ----------------------------------------------------------------------
+
+# Force HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Headers de sécurité
+<IfModule mod_headers.c>
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    Header set X-Frame-Options "DENY"
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "no-referrer-when-downgrade"
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self';"
+</IfModule>
+
+# Désactiver le listage de répertoires
+Options -Indexes
+
+# Bloquer l'accès aux fichiers sensibles
+<FilesMatch "^\.|\.(json|config|mjs|yml|yaml|env|log|sh)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Protection spécifique package.json
+<Files "package.json">
+    Order allow,deny
+    Deny from all
+</Files>
