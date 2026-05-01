@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v0.7.9
-- **Objectif** : Harmonisation de la largeur du StickyCTA et équilibrage interne des éléments.
+- **Version** : v0.8.0
+- **Objectif** : Finalisation du StickyCTA (bouton affiné) et stabilisation de l'aperçu.
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
