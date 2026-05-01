@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.4.1
-- **Objectif** : Synchronisation colorimétrique par ceinture (boutons, badges, détails).
+- **Version** : v1.4.2
+- **Objectif** : Nettoyage final de la colorimétrie (Jaune et listes de modules).
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
