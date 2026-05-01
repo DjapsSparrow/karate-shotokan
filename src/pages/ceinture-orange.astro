@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import BeltPageTemplate from '../components/BeltPageTemplate';
+import Footer from '../components/Footer';
+
+const curriculum = [
+  "Approfondissement du Kihon : perfectionnement des frappes et enchaînements dynamiques (Yoko Geri, Nukite).",
+  "Focus sur Heian Nidan : décomposition du deuxième kata avec ses changements de direction rapides.",
+  "Maîtrise du Kokutsu Dachi : stabilisation de cette position défensive essentielle.",
+  "Correction des détails critiques : mise en lumière des erreurs classiques pour une progression immédiate.",
+  "Confiance Technique : préparation complète pour l'intensité et le Kime lors de l'examen."
+];
+---
+
+<Layout 
+  title="Formation Ceinture Orange Karaté Shotokan — Fluidité & Technique"
+  description="Gagnez en fluidité et en technicité. Maîtrisez les nouveaux pivots, les blocages doubles et l'élégance technique du kata Heian Nidan."
+>
+	<Navbar client:load />
+	<main>
+		<BeltPageTemplate 
+      client:load
+      color="Orange"
+      hex="#FF8C00"
+      title="Gagnez en fluidité"
+      description="Cette formation vous prépare spécifiquement aux exigences du passage de grade de la ceinture orange. Confirmez votre progression au sein du style Shotokan."
+      curriculum={curriculum}
+      ctaLink="https://ecole.fudoshin.solutions/offers/9db2619e-2484-4509-aa78-4a3afcb67640"
+    />
+	</main>
+	<Footer client:visible />
+</Layout>

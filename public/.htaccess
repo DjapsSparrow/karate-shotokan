@@ -62,8 +62,5 @@ Options -Indexes
 # SEO & Redirections
 # ----------------------------------------------------------------------
 
-# Missing Belt Pages (Temporary Redirects to main sections)
-Redirect 301 /ceinture-orange /#programmes
-Redirect 301 /ceinture-verte /#programmes
-Redirect 301 /ceinture-bleue /#programmes
-Redirect 301 /ceinture-marron /#programmes
+# Missing pages or custom redirects
+# ----------------------------------------------------------------------

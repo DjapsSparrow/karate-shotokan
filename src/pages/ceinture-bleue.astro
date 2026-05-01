@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import BeltPageTemplate from '../components/BeltPageTemplate';
+import Footer from '../components/Footer';
+
+const curriculum = [
+  "Évolution du Kihon : travail sur techniques de jambes complexes (Ushiro Geri, Hiza Geri) et précision.",
+  "Maîtrise de Heian Yodan : analyse des séquences complexes (Shuto Uke, utilisation des coudes et genoux).",
+  "Stabilité et Amplitude : garder un centre de gravité bas tout en développant des mouvements larges.",
+  "Bunkai et Sens Martial : défense contre saisies et frappes circulaires basées sur le kata.",
+  "Expertise technique : conseils sur le placement et l'orientation du corps selon les standards de Maître Kase."
+];
+---
+
+<Layout 
+  title="Formation Ceinture Bleue Karaté Shotokan — Amplitude & Maîtrise"
+  description="Affirmez votre maîtrise technique et gagnez en amplitude. Maîtrisez la complexité du kata Heian Yodan avec souplesse et fluidité."
+>
+	<Navbar client:load />
+	<main>
+		<BeltPageTemplate 
+      client:load
+      color="Bleue"
+      hex="#0000FF"
+      title="Affirmez votre maîtrise"
+      description="Cette formation vous prépare aux exigences élevées de la ceinture bleue. Développez votre équilibre et la fluidité de vos enchaînements."
+      curriculum={curriculum}
+      ctaLink="https://ecole.fudoshin.solutions/offers/3b5f8766-1129-4b81-924a-a1f40d102724"
+    />
+	</main>
+	<Footer client:visible />
+</Layout>

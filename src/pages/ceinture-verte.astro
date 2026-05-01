@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import BeltPageTemplate from '../components/BeltPageTemplate';
+import Footer from '../components/Footer';
+
+const curriculum = [
+  "Kihon Intermédiaire : changements de positions rapides et techniques percutantes (Ura Mawashi Geri, Empi).",
+  "Anatomie de Heian Sandan : étude du passage Zenkutsu Dachi à Kiba Dachi avec stabilité parfaite.",
+  "Renforcement des appuis : focus sur la position Kiba Dachi, pilier central de ce grade.",
+  "Applications Martiales (Bunkai) : compréhension des clés de bras et dégagements cachés dans Heian Sandan.",
+  "Précision du Rythme : maîtrise de l'alternance entre temps lents et explosions rapides."
+];
+---
+
+<Layout 
+  title="Formation Ceinture Verte Karaté Shotokan — Puissance & Stabilité"
+  description="Franchissez le cap des grades intermédiaires. Maîtrisez les positions basses et le kata Heian Sandan avec puissance et fluidité."
+>
+	<Navbar client:load />
+	<main>
+		<BeltPageTemplate 
+      client:load
+      color="Verte"
+      hex="#228B22"
+      title="Franchissez un cap"
+      description="Cette formation vous prépare à l'exigence technique de la ceinture verte. Apprenez à conjuguer puissance courte, stabilité et fluidité."
+      curriculum={curriculum}
+      ctaLink="https://ecole.fudoshin.solutions/offers/20697fe9-e447-4082-b338-605e0a9ddadd"
+    />
+	</main>
+	<Footer client:visible />
+</Layout>

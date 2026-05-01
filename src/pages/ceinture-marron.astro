@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import BeltPageTemplate from '../components/BeltPageTemplate';
+import Footer from '../components/Footer';
+
+const curriculum = [
+  "Kihon de haut niveau : précision absolue, kime (puissance explosive) et transitions complexes.",
+  "Anatomie de Heian Godan : maîtrise de l'ultime Heian avec ses sauts, pivots et contrôles au sol.",
+  "Transition vers le grade Dan : préparation mentale et physique à l'exigence du grade d'excellence.",
+  "Applications Martiales complexes : étude approfondie du Bunkai pour une efficacité redoutable.",
+  "Maîtrise de l'enracinement : utilisation optimale de l'énergie du sol selon l'enseignement Taiji Kase."
+];
+---
+
+<Layout 
+  title="Formation Ceinture Marron Karaté Shotokan — Vers l'Excellence"
+  description="L'ultime étape avant la ceinture noire. Développez votre Kime, maîtrisez Heian Godan et préparez votre transition vers le grade d'excellence."
+>
+	<Navbar client:load />
+	<main>
+		<BeltPageTemplate 
+      client:load
+      color="Marron"
+      hex="#8B4513"
+      title="Vers l'excellence"
+      description="Cette formation vous prépare techniquement et psychologiquement à franchir le dernier cap avant le grade de ceinture noire."
+      curriculum={curriculum}
+      ctaLink="https://ecole.fudoshin.solutions/offers/19401e96-7cb0-414e-b354-069327962b0b"
+    />
+	</main>
+	<Footer client:visible />
+</Layout>
