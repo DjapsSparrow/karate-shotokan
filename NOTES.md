@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v0.7.1
-- **Objectif** : Mise à jour détaillée Ceinture Jaune et création de la page d'aperçu native (transcription screenshot).
+- **Version** : v0.7.2
+- **Objectif** : Raffinement du bandeau de prix dans l'aperçu (double option mensuel/annuel avec essai gratuit).
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
