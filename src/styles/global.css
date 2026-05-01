@@ -13,11 +13,7 @@
 
 @layer base {
   body {
-    @apply bg-martial-white text-martial-black font-sans antialiased selection:bg-martial-red selection:text-white transition-colors duration-300;
-  }
-  
-  .dark body {
-    @apply bg-martial-black text-martial-white selection:bg-white selection:text-martial-black;
+    @apply bg-martial-white text-martial-black font-sans antialiased selection:bg-martial-red selection:text-white;
   }
 }
 

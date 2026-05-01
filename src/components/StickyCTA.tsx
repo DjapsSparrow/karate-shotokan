@@ -41,7 +41,7 @@ const StickyCTA: React.FC<Props> = ({
           className="fixed bottom-8 left-0 right-0 z-50 px-4 pointer-events-none"
         >
           <div className="max-w-4xl mx-auto pointer-events-auto w-full">
-            <div className="bg-white dark:bg-martial-black text-martial-black dark:text-white p-6 md:px-10 md:py-5 rounded-[2.5rem] shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-4 md:gap-6 border border-gray-100 dark:border-white/10 backdrop-blur-md transition-colors">
+            <div className="bg-martial-black text-white p-6 md:px-10 md:py-5 rounded-[2.5rem] shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-4 md:gap-6 border border-white/10 backdrop-blur-md bg-opacity-95">
               <div className="hidden lg:block text-center lg:text-left flex-1">
                 <h3 className="text-xl md:text-2xl font-black uppercase tracking-tighter leading-none">Tout le programme <br /> pour</h3>
               </div>
@@ -49,12 +49,12 @@ const StickyCTA: React.FC<Props> = ({
               <div className="flex flex-col md:flex-row items-center gap-4 lg:gap-10 w-full lg:w-auto flex-shrink-0">
                 <div className="flex flex-col gap-2 w-full md:w-60">
                   <div className="grid grid-cols-2 gap-2">
-                    <div className="bg-martial-gray dark:bg-white/10 border border-gray-100 dark:border-white/10 p-3 rounded-xl text-center">
-                      <p className="text-xl font-black leading-none">{priceMonthly}</p>
+                    <div className="bg-white/10 border border-white/10 p-3 rounded-xl text-center">
+                      <p className="text-xl font-black text-white leading-none">{priceMonthly}</p>
                       <p className="text-[8px] text-gray-400 uppercase font-bold mt-1 tracking-widest">/ mois</p>
                     </div>
-                    <div className="bg-martial-gray/50 dark:bg-white/5 border border-gray-100 dark:border-white/5 p-3 rounded-xl text-center opacity-60">
-                      <p className="text-xl font-black leading-none">{priceYearly}</p>
+                    <div className="bg-white/5 border border-white/5 p-3 rounded-xl text-center opacity-60">
+                      <p className="text-xl font-black text-white leading-none">{priceYearly}</p>
                       <p className="text-[8px] text-gray-400 uppercase font-bold mt-1 tracking-widest">/ an</p>
                     </div>
                   </div>
