@@ -1,9 +1,9 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.6.3
-- **Objectif** : Correction des inversions de couleurs indésirables en Dark Mode (Boutons et Gradients).
-- **Statut** : ✅ Terminé. Remplacement des valeurs `martial-black` (qui devient blanc en dark mode) par `black` dans les boutons "S'abonner" et les dégradés des pages "Aperçu" pour garantir la lisibilité et un fond sombre correct.
+- **Version** : v1.7.0
+- **Objectif** : Intégration de l'effet de transition animé pour le basculement Clair/Sombre.
+- **Statut** : ✅ Terminé. Implémentation du composant `AnimatedThemeToggler` utilisant la View Transitions API et Lucide-react pour un effet fluide (clip-path).
 - **Lien** : https://prod.karate-shotokan.fr
 
 ---

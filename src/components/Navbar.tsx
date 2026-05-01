@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import ThemeToggle from './ThemeToggle';
+import AnimatedThemeToggler from './AnimatedThemeToggler';
 
 interface NavbarProps {
   beltColor?: string;
@@ -100,17 +100,23 @@ const Navbar: React.FC<NavbarProps> = ({ beltColor = "martial-red" }) => {
             href="https://fudoshin.schoolmaker.co/" 
             target="_blank"
             rel="noopener noreferrer"
-            className={`bg-zinc-950 text-white dark:bg-white dark:text-black px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wide hover:bg-${beltColor} dark:hover:bg-martial-red dark:hover:text-white transition-all ml-4`}
+            className={`bg-zinc-950 text-white dark:bg-white dark:text-black px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wide hover:bg-${beltColor} dark:hover:bg-martial-red dark:hover:text-white transition-all ml-4 shadow-md`}
           >
             Espace Élève
           </a>
           <div className="ml-2">
-            <ThemeToggle />
+            <AnimatedThemeToggler 
+              variant="circle" 
+              className="p-2.5 rounded-xl bg-martial-gray dark:bg-white/5 border border-gray-100 dark:border-white/10 text-martial-black dark:text-white hover:bg-martial-red hover:text-white dark:hover:bg-martial-red transition-all duration-300"
+            />
           </div>
         </div>
 
         <div className="flex items-center gap-2 md:hidden">
-          <ThemeToggle />
+          <AnimatedThemeToggler 
+            variant="circle" 
+            className="p-2.5 rounded-xl bg-martial-gray dark:bg-white/5 border border-gray-100 dark:border-white/10 text-martial-black dark:text-white hover:bg-martial-red hover:text-white dark:hover:bg-martial-red transition-all duration-300"
+          />
           <button 
             className="text-martial-black dark:text-black p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

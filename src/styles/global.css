@@ -61,3 +61,13 @@
     @apply inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-martial-black border-2 border-martial-black rounded-full transition-all hover:bg-martial-black hover:text-white;
   }
 }
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+html[data-magicui-theme-vt="active"]::view-transition-group(root) {
+  animation-duration: var(--magicui-theme-toggle-vt-duration);
+}
