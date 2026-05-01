@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import ShineBorder from './ShineBorder';
 
 const belts = [
   { color: 'Jaune', hex: '#FFD700', slug: '/ceinture-jaune', price: 'Offert', desc: 'Les bases fondamentales et l\'esprit du Shotokan.' },
@@ -41,8 +42,14 @@ const PricingGrid = () => {
                 visible: { opacity: 1, y: 0 }
               }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="group relative bg-martial-gray rounded-3xl p-10 flex flex-col items-center text-center transition-all hover:bg-white dark:hover:bg-white/5 hover:shadow-xl hover:shadow-black/5 overflow-hidden"
+              className="group relative bg-martial-gray rounded-3xl p-10 flex flex-col items-center text-center transition-all hover:bg-white dark:hover:bg-white/5 hover:shadow-xl hover:shadow-black/5 overflow-hidden border border-gray-100 dark:border-white/5"
             >
+              <ShineBorder 
+                borderWidth={1.5} 
+                duration={12} 
+                shineColor={belt.color === 'Noire' ? ["#E31B23", "#050505", "#FFFFFF"] : belt.hex}
+                className="opacity-0 group-hover:opacity-100 transition-opacity"
+              />
               {/* Belt Visual */}
               <div 
                 className="w-full h-4 mb-8 rounded-full shadow-inner"

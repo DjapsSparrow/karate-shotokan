@@ -11,9 +11,18 @@
   
   --breakpoint-xs: 480px;
 
-  @keyframes shine-rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+  --animate-shine: shine var(--duration, 14s) infinite linear;
+
+  @keyframes shine {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    to {
+      background-position: 0% 0%;
+    }
   }
 }
 
@@ -48,34 +57,5 @@
   
   .btn-secondary {
     @apply inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-martial-black border-2 border-martial-black rounded-full transition-all hover:bg-martial-black hover:text-white;
-  }
-
-  /* MagicUI Shine Border Effect */
-  .btn-shine {
-    @apply relative overflow-hidden;
-    isolation: isolate;
-  }
-
-  .btn-shine::before {
-    content: "";
-    position: absolute;
-    inset: -200%;
-    background: conic-gradient(
-      from 0deg,
-      transparent 0 320deg,
-      rgba(255, 255, 255, 0.4) 340deg,
-      var(--martial-red) 360deg
-    );
-    animation: shine-rotate 3s linear infinite;
-    z-index: -2;
-  }
-
-  .btn-shine::after {
-    content: "";
-    position: absolute;
-    inset: 2px;
-    background: inherit;
-    border-radius: inherit;
-    z-index: -1;
   }
 }

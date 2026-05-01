@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import ShineBorder from './ShineBorder';
 
 interface Props {
   offerUrl: string;
@@ -41,7 +42,12 @@ const StickyCTA: React.FC<Props> = ({
           className="fixed bottom-8 left-0 right-0 z-50 px-4 pointer-events-none"
         >
           <div className="max-w-4xl mx-auto pointer-events-auto w-full">
-            <div className="bg-martial-deep-black text-white p-6 md:px-10 md:py-5 rounded-[2.5rem] shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-4 md:gap-6 border border-white/10 backdrop-blur-md bg-opacity-95">
+            <div className="relative bg-martial-deep-black text-white p-6 md:px-10 md:py-5 rounded-[2.5rem] shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-4 md:gap-6 backdrop-blur-md bg-opacity-95">
+              <ShineBorder 
+                borderWidth={1} 
+                duration={14} 
+                shineColor={["#E31B23", "#FFFFFF"]} 
+              />
               <div className="hidden lg:block text-center lg:text-left flex-1">
                 <h3 className="text-xl md:text-2xl font-black uppercase tracking-tighter leading-none">Tout le programme <br /> pour</h3>
               </div>
@@ -68,9 +74,9 @@ const StickyCTA: React.FC<Props> = ({
                     href={offerUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className={`btn-primary btn-shine !bg-${color} !text-white !px-12 !py-4 md:!py-3 w-full md:w-auto text-center shadow-2xl shadow-${color}/40 hover:scale-105 transition-transform text-xs font-black uppercase tracking-[0.15em] whitespace-nowrap`}
+                    className={`btn-primary !bg-${color} !text-white !px-12 !py-4 md:!py-3 w-full md:w-auto text-center shadow-2xl shadow-${color}/40 hover:scale-105 transition-transform text-xs font-black uppercase tracking-[0.15em] whitespace-nowrap`}
                   >
-                    <span>Commencez l'essai</span>
+                    Commencez l'essai
                   </a>
                   <p className={`md:hidden text-[9px] text-${color} font-black uppercase tracking-[0.15em] text-center animate-pulse leading-none`}>
                     1 semaine d'essai gratuit

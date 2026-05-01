@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import ShineBorder from './ShineBorder';
 
 const NoveltySection = () => {
   return (
@@ -9,8 +10,13 @@ const NoveltySection = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white dark:bg-black/20 rounded-[2rem] p-8 md:p-16 shadow-2xl shadow-black/5 flex flex-col lg:flex-row items-center gap-12 border border-gray-100 dark:border-white/10"
+          className="relative bg-white dark:bg-black/20 rounded-[2rem] p-8 md:p-16 shadow-2xl shadow-black/5 flex flex-col lg:flex-row items-center gap-12"
         >
+          <ShineBorder 
+            borderWidth={2} 
+            duration={10} 
+            shineColor={["#E31B23", "#050505", "#FFFFFF"]} 
+          />
           <div className="lg:w-1/2 relative">
             <div className="absolute -top-6 -left-6 bg-martial-red text-white font-black px-6 py-2 rounded-full z-10 animate-pulse text-sm uppercase tracking-widest">
               Nouveauté

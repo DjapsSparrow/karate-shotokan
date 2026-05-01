@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import ShineBorder from '../components/ShineBorder';
 
 const offerUrl = "https://fudoshin.schoolmaker.co/offers/dc2cb6fa-53f5-45f0-a811-9d023db2ddfe";
 
@@ -51,8 +52,8 @@ const dan3Katas = [
 
         {/* Floating CTA */}
         <div class="sticky top-28 z-40 mb-12 flex flex-col items-center gap-4">
-          <a href={offerUrl} target="_blank" rel="noopener noreferrer" class="btn-shine bg-martial-red text-white px-8 py-4 rounded-full font-black uppercase tracking-widest shadow-xl shadow-martial-red/20 hover:scale-105 transition-transform flex items-center gap-3">
-            <span>S'abonner maintenant</span>
+          <a href={offerUrl} target="_blank" rel="noopener noreferrer" class="bg-martial-red text-white px-8 py-4 rounded-full font-black uppercase tracking-widest shadow-xl shadow-martial-red/20 hover:scale-105 transition-transform flex items-center gap-3">
+            S'abonner maintenant
             <span class="bg-white/20 px-3 py-1 rounded-full text-[10px]">9,90€/mois</span>
           </a>
           <p class="text-martial-red font-bold text-xs uppercase tracking-widest animate-pulse">
@@ -61,7 +62,8 @@ const dan3Katas = [
         </div>
 
         {/* Section: Introduction */}
-        <section class="bg-white dark:bg-black/20 rounded-[2rem] p-8 md:p-12 shadow-sm border border-gray-100 dark:border-white/10 mb-12">
+        <section class="relative bg-white dark:bg-black/20 rounded-[2rem] p-8 md:p-12 shadow-sm mb-12">
+          <ShineBorder client:load borderWidth={1} duration={14} shineColor="#E31B23" />
           <div class="flex items-center gap-4 mb-8">
             <div class="w-1.5 h-8 bg-martial-red rounded-full"></div>
             <h2 class="text-2xl font-black uppercase tracking-tight dark:text-white">Introduction</h2>
@@ -77,7 +79,8 @@ const dan3Katas = [
         </section>
 
         {/* Section: 2e Dan */}
-        <section class="bg-white dark:bg-black/20 rounded-[2rem] p-8 md:p-12 shadow-sm border border-gray-100 dark:border-white/10 mb-12">
+        <section class="relative bg-white dark:bg-black/20 rounded-[2rem] p-8 md:p-12 shadow-sm mb-12">
+          <ShineBorder client:load borderWidth={1} duration={14} shineColor="#E31B23" />
           <div class="flex items-center gap-4 mb-8">
             <div class="w-1.5 h-8 bg-martial-red rounded-full"></div>
             <h2 class="text-2xl font-black uppercase tracking-tight dark:text-white">Les katas du 2e dan</h2>
@@ -103,7 +106,8 @@ const dan3Katas = [
         </section>
 
         {/* Section: 3e Dan */}
-        <section class="bg-white dark:bg-black/20 rounded-[2rem] p-8 md:p-12 shadow-sm border border-gray-100 dark:border-white/10 mb-12">
+        <section class="relative bg-white dark:bg-black/20 rounded-[2rem] p-8 md:p-12 shadow-sm mb-12">
+          <ShineBorder client:load borderWidth={1} duration={14} shineColor="#E31B23" />
           <div class="flex items-center gap-4 mb-8">
             <div class="w-1.5 h-8 bg-martial-red rounded-full"></div>
             <h2 class="text-2xl font-black uppercase tracking-tight dark:text-white">Les katas du 3e dan</h2>
@@ -129,7 +133,8 @@ const dan3Katas = [
         </section>
 
         {/* Section: Conclusion */}
-        <section class="bg-white dark:bg-black/20 rounded-[2rem] p-8 md:p-12 shadow-sm border border-gray-100 dark:border-white/10 mb-20">
+        <section class="relative bg-white dark:bg-black/20 rounded-[2rem] p-8 md:p-12 shadow-sm mb-20">
+          <ShineBorder client:load borderWidth={2} duration={8} shineColor={["#E31B23", "#FFFFFF"]} />
           <div class="flex items-center gap-4 mb-8">
             <div class="w-1.5 h-8 bg-martial-red rounded-full"></div>
             <h2 class="text-2xl font-black uppercase tracking-tight dark:text-white">Conclusion</h2>
@@ -148,8 +153,8 @@ const dan3Katas = [
           </div>
 
           <div class="text-center space-y-4">
-            <a href={offerUrl} target="_blank" rel="noopener noreferrer" class="btn-primary btn-shine w-full md:w-auto inline-block !px-12 !py-5">
-              <span>Accéder au programme complet</span>
+            <a href={offerUrl} target="_blank" rel="noopener noreferrer" class="btn-primary w-full md:w-auto inline-block !px-12 !py-5">
+              Accéder au programme complet
             </a>
             <p class="text-martial-red font-bold text-sm uppercase tracking-widest">
               1 semaine d'essai gratuite
