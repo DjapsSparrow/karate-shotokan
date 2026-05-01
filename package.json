@@ -1,7 +1,7 @@
 {
   "name": "karate-shotokan",
   "type": "module",
-  "version": "1.5.0",
+  "version": "1.5.4",
   "engines": {
     "node": ">=22.12.0"
   },

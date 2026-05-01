@@ -1,9 +1,9 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.5.0
-- **Objectif** : Implémentation complète du Dark Mode Harmonieux.
-- **Statut** : ✅ Terminé. Toutes les pages (ceintures, aperçus, katas, dojo, karate) sont conformes.
+- **Version** : v1.5.4
+- **Objectif** : Dark Mode Complet + Theme Toggle + Shine Border (MagicUI).
+- **Statut** : ✅ Terminé. Intégration du sélecteur de thème et des effets visuels avancés sur les conteneurs.
 - **Lien** : https://prod.karate-shotokan.fr
 
 ---
