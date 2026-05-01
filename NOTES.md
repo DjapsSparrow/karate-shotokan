@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.3.8
-- **Objectif** : Correction de l'URL de l'offre Ceinture Marron.
+- **Version** : v1.3.9
+- **Objectif** : Correction de l'URL de l'offre Ceinture Noire 1° Dan.
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
