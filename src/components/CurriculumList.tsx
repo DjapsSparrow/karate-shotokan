@@ -26,6 +26,7 @@ const CurriculumList: React.FC<Props> = ({ modules }) => {
         return (
           <div key={idx} className="bg-white border border-gray-100 rounded-[2rem] overflow-hidden shadow-sm">
             <button 
+              type="button"
               onClick={() => setOpenIndex(isOpen ? null : idx)}
               className="w-full px-8 py-6 bg-martial-gray border-b border-gray-100 flex items-center justify-between text-left transition-colors hover:bg-gray-100"
             >
