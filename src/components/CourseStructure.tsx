@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const lessons = [
   {
@@ -44,52 +44,80 @@ const lessons = [
   }
 ];
 
+const LessonCard = ({ lesson, index }: { lesson: typeof lessons[0], index: number }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: index * 0.05 }}
+      className={`group bg-martial-gray rounded-3xl p-6 transition-all duration-300 border border-transparent ${
+        isOpen ? 'bg-white shadow-xl shadow-black/5 border-gray-100' : 'hover:bg-white hover:shadow-lg'
+      }`}
+    >
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full text-left flex items-center justify-between gap-4"
+      >
+        <div className="flex items-center gap-4">
+          <span className="flex-shrink-0 w-8 h-8 bg-white text-martial-red font-black text-[10px] flex items-center justify-center rounded-full shadow-sm">
+            {lesson.number}
+          </span>
+          <h3 className="text-lg font-black uppercase tracking-tight text-martial-black group-hover:text-martial-red transition-colors">
+            {lesson.title}
+          </h3>
+        </div>
+        <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${isOpen ? 'bg-martial-red text-white rotate-180' : 'bg-white text-gray-400 group-hover:text-martial-red'}`}>
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </button>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            className="overflow-hidden"
+          >
+            <div className="pt-4 pb-2">
+              <div className="w-8 h-1 bg-martial-red/20 rounded-full mb-4"></div>
+              <p className="text-gray-500 text-sm font-medium leading-relaxed">
+                {lesson.description}
+              </p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  );
+};
+
 const CourseStructure = () => {
   return (
     <section className="py-24 bg-white overflow-hidden">
       <div className="container-custom">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="mb-16"
+            className="mb-16 text-center md:text-left"
           >
             <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-martial-red leading-none mb-4">
               Structure <br /> <span className="text-martial-black">des formations</span>
             </h2>
-            <div className="w-20 h-2 bg-martial-red rounded-full"></div>
+            <div className="w-20 h-2 bg-martial-red rounded-full mx-auto md:mx-0"></div>
           </motion.div>
 
-          <div className="grid grid-cols-1 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
             {lessons.map((lesson, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="group bg-martial-gray rounded-3xl p-8 hover:bg-white hover:shadow-2xl hover:shadow-black/5 border border-transparent hover:border-gray-100 transition-all duration-300"
-              >
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-4 mb-3">
-                      <span className="text-martial-red font-black text-xs uppercase tracking-widest bg-white px-3 py-1 rounded-full shadow-sm">
-                        Leçon {lesson.number}
-                      </span>
-                      <h3 className="text-xl md:text-2xl font-black uppercase tracking-tight text-martial-black group-hover:text-martial-red transition-colors">
-                        {lesson.title}
-                      </h3>
-                    </div>
-                    <p className="text-gray-500 font-medium leading-relaxed max-w-2xl">
-                      {lesson.description}
-                    </p>
-                  </div>
-                  <div className="hidden md:block">
-                    <div className="w-12 h-1 bg-martial-red/20 group-hover:bg-martial-red rounded-full transition-colors"></div>
-                  </div>
-                </div>
-              </motion.div>
+              <LessonCard key={index} lesson={lesson} index={index} />
             ))}
           </div>
         </div>
