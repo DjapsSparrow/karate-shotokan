@@ -5,12 +5,14 @@ interface Props {
   offerUrl: string;
   priceMonthly?: string;
   priceYearly?: string;
+  color?: string; // e.g. "martial-red", "amber-500", etc.
 }
 
 const StickyCTA: React.FC<Props> = ({ 
   offerUrl, 
   priceMonthly = "4,90€", 
-  priceYearly = "49€" 
+  priceYearly = "49€",
+  color = "martial-red"
 }) => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -56,7 +58,7 @@ const StickyCTA: React.FC<Props> = ({
                       <p className="text-[8px] text-gray-400 uppercase font-bold mt-1 tracking-widest">/ an</p>
                     </div>
                   </div>
-                  <p className="text-[9px] text-martial-red font-black uppercase tracking-[0.15em] text-center animate-pulse leading-none">
+                  <p className={`text-[9px] text-${color} font-black uppercase tracking-[0.15em] text-center animate-pulse leading-none`}>
                     1 semaine d'essai gratuit
                   </p>
                 </div>
@@ -65,7 +67,7 @@ const StickyCTA: React.FC<Props> = ({
                   href={offerUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="btn-primary !bg-martial-red !text-white !px-12 !py-3 w-full md:w-auto text-center shadow-2xl shadow-martial-red/40 hover:scale-105 transition-transform text-xs font-black uppercase tracking-[0.15em] whitespace-nowrap"
+                  className={`btn-primary !bg-${color} !text-white !px-12 !py-3 w-full md:w-auto text-center shadow-2xl shadow-${color}/40 hover:scale-105 transition-transform text-xs font-black uppercase tracking-[0.15em] whitespace-nowrap`}
                 >
                   Commencez l'essai
                 </a>
