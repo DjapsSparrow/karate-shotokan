@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import NoveltySection from '../components/NoveltySection';
+import CourseStructure from '../components/CourseStructure';
 import PricingGrid from '../components/PricingGrid';
 import AuthoritySection from '../components/AuthoritySection';
 import Testimonials from '../components/Testimonials';
@@ -14,6 +15,7 @@ import Footer from '../components/Footer';
 	<main>
 		<Hero client:load />
 		<NoveltySection client:visible />
+		<CourseStructure client:visible />
 		<PricingGrid client:visible />
 		<AuthoritySection client:visible />
 		<Testimonials client:visible />
