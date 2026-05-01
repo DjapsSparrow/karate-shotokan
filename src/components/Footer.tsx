@@ -7,27 +7,27 @@ const Footer = () => {
     {
       title: "L'École",
       links: [
-        { name: "Histoire du Karaté", href: "/le-karate" },
+        { name: "L'Histoire", href: "/le-karate" },
         { name: "Le Dojo", href: "/le-dojo" },
         { name: "Philippe Bouvier", href: "/#authority" },
-        { name: "FAQ", href: "/#faq" },
       ]
     },
     {
       title: "Formations",
       links: [
         { name: "Katas Supérieurs", href: "/katas-superieurs" },
+        { name: "Programmes Belts", href: "/#programmes" },
         { name: "Ceinture Jaune", href: "/ceinture-jaune" },
         { name: "Ceinture Noire", href: "/ceinture-noire" },
-        { name: "Espace Élève", href: "https://fudoshin.schoolmaker.co/" },
       ]
     },
     {
-      title: "Légal & Support",
+      title: "Support & Légal",
       links: [
+        { name: "Espace Élève", href: "https://fudoshin.schoolmaker.co/" },
+        { name: "FAQ", href: "/#faq" },
         { name: "Mentions Légales", href: "/mentions-legales" },
-        { name: "Signaler un bug", href: "mailto:contact@fudoshin.solutions" },
-        { name: "Fédération (FFK)", href: "https://www.ffkarate.fr/" },
+        { name: "Contact", href: "mailto:contact@karate-shotokan.fr" },
       ]
     }
   ];

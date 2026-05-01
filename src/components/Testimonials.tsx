@@ -31,7 +31,7 @@ const stats = [
 
 const Testimonials = () => {
   return (
-    <section className="py-24 bg-martial-gray overflow-hidden">
+    <section id="faq" className="py-24 bg-martial-gray overflow-hidden">
       <div className="container-custom">
         <div className="flex flex-col lg:flex-row gap-20">
           {/* Stats */}
