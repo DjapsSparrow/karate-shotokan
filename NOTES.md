@@ -1,9 +1,9 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.6.0
-- **Objectif** : Refonte Navbar Dark Mode (Fond Noir Fixe).
-- **Statut** : ✅ Terminé. Navbar passée en Zinc-950 (noir profond) au scroll en mode sombre pour garantir la visibilité du texte blanc.
+- **Version** : v1.6.1
+- **Objectif** : Correction radicale Navbar Dark Mode (Forçage Hex).
+- **Statut** : ✅ Terminé. Utilisation de !important et d'une valeur hexadécimale fixe (#050505) pour garantir le fond noir en mode sombre.
 - **Lien** : https://prod.karate-shotokan.fr
 
 ---
