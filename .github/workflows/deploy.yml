@@ -27,4 +27,4 @@ jobs:
       - name: Deploy with Rsync
         run: |
           sudo apt-get install -y sshpass
-          sshpass -p "${{ secrets.SSH_PASSWORD }}" rsync -avz -e "ssh -vv -o StrictHostKeyChecking=no" dist/ ky6gz_karate-shotokan@128.65.195.221:sites/prod.karate-shotokan.fr/
+          sshpass -p "${{ secrets.SSH_PASSWORD }}" rsync -avz -e "ssh -o StrictHostKeyChecking=no" dist/ ky6gz_karate-shotokan@128.65.195.221:sites/prod.karate-shotokan.fr/
