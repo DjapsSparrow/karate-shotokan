@@ -6,20 +6,21 @@ import Footer from '../components/Footer';
 const offerUrl = "https://fudoshin.schoolmaker.co/offers/dc2cb6fa-53f5-45f0-a811-9d023db2ddfe";
 
 const dan2Katas = [
-  { name: "Bassai Dai", duration: "10 min" },
+  { name: "Introduction", duration: "2 min" },
+  { name: "Bassai Dai : Le kata", duration: "10 min" },
   { name: "Bassai Dai : Décomposition du Kata", duration: "15 min" },
-  { name: "Empi", duration: "10 min" },
+  { name: "Empi : Le kata", duration: "10 min" },
   { name: "Empi : Décomposition du kata", duration: "18 min" },
-  { name: "Jion", duration: "10 min" },
+  { name: "Jion : Le kata", duration: "10 min" },
   { name: "Jion : Décomposition du Kata", duration: "16 min" },
-  { name: "Hangetsu", duration: "11 min" },
+  { name: "Hangetsu : Le kata", duration: "11 min" },
   { name: "Hangetsu : Décomposition du kata", duration: "17 min" },
-  { name: "Kanku Dai", duration: "12 min" },
+  { name: "Kanku Dai : Le kata", duration: "12 min" },
   { name: "Kanku Dai : Décomposition du kata", duration: "20 min" },
 ];
 
 const dan3Katas = [
-  { name: "Bassai Sho", duration: "12 min" },
+  { name: "Nijushiho", duration: "10 min" },
   { name: "Gankaku : Décomposition du Kata", duration: "18 min" },
   { name: "Jitte : Décomposition du kata", duration: "15 min" },
 ];
@@ -49,11 +50,14 @@ const dan3Katas = [
         </div>
 
         {/* Floating CTA */}
-        <div class="sticky top-28 z-40 mb-12 flex justify-center">
+        <div class="sticky top-28 z-40 mb-12 flex flex-col items-center gap-4">
           <a href={offerUrl} target="_blank" rel="noopener noreferrer" class="bg-martial-red text-white px-8 py-4 rounded-full font-black uppercase tracking-widest shadow-xl shadow-martial-red/20 hover:scale-105 transition-transform flex items-center gap-3">
             S'abonner maintenant
             <span class="bg-white/20 px-3 py-1 rounded-full text-[10px]">9,90€/mois</span>
           </a>
+          <p class="text-martial-red font-bold text-xs uppercase tracking-widest animate-pulse">
+            1 semaine d'essai gratuite
+          </p>
         </div>
 
         {/* Section: Introduction */}
@@ -143,10 +147,13 @@ const dan3Katas = [
             <span class="text-[10px] font-black text-martial-red uppercase tracking-widest">10 min</span>
           </div>
 
-          <div class="text-center">
+          <div class="text-center space-y-4">
             <a href={offerUrl} target="_blank" rel="noopener noreferrer" class="btn-primary w-full md:w-auto inline-block !px-12 !py-5">
               Accéder au programme complet
             </a>
+            <p class="text-martial-red font-bold text-sm uppercase tracking-widest">
+              1 semaine d'essai gratuite
+            </p>
           </div>
         </section>
 
