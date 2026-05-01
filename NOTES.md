@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v0.6.0
-- **Objectif** : Migration intégrale du contenu "Le Dojo" vers Draguignan (Club Léo Lagrange) avec tarifs et horaires officiels.
+- **Version** : v0.6.1
+- **Objectif** : Remplacement de "Lignage Kase" par "Le dojo" dans le footer pour une meilleure clarté.
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
