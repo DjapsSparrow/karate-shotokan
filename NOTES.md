@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.4.6
-- **Objectif** : Optimisation mobile du StickyCTA (plus compact).
+- **Version** : v1.4.7
+- **Objectif** : Affichage du nom "Karaté Shotokan" sur mobile avec couleur dynamique.
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
