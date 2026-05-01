@@ -34,9 +34,9 @@ const Hero = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="#programmes" 
-                className="btn-primary"
+                className="btn-primary btn-shine"
               >
-                Découvrir les Programmes
+                <span>Découvrir les Programmes</span>
               </motion.a>
               <motion.a 
                 whileHover={{ scale: 1.05, backgroundColor: 'rgba(255, 255, 255, 0.1)', color: 'currentColor' }}
