@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.4.4
-- **Objectif** : Logo dynamique (Shotokan prend la couleur de la ceinture).
+- **Version** : v1.4.5
+- **Objectif** : Correction de l'ancrage du bouton de retour (BackToCourses).
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
