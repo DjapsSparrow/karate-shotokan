@@ -8,7 +8,7 @@ const Footer = () => {
       title: "L'École",
       links: [
         { name: "L'Histoire", href: "/le-karate" },
-        { name: "Lignage Kase", href: "/le-karate#kase" },
+        { name: "Le dojo", href: "/le-dojo" },
         { name: "Philippe Bouvier", href: "/#authority" },
       ]
     },
