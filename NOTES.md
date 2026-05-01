@@ -1,9 +1,9 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.5.5
-- **Objectif** : Correction visibilité Navbar (Dark Mode) + Shine Border.
-- **Statut** : ✅ Terminé. Bouton Espace Élève corrigé et contraste des liens amélioré en mode sombre.
+- **Version** : v1.5.6
+- **Objectif** : Correction globale visibilité (Espace Élève + Widget Version).
+- **Statut** : ✅ Terminé. Utilisation de couleurs fixes (Zinc-950) pour les éléments devant rester sombres.
 - **Lien** : https://prod.karate-shotokan.fr
 
 ---
