@@ -1,0 +1,131 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import CurriculumList from '../components/CurriculumList';
+import StickyCTA from '../components/StickyCTA';
+
+const modules = [
+  {
+    title: "Introduction",
+    stats: "2 leçons",
+    lessons: [
+      { name: "Introduction", duration: "5:30" },
+      { name: "Le déroulé de l'examen", duration: "10:15" }
+    ]
+  },
+  {
+    title: "Les positions",
+    stats: "0 leçon",
+    lessons: [
+      { name: "Pas de nouvelles positions", duration: "-" }
+    ]
+  },
+  {
+    title: "Les déplacements",
+    stats: "0 leçon",
+    lessons: [
+      { name: "Pas de nouveaux déplacements", duration: "-" }
+    ]
+  },
+  {
+    title: "Les techniques",
+    stats: "10 leçons",
+    lessons: [
+      { name: "Introduction", duration: "4:30" },
+      { name: "MIZU NAGARÉ NO KAMAE", duration: "8:15" },
+      { name: "HAÏSHU", duration: "6:40" },
+      { name: "MIKATSUKI GÉRI", duration: "9:20" },
+      { name: "URA MIKATSUKI GERI", duration: "10:15" },
+      { name: "MOROTÉ URA TSUKI JODAN", duration: "8:50" },
+      { name: "JODAN TEÏSHO UKÉ", duration: "7:40" },
+      { name: "MANJI KAMAE", duration: "9:15" },
+      { name: "KAGI TSUKI", duration: "8:20" },
+      { name: "NAGASHI UKÉ", duration: "10:30" },
+      { name: "NAMI GAÉSHI", duration: "12:15" }
+    ]
+  },
+  {
+    title: "Le kihon",
+    stats: "3 leçons",
+    lessons: [
+      { name: "Introduction", duration: "3:45" },
+      { name: "KIHON UNIDIRECTIONNEL", duration: "20:30" },
+      { name: "KIHON MULTIDIRECTIONNEL", duration: "25:15" },
+      { name: "KIHON SUR CIBLES", duration: "22:45" }
+    ]
+  },
+  {
+    title: "Le kata",
+    stats: "4 leçons",
+    lessons: [
+      { name: "Introduction", duration: "5:30" },
+      { name: "HEÏAN GODAN", duration: "18:45" },
+      { name: "Décomposition du kata", duration: "35:20" },
+      { name: "BUNKAÏ", duration: "22:15" }
+    ]
+  },
+  {
+    title: "Le Kumite",
+    stats: "0 leçon",
+    lessons: [
+      { name: "Pas de nouveaux kumite", duration: "-" }
+    ]
+  },
+  {
+    title: "Conclusion",
+    stats: "1 leçon",
+    lessons: [
+      { name: "Synthèse", duration: "10:20" }
+    ]
+  }
+];
+
+const offerUrl = "https://ecole.fudoshin.solutions/offers/6b3f8766-1129-4b81-924a-a1f40d102724";
+---
+
+<Layout 
+  title="Aperçu du Programme — Ceinture Marron"
+  description="Découvrez le contenu détaillé de la formation ceinture marron : Heian Godan, Mizu Nagare et Kihon multidirectionnel."
+>
+	<Navbar client:load />
+	
+  <main class="pt-32 pb-24 bg-[#FAFAFA]">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        
+        {/* Banner */}
+        <div class="relative h-64 md:h-80 rounded-[3rem] overflow-hidden mb-12 shadow-2xl">
+          <img 
+            src="https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80&w=2000" 
+            alt="Formation Ceinture Marron" 
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-martial-black/90 to-transparent flex flex-col justify-end p-10 md:p-16">
+            <h1 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter">Aperçu du Programme</h1>
+            <p class="text-white/60 font-bold uppercase tracking-widest text-xs mt-2">Karaté Shotokan — Ceinture Marron</p>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-2xl font-black uppercase tracking-tight mb-4 text-martial-black">Karaté Shotokan - Ceinture Marron</h2>
+          <p class="text-gray-600 font-medium">Cette formation a pour but de vous préparer à votre passage de grade menant vers la ceinture Marron.</p>
+        </div>
+
+        {/* Curriculum List (Interactive) */}
+        <CurriculumList client:load modules={modules} />
+
+        {/* Dynamic Sticky CTA */}
+        <StickyCTA 
+          client:load 
+          offerUrl={offerUrl} 
+          priceMonthly="12,90€" 
+          priceYearly="129€" 
+        />
+
+      </div>
+    </div>
+  </main>
+
+	<Footer client:visible />
+</Layout>

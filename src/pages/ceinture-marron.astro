@@ -1,33 +1,160 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
-import BeltPageTemplate from '../components/BeltPageTemplate';
 import Footer from '../components/Footer';
 
-const curriculum = [
-  "Kihon de haut niveau : précision absolue, kime (puissance explosive) et transitions complexes.",
-  "Anatomie de Heian Godan : maîtrise de l'ultime Heian avec ses sauts, pivots et contrôles au sol.",
-  "Transition vers le grade Dan : préparation mentale et physique à l'exigence du grade d'excellence.",
-  "Applications Martiales complexes : étude approfondie du Bunkai pour une efficacité redoutable.",
-  "Maîtrise de l'enracinement : utilisation optimale de l'énergie du sol selon l'enseignement Taiji Kase."
-];
+const previewUrl = "/ceinture-marron-apercu";
+const offerUrl = "https://ecole.fudoshin.solutions/offers/6b3f8766-1129-4b81-924a-a1f40d102724";
 ---
 
 <Layout 
-  title="Formation Ceinture Marron Karaté Shotokan — Vers l'Excellence"
-  description="L'ultime étape avant la ceinture noire. Développez votre Kime, maîtrisez Heian Godan et préparez votre transition vers le grade d'excellence."
+  title="Formation Ceinture Marron Karaté Shotokan — Expertise et Heian Godan"
+  description="L'ultime étape avant la ceinture noire. Maîtrisez Heian Godan, le saut Mizu No Nagare et perfectionnez votre Kime pour rejoindre l'élite."
 >
 	<Navbar client:load />
-	<main>
-		<BeltPageTemplate 
-      client:load
-      color="Marron"
-      hex="#8B4513"
-      title="Vers l'excellence"
-      description="Cette formation vous prépare techniquement et psychologiquement à franchir le dernier cap avant le grade de ceinture noire."
-      curriculum={curriculum}
-      ctaLink="https://ecole.fudoshin.solutions/offers/19401e96-7cb0-414e-b354-069327962b0b"
-    />
-	</main>
+	
+  <main class="pt-32 pb-24">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        
+        {/* Header Section */}
+        <div class="mb-16">
+          <span class="inline-block bg-amber-900/10 text-amber-900 font-bold text-xs uppercase tracking-[0.3em] px-4 py-2 rounded-full mb-8">
+            Niveau Élite
+          </span>
+          <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 leading-[0.9]">
+            La Ceinture <br /> <span class="text-amber-900">Marron</span>
+          </h1>
+          <p class="text-2xl font-bold text-martial-black uppercase tracking-tight italic mb-8">
+            L'ultime étape avant la ceinture noire.
+          </p>
+          <div class="prose prose-lg max-w-none text-gray-600">
+            <p>
+              Cette formation d'élite vous prépare aux exigences rigoureuses du passage de grade de la ceinture marron. Maîtrisez <strong>Heian Godan</strong>, le plus complet des katas de base, et perfectionnez votre gestion du saut, des changements de rythme et de l'énergie pour prouver que vous êtes prêt à rejoindre les rangs des gradés confirmés.
+            </p>
+          </div>
+        </div>
+
+        {/* Story Section */}
+        <div class="bg-martial-gray rounded-[3rem] p-10 md:p-16 mb-20 border border-gray-100 shadow-sm">
+          <div class="prose prose-lg max-w-none text-gray-600">
+            <p class="text-xl font-medium text-martial-black mb-8 italic">
+              "La ceinture marron n'est pas une simple couleur supplémentaire : c'est un engagement."
+            </p>
+            <p>
+              À ce niveau, le karatéka doit faire preuve d'une maîtrise totale de ses appuis et d'une capacité à projeter son intention martiale. Le jury n'examine plus seulement vos positions, mais votre capacité à générer une puissance interne et à maîtriser l'espace.
+            </p>
+            <p>
+              Le kata <strong>Heian Godan</strong> est la synthèse parfaite de tout ce que vous avez appris depuis le début. Saut, esquives, pivots complexes et changements de niveaux : il exige une condition physique et une concentration sans faille. Ce programme vous offre les outils pour polir votre technique jusqu'à l'excellence.
+            </p>
+          </div>
+        </div>
+
+        {/* The Pillars */}
+        <div class="mb-24">
+          <h2 class="text-3xl font-black uppercase mb-12 tracking-tight">1. La préparation à la maîtrise</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="p-8 bg-white border border-gray-100 rounded-3xl shadow-sm hover:border-amber-900/20 transition-colors">
+              <h3 class="text-xl font-black uppercase mb-4">Kihon de haut niveau</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Perfectionnement des enchaînements complexes combinant attaques et blocages simultanés avec un Kime dévastateur.</p>
+            </div>
+            <div class="p-8 bg-white border border-gray-100 rounded-3xl shadow-sm hover:border-amber-900/20 transition-colors">
+              <h3 class="text-xl font-black uppercase mb-4">Anatomie de Heian Godan</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Une étude millimétrée du 5ème kata : maîtrise du saut (Mizu No Nagare), travail des mains ouvertes et projections simulées.</p>
+            </div>
+            <div class="p-8 bg-white border border-gray-100 rounded-3xl shadow-sm hover:border-amber-900/20 transition-colors">
+              <h3 class="text-xl font-black uppercase mb-4">Dynamique du corps</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Apprenez à utiliser la contraction et décontraction musculaire pour gagner en vitesse d'exécution et en impact.</p>
+            </div>
+            <div class="p-8 bg-white border border-gray-100 rounded-3xl shadow-sm hover:border-amber-900/20 transition-colors">
+              <h3 class="text-xl font-black uppercase mb-4">Bunkai Avancés</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Exploration des applications concrètes de Heian Godan : des clés de poignet aux sorties de saisies arrière.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Why Choice */}
+        <div class="mb-24">
+          <h2 class="text-3xl font-black uppercase mb-12 tracking-tight">2. Pourquoi choisir ce programme ?</h2>
+          <div class="space-y-6">
+            <div class="flex gap-6 items-start">
+              <div class="w-12 h-12 bg-amber-900 rounded-full flex items-center justify-center text-white font-black shrink-0">1</div>
+              <div>
+                <h4 class="font-bold uppercase mb-2">Maîtrise du saut</h4>
+                <p class="text-gray-500">Le saut de Heian Godan est un point critique. Nous vous donnons les exercices spécifiques pour réussir votre réception et conserver votre équilibre.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="w-12 h-12 bg-amber-900 rounded-full flex items-center justify-center text-white font-black shrink-0">2</div>
+              <div>
+                <h4 class="font-bold uppercase mb-2">Précision du style Kase</h4>
+                <p class="text-gray-500">Intégrez les nuances de force et d'ancrage caractéristiques de la lignée de Maître Taiji Kase pour donner de l'âme à votre pratique.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="w-12 h-12 bg-amber-900 rounded-full flex items-center justify-center text-white font-black shrink-0">3</div>
+              <div>
+                <h4 class="font-bold uppercase mb-2">Audit de passage de grade</h4>
+                <p class="text-gray-500">Des conseils stratégiques pour gérer votre stress et présenter un Karaté qui impose le respect lors de l'examen.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Goal Section */}
+        <div class="bg-martial-black text-white rounded-[3rem] p-12 md:p-20 mb-24 text-center relative overflow-hidden">
+          <div class="relative z-10">
+            <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-8">3. Votre objectif : Le seuil de la Ceinture Noire</h2>
+            <p class="text-xl mb-12 font-medium opacity-80 max-w-2xl mx-auto italic">
+              "En obtenant votre ceinture marron, vous affirmez que les bases du Shotokan sont acquises. Vous ne faites plus du karaté, vous devenez karatéka."
+            </p>
+            <p class="text-amber-900 font-bold uppercase tracking-widest text-sm">
+              Dominez la complexité de Heian Godan, forgez votre mental et préparez le terrain pour votre future ceinture noire.
+            </p>
+          </div>
+        </div>
+
+        {/* Access List */}
+        <div class="mb-24 bg-white border border-gray-100 rounded-[3rem] p-10 shadow-xl shadow-black/5">
+          <h3 class="text-2xl font-black uppercase mb-10 text-center">Vous aurez accès à :</h3>
+          <div class="flex flex-col md:flex-row items-center justify-between gap-8 border-b border-gray-100 pb-10 mb-10">
+            <p class="text-lg font-bold">Programme "Karaté Shotokan - Ceinture Marron" par abonnement</p>
+            <a href={previewUrl} class="btn-primary !bg-martial-black !text-white text-sm">Aperçu de la formation</a>
+          </div>
+        </div>
+
+        {/* Pricing Grid */}
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          {/* Monthly */}
+          <div class="bg-white border-2 border-gray-100 rounded-[2.5rem] p-10 flex flex-col items-center shadow-sm hover:border-amber-900 transition-all transform hover:-translate-y-2">
+            <span class="text-xs font-black uppercase tracking-[0.2em] text-gray-400 mb-4">Mensuel</span>
+            <div class="flex items-baseline gap-1 mb-8">
+              <span class="text-6xl font-black text-martial-black">12,90€</span>
+              <span class="text-gray-400 font-bold">/mois</span>
+            </div>
+            <div class="bg-amber-900/10 text-amber-900 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest mb-10">
+              1 semaine d'essai gratuit
+            </div>
+            <a href={offerUrl} target="_blank" rel="noopener noreferrer" class="w-full btn-primary !bg-amber-900 !py-4 text-center">S'abonner</a>
+          </div>
+          
+          {/* Yearly */}
+          <div class="bg-martial-black text-white rounded-[2.5rem] p-10 flex flex-col items-center shadow-2xl relative overflow-hidden transform hover:-translate-y-2 transition-all">
+            <div class="absolute top-4 right-4 bg-amber-900 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Meilleure offre</div>
+            <span class="text-xs font-black uppercase tracking-[0.2em] text-gray-500 mb-4">Annuel</span>
+            <div class="flex items-baseline gap-1 mb-8">
+              <span class="text-6xl font-black">129€</span>
+              <span class="text-gray-400 font-bold">/an</span>
+            </div>
+            <div class="bg-white/10 text-white px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest mb-10">
+              1 semaine d'essai gratuit
+            </div>
+            <a href={offerUrl} target="_blank" rel="noopener noreferrer" class="w-full btn-primary !bg-white !text-martial-black !py-4 text-center">S'abonner</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
 	<Footer client:visible />
 </Layout>

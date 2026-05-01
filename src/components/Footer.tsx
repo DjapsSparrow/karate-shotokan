@@ -19,6 +19,7 @@ const Footer = () => {
         { name: "Ceinture Orange", href: "/ceinture-orange" },
         { name: "Ceinture Verte", href: "/ceinture-verte" },
         { name: "Ceinture Bleue", href: "/ceinture-bleue" },
+        { name: "Ceinture Marron", href: "/ceinture-marron" },
         { name: "Ceinture Noire", href: "/ceinture-noire" },
         { name: "Katas Supérieurs", href: "/katas-superieurs" },
       ]
