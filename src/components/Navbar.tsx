@@ -100,7 +100,7 @@ const Navbar: React.FC<NavbarProps> = ({ beltColor = "martial-red" }) => {
             href="https://fudoshin.schoolmaker.co/" 
             target="_blank"
             rel="noopener noreferrer"
-            className={`bg-martial-black text-white px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wide hover:bg-${beltColor} transition-all ml-4`}
+            className={`bg-martial-black text-white dark:bg-white dark:text-black px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wide hover:bg-${beltColor} dark:hover:bg-martial-red dark:hover:text-white transition-all ml-4`}
           >
             Espace Élève
           </a>
