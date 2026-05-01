@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v0.5.7
-- **Objectif** : Correction terminologique du footer (Suppression de "Belts").
+- **Version** : v0.5.8
+- **Objectif** : Refonte de la page "Le Dojo" (Club de la Grange) et restructuration du footer selon le nouveau contenu.
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
