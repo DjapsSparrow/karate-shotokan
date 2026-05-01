@@ -16,6 +16,7 @@ const Footer = () => {
     {
       title: "Formations",
       links: [
+        { name: "Katas Supérieurs", href: "/katas-superieurs" },
         { name: "Ceinture Jaune", href: "/ceinture-jaune" },
         { name: "Ceinture Orange", href: "/ceinture-orange" },
         { name: "Ceinture Verte", href: "/ceinture-verte" },
@@ -78,7 +79,7 @@ const Footer = () => {
               <ul className="flex flex-col gap-4">
                 {section.links.map((link) => (
                   <li key={link.name}>
-                    <a href={link.href} className="text-gray-400 hover:text-white transition-colors text-sm">
+                    <a href={link.href} className="text-gray-400 hover:text-martial-red transition-colors text-sm font-medium">
                       {link.name}
                     </a>
                   </li>

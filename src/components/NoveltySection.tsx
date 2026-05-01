@@ -49,7 +49,7 @@ const NoveltySection = () => {
             </ul>
             <motion.a 
               whileHover={{ x: 10 }}
-              href="https://fudoshin.schoolmaker.co/offers/dc2cb6fa-53f5-45f0-a811-9d023db2ddfe" 
+              href="/katas-superieurs" 
               className="inline-flex items-center gap-4 text-xl font-black uppercase tracking-tighter group"
             >
               Découvrir le programme

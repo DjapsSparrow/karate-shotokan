@@ -1,0 +1,128 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import { motion } from 'framer-motion';
+---
+
+<Layout 
+  title="Formation Katas Supérieurs Karaté Shotokan — De la technique à la maîtrise"
+  description="Maîtrisez les katas avancés du Shotokan (Bassai Sho, Unsu, Sochin...) avec l'expertise de Philippe Bouvier. Bunkai, rythme et Kime détaillés."
+>
+	<Navbar client:load />
+	<main class="pt-32 pb-24">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        {/* Hero Section */}
+        <div class="text-center mb-20">
+          <span class="inline-block bg-martial-red/10 text-martial-red font-bold text-xs uppercase tracking-[0.3em] px-4 py-2 rounded-full mb-8">
+            Formation Exclusive
+          </span>
+          <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 leading-[0.9]">
+            Les Katas <br /> <span class="text-martial-red">Supérieurs</span>
+          </h1>
+          <p class="text-2xl font-bold text-martial-black uppercase tracking-tight italic">
+            Passez de la technique à la maîtrise.
+          </p>
+        </div>
+
+        {/* Introduction */}
+        <div class="prose prose-lg max-w-none text-gray-600 mb-20">
+          <p>
+            Cette formation exclusive vous guide à travers les katas supérieurs du Shotokan (de <strong>Bassai Sho</strong> à <strong>Gojushiho</strong>, en passant par <strong>Unsu</strong> ou <strong>Kanku Sho</strong>). Conçue spécifiquement pour les pratiquants gradés, chaque leçon décortique le rythme, la gestion du centre de gravité et les applications réelles (Bunkai) pour transformer votre pratique martiale en une quête de perfection absolue.
+          </p>
+          <p>
+            Obtenir sa ceinture noire est une étape charnière. Mais face à la complexité des katas supérieurs, de nombreux karatékas stagnent. Comment maîtriser la fluidité de Nijushiho, la puissance explosive de Sochin ou la précision aérienne d'Unsu sans un guide quotidien ? L’entraînement au dojo est indispensable, mais il ne permet pas toujours de s’attarder sur les micro-détails qui font la différence entre une exécution scolaire et une démonstration de haut niveau.
+          </p>
+          <div class="bg-martial-gray p-8 rounded-3xl border border-gray-100 my-12">
+            <p class="mb-0">
+              Cette formation en ligne a été pensée comme une archive vivante et un outil de perfectionnement individuel. Elle s'adresse aux ceintures noires (du 1er au 5e Dan) désireuses d'approfondir leur compréhension du style de Maître Taiji Kase.
+            </p>
+          </div>
+        </div>
+
+        {/* Features Grid */}
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+          {[
+            { title: "Anatomie du mouvement", desc: "Une analyse plan par plan des trajectoires, des pivots et du travail de hanche spécifique à chaque kata." },
+            { title: "Le rythme et le 'Kime'", desc: "Comprendre quand ralentir pour accumuler l'énergie et quand l'expulser avec une précision chirurgicale." },
+            { title: "Bunkai Supérieurs", desc: "Ne vous contentez pas de mémoriser des gestes. Apprenez le sens caché de chaque technique pour une efficacité réelle." },
+            { title: "Gestion de l'espace", desc: "Maîtriser le déplacement au sol pour conserver un équilibre parfait, même dans les enchaînements acrobatiques." },
+          ].map((item) => (
+            <div key={item.title} class="border-l-4 border-martial-red pl-6 py-2">
+              <h3 class="text-xl font-black uppercase tracking-tight mb-2">{item.title}</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Why Choice */}
+        <div class="bg-martial-black text-white rounded-[3rem] p-10 md:p-16 mb-24 relative overflow-hidden">
+          <div class="relative z-10">
+            <h2 class="text-3xl font-black uppercase mb-12 text-center">Pourquoi choisir ce programme ?</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 text-center">
+              <div>
+                <div class="text-martial-red font-black text-4xl mb-4">∞</div>
+                <h4 class="font-bold uppercase text-sm mb-2">Accès illimité</h4>
+                <p class="text-gray-400 text-xs uppercase tracking-tighter">Révisez n'importe où, n'importe quand.</p>
+              </div>
+              <div>
+                <div class="text-martial-red font-black text-4xl mb-4">🎓</div>
+                <h4 class="font-bold uppercase text-sm mb-2">Pédagogie avancée</h4>
+                <p class="text-gray-400 text-xs uppercase tracking-tighter">Au-delà de la répétition visuelle.</p>
+              </div>
+              <div>
+                <div class="text-martial-red font-black text-4xl mb-4">🥋</div>
+                <h4 class="font-bold uppercase text-sm mb-2">Expertise Shotokan</h4>
+                <p class="text-gray-400 text-xs uppercase tracking-tighter">Respect strict des standards fédéraux.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Call to Action */}
+        <div class="text-center mb-24">
+          <h2 class="text-3xl font-black uppercase mb-6 italic">Ne vous contentez pas de connaître les katas. Incarnez-les.</h2>
+          <p class="text-gray-500 mb-12">Rejoignez une communauté de passionnés et portez votre karaté vers de nouveaux sommets dès aujourd'hui.</p>
+          
+          <div class="inline-block bg-yellow-50 border border-yellow-200 text-yellow-800 text-xs font-bold uppercase tracking-widest px-6 py-2 rounded-full mb-10">
+            Formation en cours de construction — Aperçu disponible
+          </div>
+        </div>
+
+        {/* Pricing Table */}
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          {/* Monthly */}
+          <div class="bg-white border-2 border-gray-100 rounded-[2.5rem] p-10 flex flex-col items-center shadow-sm hover:border-martial-red transition-colors">
+            <span class="text-xs font-black uppercase tracking-[0.2em] text-gray-400 mb-4">Mensuel</span>
+            <div class="flex items-baseline gap-1 mb-8">
+              <span class="text-5xl font-black">9,90€</span>
+              <span class="text-gray-400 font-bold">/mois</span>
+            </div>
+            <p class="text-xs text-center text-gray-500 mb-8 font-medium">1 semaine d'essai gratuit</p>
+            <a href="https://fudoshin.schoolmaker.co/offers/dc2cb6fa-53f5-45f0-a811-9d023db2ddfe" class="w-full btn-primary !py-4 text-center">S'abonner</a>
+          </div>
+          
+          {/* Yearly */}
+          <div class="bg-martial-black text-white rounded-[2.5rem] p-10 flex flex-col items-center shadow-2xl relative overflow-hidden">
+            <div class="absolute top-4 right-4 bg-martial-red text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Économie</div>
+            <span class="text-xs font-black uppercase tracking-[0.2em] text-gray-500 mb-4">Annuel</span>
+            <div class="flex items-baseline gap-1 mb-8">
+              <span class="text-5xl font-black">99€</span>
+              <span class="text-gray-400 font-bold">/an</span>
+            </div>
+            <p class="text-xs text-center text-gray-400 mb-8 font-medium">1 semaine d'essai gratuit</p>
+            <a href="https://fudoshin.schoolmaker.co/offers/dc2cb6fa-53f5-45f0-a811-9d023db2ddfe" class="w-full btn-primary !bg-white !text-martial-black !py-4 text-center">S'abonner</a>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <a href="https://fudoshin.schoolmaker.co/offers/dc2cb6fa-53f5-45f0-a811-9d023db2ddfe" class="text-martial-red font-black uppercase tracking-tighter hover:underline text-sm">
+            Clique ici pour l'aperçu des katas disponibles
+          </a>
+        </div>
+      </div>
+    </div>
+	</main>
+	<Footer client:visible />
+</Layout>
