@@ -1,19 +1,34 @@
 @import "tailwindcss";
 
 @theme {
-  --color-martial-black: #050505;
-  --color-martial-red: #E31B23;
-  --color-martial-white: #FFFFFF;
-  --color-martial-gray: #F8F9FA;
+  --color-martial-black: var(--martial-black);
+  --color-martial-red: var(--martial-red);
+  --color-martial-white: var(--martial-white);
+  --color-martial-gray: var(--martial-gray);
+  --color-martial-deep-black: #050505;
   
   --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
   
   --breakpoint-xs: 480px;
 }
 
+:root {
+  --martial-black: #050505;
+  --martial-red: #E31B23;
+  --martial-white: #FFFFFF;
+  --martial-gray: #F8F9FA;
+}
+
+.dark {
+  --martial-black: #F8F9FA;
+  --martial-red: #FF2E37;
+  --martial-white: #0A0A0A;
+  --martial-gray: #161616;
+}
+
 @layer base {
   body {
-    @apply bg-martial-white text-martial-black font-sans antialiased selection:bg-martial-red selection:text-white;
+    @apply bg-martial-white text-martial-black font-sans antialiased transition-colors duration-300 selection:bg-martial-red selection:text-white;
   }
 }
 

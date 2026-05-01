@@ -10,7 +10,7 @@ const BackToCourses = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           whileHover={{ x: -10 }}
-          className="group flex items-center gap-4 text-martial-black/60 hover:text-martial-black font-black uppercase tracking-widest text-xs transition-colors py-4 px-8 border border-gray-100 rounded-full hover:bg-gray-50"
+          className="group flex items-center gap-4 text-martial-black/60 dark:text-white/60 hover:text-martial-black dark:hover:text-white font-black uppercase tracking-widest text-xs transition-colors py-4 px-8 border border-gray-100 dark:border-white/10 rounded-full hover:bg-gray-50 dark:hover:bg-white/5"
         >
           <svg 
             xmlns="http://www.w3.org/2000/svg" 

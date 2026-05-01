@@ -24,20 +24,20 @@ const offerUrl = "https://fudoshin.schoolmaker.co/offers/dc2cb6fa-53f5-45f0-a811
           <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 leading-[0.9]">
             Les Katas <br /> <span class="text-martial-red">Supérieurs</span>
           </h1>
-          <p class="text-2xl font-bold text-martial-black uppercase tracking-tight italic">
+          <p class="text-2xl font-bold text-martial-black dark:text-white uppercase tracking-tight italic">
             Passez de la technique à la maîtrise.
           </p>
         </div>
 
         {/* Introduction */}
-        <div class="prose prose-lg max-w-none text-gray-600 mb-20">
+        <div class="prose prose-lg dark:prose-invert max-w-none text-gray-600 dark:text-gray-400 mb-20">
           <p>
             Cette formation exclusive vous guide à travers les katas supérieurs du Shotokan (de <strong>Bassai Sho</strong> à <strong>Gojushiho</strong>, en passant par <strong>Unsu</strong> ou <strong>Kanku Sho</strong>). Conçue spécifiquement pour les pratiquants gradés, chaque leçon décortique le rythme, la gestion du centre de gravité et les applications réelles (Bunkai) pour transformer votre pratique martiale en une quête de perfection absolue.
           </p>
           <p>
             Obtenir sa ceinture noire est une étape charnière. Mais face à la complexité des katas supérieurs, de nombreux karatékas stagnent. Comment maîtriser la fluidité de Nijushiho, la puissance explosive de Sochin ou la précision aérienne d'Unsu sans un guide quotidien ? L’entraînement au dojo est indispensable, mais il ne permet pas toujours de s’attarder sur les micro-détails qui font la différence entre une exécution scolaire et une démonstration de haut niveau.
           </p>
-          <div class="bg-martial-gray p-8 rounded-3xl border border-gray-100 my-12">
+          <div class="bg-martial-gray rounded-[3rem] p-10 md:p-16 mb-20 border border-gray-100 dark:border-white/10 shadow-sm">
             <p class="mb-0">
               Cette formation en ligne a été pensée comme une archive vivante et un outil de perfectionnement individuel. Elle s'adresse aux ceintures noires (du 1er au 5e Dan) désireuses d'approfondir leur compréhension du style de Maître Taiji Kase.
             </p>
@@ -53,14 +53,14 @@ const offerUrl = "https://fudoshin.schoolmaker.co/offers/dc2cb6fa-53f5-45f0-a811
             { title: "Gestion de l'espace", desc: "Maîtriser le déplacement au sol pour conserver un équilibre parfait, même dans les enchaînements acrobatiques." },
           ].map((item) => (
             <div key={item.title} class="border-l-4 border-martial-red pl-6 py-2">
-              <h3 class="text-xl font-black uppercase tracking-tight mb-2">{item.title}</h3>
-              <p class="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+              <h3 class="text-xl font-black uppercase tracking-tight mb-2 dark:text-white">{item.title}</h3>
+              <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
 
         {/* Why Choice */}
-        <div class="bg-martial-black text-white rounded-[3rem] p-10 md:p-16 mb-24 relative overflow-hidden">
+        <div class="bg-martial-deep-black text-white rounded-[3rem] p-10 md:p-16 mb-24 relative overflow-hidden">
           <div class="relative z-10">
             <h2 class="text-3xl font-black uppercase mb-12 text-center">Pourquoi choisir ce programme ?</h2>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 text-center">
@@ -85,10 +85,10 @@ const offerUrl = "https://fudoshin.schoolmaker.co/offers/dc2cb6fa-53f5-45f0-a811
 
         {/* Call to Action */}
         <div class="text-center mb-24">
-          <h2 class="text-3xl font-black uppercase mb-6 italic">Ne vous contentez pas de connaître les katas. Incarnez-les.</h2>
-          <p class="text-gray-500 mb-12">Rejoignez une communauté de passionnés et portez votre karaté vers de nouveaux sommets dès aujourd'hui.</p>
+          <h2 class="text-3xl font-black uppercase mb-6 italic dark:text-white">Ne vous contentez pas de connaître les katas. Incarnez-les.</h2>
+          <p class="text-gray-500 dark:text-gray-400 mb-12">Rejoignez une communauté de passionnés et portez votre karaté vers de nouveaux sommets dès aujourd'hui.</p>
           
-          <div class="inline-block bg-yellow-50 border border-yellow-200 text-yellow-800 text-xs font-bold uppercase tracking-widest px-6 py-2 rounded-full mb-10">
+          <div class="inline-block bg-yellow-50 dark:bg-yellow-900/10 border border-yellow-200 dark:border-yellow-500/20 text-yellow-800 dark:text-yellow-400 text-xs font-bold uppercase tracking-widest px-6 py-2 rounded-full mb-10">
             Formation en cours de construction — Aperçu disponible
           </div>
         </div>
@@ -96,11 +96,11 @@ const offerUrl = "https://fudoshin.schoolmaker.co/offers/dc2cb6fa-53f5-45f0-a811
         {/* Pricing Table */}
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           {/* Monthly */}
-          <div class="bg-white border-2 border-gray-100 rounded-[2.5rem] p-10 flex flex-col items-center shadow-sm hover:border-martial-red transition-colors">
-            <span class="text-xs font-black uppercase tracking-[0.2em] text-gray-400 mb-4">Mensuel</span>
+          <div class="bg-white dark:bg-black/20 border-2 border-gray-100 dark:border-white/10 rounded-[2.5rem] p-10 flex flex-col items-center shadow-sm hover:border-martial-red transition-colors">
+            <span class="text-xs font-black uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500 mb-4">Mensuel</span>
             <div class="flex items-baseline gap-1 mb-8">
-              <span class="text-5xl font-black">9,90€</span>
-              <span class="text-gray-400 font-bold">/mois</span>
+              <span class="text-5xl font-black dark:text-white">9,90€</span>
+              <span class="text-gray-400 dark:text-gray-500 font-bold">/mois</span>
             </div>
             <div class="bg-martial-red/10 text-martial-red px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest mb-8">
               1 semaine d'essai gratuit
@@ -109,12 +109,12 @@ const offerUrl = "https://fudoshin.schoolmaker.co/offers/dc2cb6fa-53f5-45f0-a811
           </div>
           
           {/* Yearly */}
-          <div class="bg-martial-black text-white rounded-[2.5rem] p-10 flex flex-col items-center shadow-2xl relative overflow-hidden">
+          <div class="bg-martial-deep-black text-white rounded-[2.5rem] p-10 flex flex-col items-center shadow-2xl relative overflow-hidden">
             <div class="absolute top-4 right-4 bg-martial-red text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Économie</div>
-            <span class="text-xs font-black uppercase tracking-[0.2em] text-gray-500 mb-4">Annuel</span>
+            <span class="text-xs font-black uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400 mb-4">Annuel</span>
             <div class="flex items-baseline gap-1 mb-8">
               <span class="text-5xl font-black">99€</span>
-              <span class="text-gray-400 font-bold">/an</span>
+              <span class="text-gray-400 dark:text-gray-500 font-bold">/an</span>
             </div>
             <div class="bg-white/10 text-white px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest mb-8">
               1 semaine d'essai gratuit

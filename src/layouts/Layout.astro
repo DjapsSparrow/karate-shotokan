@@ -23,12 +23,31 @@ const {
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		
+		<!-- Theme Detection -->
+		<script is:inline>
+			const theme = (() => {
+				if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+					return localStorage.getItem('theme');
+				}
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					return 'dark';
+				}
+				return 'light';
+			})();
+		
+			if (theme === 'dark') {
+				document.documentElement.classList.add('dark');
+			} else {
+				document.documentElement.classList.remove('dark');
+			}
+		</script>
+
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 	</head>
-	<body class="bg-white text-slate-950 antialiased font-sans">
+	<body class="antialiased font-sans dark:bg-martial-deep-black dark:text-white">
 		<slot />
     
     {/* Version Indicator */}

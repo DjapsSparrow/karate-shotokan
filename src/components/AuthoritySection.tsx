@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const AuthoritySection = () => {
   return (
-    <section id="authority" className="py-24 bg-martial-black text-white overflow-hidden relative">
+    <section id="authority" className="py-24 bg-martial-deep-black text-white overflow-hidden relative">
       {/* Texture Background */}
       <div className="absolute inset-0 opacity-10 pointer-events-none grayscale contrast-150">
         <img 
@@ -42,9 +42,9 @@ const AuthoritySection = () => {
               </span>
               <h2 className="text-5xl md:text-6xl font-black uppercase tracking-tighter leading-[0.9] mb-8">
                 Philippe Bouvier <br /> 
-                <span className="text-gray-500">7e Dan FFK</span>
+                <span className="text-gray-500 dark:text-gray-400">7e Dan FFK</span>
               </h2>
-              <p className="text-xl text-gray-400 mb-10 leading-relaxed font-light italic">
+              <p className="text-xl text-gray-400 dark:text-gray-300 mb-10 leading-relaxed font-light italic">
                 "Transmettre l'essence du Shotokan telle que Sensei Taiji Kase me l'a confiée : une pratique puissante, enracinée et en constante évolution."
               </p>
               
@@ -60,7 +60,7 @@ const AuthoritySection = () => {
                     </div>
                     <div>
                       <h4 className="font-bold text-lg uppercase tracking-wide mb-1">{item.title}</h4>
-                      <p className="text-gray-500 text-sm">{item.desc}</p>
+                      <p className="text-gray-500 dark:text-gray-400 text-sm">{item.desc}</p>
                     </div>
                   </div>
                 ))}

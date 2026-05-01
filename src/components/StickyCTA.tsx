@@ -41,7 +41,7 @@ const StickyCTA: React.FC<Props> = ({
           className="fixed bottom-8 left-0 right-0 z-50 px-4 pointer-events-none"
         >
           <div className="max-w-4xl mx-auto pointer-events-auto w-full">
-            <div className="bg-martial-black text-white p-6 md:px-10 md:py-5 rounded-[2.5rem] shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-4 md:gap-6 border border-white/10 backdrop-blur-md bg-opacity-95">
+            <div className="bg-martial-deep-black text-white p-6 md:px-10 md:py-5 rounded-[2.5rem] shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-4 md:gap-6 border border-white/10 backdrop-blur-md bg-opacity-95">
               <div className="hidden lg:block text-center lg:text-left flex-1">
                 <h3 className="text-xl md:text-2xl font-black uppercase tracking-tighter leading-none">Tout le programme <br /> pour</h3>
               </div>

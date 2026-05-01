@@ -1,9 +1,9 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.4.9
-- **Objectif** : Stabilisation du sous-menu (suppression de l'espace mort).
-- **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
+- **Version** : v1.5.0
+- **Objectif** : Implémentation complète du Dark Mode Harmonieux.
+- **Statut** : ✅ Terminé. Toutes les pages (ceintures, aperçus, katas, dojo, karate) sont conformes.
 - **Lien** : https://prod.karate-shotokan.fr
 
 ---

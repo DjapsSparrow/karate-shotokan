@@ -127,10 +127,10 @@ const Testimonials = () => {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="bg-white p-6 rounded-3xl border border-gray-100 flex flex-col items-center justify-center text-center shadow-sm"
+                className="bg-white dark:bg-black/20 p-6 rounded-3xl border border-gray-100 dark:border-white/10 flex flex-col items-center justify-center text-center shadow-sm"
               >
                 <span className="text-3xl font-black text-martial-black mb-1">{stat.value}</span>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">{stat.label}</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">{stat.label}</span>
               </motion.div>
             ))}
           </div>
@@ -157,7 +157,7 @@ const Testimonials = () => {
                   {getVisibleTestimonials().map((t, i) => (
                     <div
                       key={`${t.name}-${index}-${i}`}
-                      className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-xl shadow-black/5 relative flex flex-col h-full select-none pointer-events-none md:pointer-events-auto"
+                      className="bg-white dark:bg-black/20 p-10 rounded-[2.5rem] border border-gray-100 dark:border-white/10 shadow-xl shadow-black/5 relative flex flex-col h-full select-none pointer-events-none md:pointer-events-auto"
                     >
                       <div className="flex gap-1 mb-6">
                         {[...Array(t.rating)].map((_, starIdx) => (
@@ -170,15 +170,15 @@ const Testimonials = () => {
                         "{t.content}"
                       </p>
                       <div className="flex items-center gap-4 mt-8">
-                        <div className="w-12 h-12 bg-martial-gray rounded-full flex items-center justify-center text-martial-black font-bold border border-gray-100">
+                        <div className="w-12 h-12 bg-martial-gray dark:bg-white/5 rounded-full flex items-center justify-center text-martial-black font-bold border border-gray-100 dark:border-white/10">
                           {t.name.charAt(0)}
                         </div>
                         <div>
                           <h4 className="font-bold text-xs uppercase tracking-wider">{t.name}</h4>
-                          <span className="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">{t.role}</span>
+                          <span className="text-[10px] text-gray-400 dark:text-gray-500 font-bold uppercase tracking-tighter">{t.role}</span>
                         </div>
                       </div>
-                      <div className="absolute top-10 right-10 text-6xl text-gray-50 font-black pointer-events-none select-none">
+                      <div className="absolute top-10 right-10 text-6xl text-gray-50 dark:text-white/5 font-black pointer-events-none select-none">
                         "
                       </div>
                     </div>
@@ -194,7 +194,7 @@ const Testimonials = () => {
                     <button
                       key={i}
                       onClick={() => setIndex(i)}
-                      className={`w-2 h-2 rounded-full transition-all ${index === i ? 'bg-martial-black w-6' : 'bg-gray-200 hover:bg-gray-300'}`}
+                      className={`w-2 h-2 rounded-full transition-all ${index === i ? 'bg-martial-black w-6' : 'bg-gray-200 dark:bg-white/10 hover:bg-gray-300 dark:hover:bg-white/20'}`}
                     />
                   )
                 ))}
