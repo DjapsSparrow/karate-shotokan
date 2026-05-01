@@ -1,0 +1,134 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import CurriculumList from '../components/CurriculumList';
+import StickyCTA from '../components/StickyCTA';
+
+const modules = [
+  {
+    title: "Introduction",
+    stats: "2 leçons",
+    lessons: [
+      { name: "Introduction", duration: "5:30" },
+      { name: "Le déroulé de l'examen", duration: "10:15" }
+    ]
+  },
+  {
+    title: "Les positions",
+    stats: "2 leçons",
+    lessons: [
+      { name: "Introduction", duration: "4:30" },
+      { name: "SOÉ ASHI", duration: "8:45" },
+      { name: "FUDO DACHI", duration: "9:20" }
+    ]
+  },
+  {
+    title: "Les déplacements",
+    stats: "0 leçon",
+    lessons: [
+      { name: "Pas de nouveaux déplacements", duration: "-" }
+    ]
+  },
+  {
+    title: "Les techniques",
+    stats: "9 leçons",
+    lessons: [
+      { name: "Introduction", duration: "5:15" },
+      { name: "HAÏWAN SOKU-MEN JODAN UKÉ", duration: "12:30" },
+      { name: "TATÉ TSUKI", duration: "8:40" },
+      { name: "KISAMI TSUKI", duration: "9:15" },
+      { name: "HIZA/HITSUI GÉRI", duration: "10:20" },
+      { name: "MAWASHI ENPI", duration: "11:45" },
+      { name: "GÉDAN SHUTO", duration: "9:30" },
+      { name: "JODAN SHUTO UCHI", duration: "10:15" },
+      { name: "KAKI WAKÉ UKÉ", duration: "12:40" },
+      { name: "USHIRO GERI", duration: "15:20" }
+    ]
+  },
+  {
+    title: "Le kihon",
+    stats: "4 leçons",
+    lessons: [
+      { name: "Introduction", duration: "3:45" },
+      { name: "KIHON LINÉAIRE", duration: "18:20" },
+      { name: "KIHON MULTIDIRECTIONNEL", duration: "22:15" },
+      { name: "KIHON SUR CIBLES", duration: "20:30" },
+      { name: "Enchaînement de 3 techniques", duration: "25:45" }
+    ]
+  },
+  {
+    title: "Le kata",
+    stats: "4 leçons",
+    lessons: [
+      { name: "Introduction", duration: "6:15" },
+      { name: "HEÏAN YODAN", duration: "18:45" },
+      { name: "Décomposition du kata", duration: "32:30" },
+      { name: "BUNKAÏ", duration: "20:15" }
+    ]
+  },
+  {
+    title: "Le Kumite",
+    stats: "2 leçons",
+    lessons: [
+      { name: "Introduction", duration: "4:30" },
+      { name: "SHIAÏ", duration: "25:20" }
+    ]
+  },
+  {
+    title: "Conclusion",
+    stats: "1 leçon",
+    lessons: [
+      { name: "Synthèse", duration: "12:20" }
+    ]
+  }
+];
+
+const offerUrl = "https://ecole.fudoshin.solutions/offers/3b5f8766-1129-4b81-924a-a1f40d102724";
+---
+
+<Layout 
+  title="Aperçu du Programme — Ceinture Bleue"
+  description="Découvrez le contenu détaillé de la formation ceinture bleue : Fudo Dachi, Heian Yodan et Kumité de compétition."
+>
+	<Navbar client:load />
+	
+  <main class="pt-32 pb-24 bg-[#FAFAFA]">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        
+        {/* Banner */}
+        <div class="relative h-64 md:h-80 rounded-[3rem] overflow-hidden mb-12 shadow-2xl">
+          <img 
+            src="https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80&w=2000" 
+            alt="Formation Ceinture Bleue" 
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-martial-black/90 to-transparent flex flex-col justify-end p-10 md:p-16">
+            <h1 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter">Aperçu du Programme</h1>
+            <p class="text-white/60 font-bold uppercase tracking-widest text-xs mt-2">Karaté Shotokan — Ceinture Bleue</p>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-2xl font-black uppercase tracking-tight mb-4 text-martial-black">Karaté Shotokan - Ceinture Bleue</h2>
+          <p class="text-gray-600 font-medium">Cette formation a pour but de vous préparer à votre passage de grade menant vers la ceinture Bleue.</p>
+        </div>
+
+        {/* Curriculum List (Interactive) */}
+        <CurriculumList client:load modules={modules} />
+
+        {/* Dynamic Sticky CTA */}
+        <StickyCTA 
+          client:load 
+          offerUrl={offerUrl} 
+          priceMonthly="10,90€" 
+          priceYearly="109€" 
+        />
+
+      </div>
+    </div>
+  </main>
+
+	<Footer client:visible />
+</Layout>
