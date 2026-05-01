@@ -50,6 +50,10 @@ const Testimonials = () => {
     setIndex((prev) => (prev + 1) % testimonials.length);
   };
 
+  const prevSlide = () => {
+    setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
+
   useEffect(() => {
     if (!isPaused) {
       timerRef.current = setInterval(nextSlide, 5000);
@@ -64,6 +68,15 @@ const Testimonials = () => {
     const first = testimonials[index];
     const second = testimonials[(index + 1) % testimonials.length];
     return [first, second];
+  };
+
+  const handleDragEnd = (event: any, info: any) => {
+    const swipeThreshold = 50;
+    if (info.offset.x < -swipeThreshold) {
+      nextSlide();
+    } else if (info.offset.x > swipeThreshold) {
+      prevSlide();
+    }
   };
 
   return (
@@ -88,7 +101,7 @@ const Testimonials = () => {
 
           {/* Testimonials Slider */}
           <div 
-            className="lg:w-3/4 w-full"
+            className="lg:w-3/4 w-full cursor-grab active:cursor-grabbing"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
@@ -96,16 +109,19 @@ const Testimonials = () => {
               <AnimatePresence mode="wait">
                 <motion.div 
                   key={index}
+                  drag="x"
+                  dragConstraints={{ left: 0, right: 0 }}
+                  onDragEnd={handleDragEnd}
                   initial={{ opacity: 0, x: 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -50 }}
                   transition={{ duration: 0.6, ease: "easeInOut" }}
-                  className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full"
+                  className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full touch-pan-y"
                 >
                   {getVisibleTestimonials().map((t, i) => (
                     <div
                       key={`${t.name}-${i}`}
-                      className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-xl shadow-black/5 relative flex flex-col h-full"
+                      className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-xl shadow-black/5 relative flex flex-col h-full select-none pointer-events-none md:pointer-events-auto"
                     >
                       <div className="flex gap-1 mb-6">
                         {[...Array(t.rating)].map((_, starIdx) => (
