@@ -164,41 +164,42 @@ const offerUrl = "https://ecole.fudoshin.solutions/offers/eddbdb91-3af5-4345-992
 
         {/* Sticky CTA */}
         <div class="mt-16 sticky bottom-8 z-50">
-          <div class="bg-martial-black text-white p-6 md:p-8 rounded-[2.5rem] shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8 border border-white/10 backdrop-blur-md bg-opacity-95">
-            <div class="hidden md:block">
+          <div class="bg-martial-black text-white p-6 md:p-8 rounded-[2.5rem] shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8 border border-white/10 backdrop-blur-md bg-opacity-95">
+            <div class="text-center lg:text-left">
               <p class="text-martial-red font-black uppercase text-[10px] tracking-[0.3em] mb-1">Prêt à commencer ?</p>
-              <h3 class="text-xl font-bold uppercase tracking-tight">Accédez à l'intégralité du programme</h3>
+              <h3 class="text-xl md:text-2xl font-bold uppercase tracking-tight">Accédez à l'intégralité du programme</h3>
             </div>
             
-            <div class="flex flex-col gap-3 w-full md:w-auto">
-              {/* Monthly Option */}
-              <a 
-                href={offerUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                class="flex items-center justify-between gap-6 bg-white/10 hover:bg-white/20 border border-white/10 p-4 rounded-2xl transition-all group"
-              >
-                <div class="text-left">
-                  <p class="font-bold text-sm">S'abonner pour 4,90 €</p>
-                  <p class="text-[10px] text-gray-400">chaque mois (1 semaine d'essai gratuit)</p>
+            <div class="flex flex-col md:flex-row items-center gap-6 w-full lg:w-auto">
+              {/* Informational Pricing Display (Non-clickable) */}
+              <div class="flex flex-col gap-2 bg-white/5 border border-white/10 p-4 rounded-2xl w-full md:w-64">
+                <div class="flex items-center justify-between opacity-80">
+                  <div class="text-left">
+                    <p class="font-bold text-[11px]">4,90 € / mois</p>
+                    <p class="text-[9px] text-gray-500 italic">1 semaine d'essai gratuit</p>
+                  </div>
+                  <div class="w-3 h-3 rounded-full border border-martial-red flex items-center justify-center">
+                    <div class="w-1.5 h-1.5 bg-martial-red rounded-full"></div>
+                  </div>
                 </div>
-                <div class="w-6 h-6 rounded-full border-2 border-martial-red flex items-center justify-center">
-                  <div class="w-3 h-3 bg-martial-red rounded-full"></div>
+                <div class="h-px bg-white/5"></div>
+                <div class="flex items-center justify-between opacity-50">
+                  <div class="text-left">
+                    <p class="font-bold text-[11px]">49 € / an</p>
+                    <p class="text-[9px] text-gray-500 italic">1 semaine d'essai gratuit</p>
+                  </div>
+                  <div class="w-3 h-3 rounded-full border border-gray-600"></div>
                 </div>
-              </a>
+              </div>
 
-              {/* Yearly Option */}
+              {/* Single Action Button */}
               <a 
                 href={offerUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="flex items-center justify-between gap-6 bg-white/5 hover:bg-white/15 border border-white/5 p-4 rounded-2xl transition-all group"
+                class="btn-primary !bg-martial-red !text-white !px-12 !py-5 w-full md:w-auto text-center shadow-xl shadow-martial-red/20 hover:scale-105 transition-transform"
               >
-                <div class="text-left">
-                  <p class="font-bold text-sm text-gray-300">S'abonner pour 49 €</p>
-                  <p class="text-[10px] text-gray-500">chaque année (1 semaine d'essai gratuit)</p>
-                </div>
-                <div class="w-6 h-6 rounded-full border-2 border-gray-700"></div>
+                S'abonner maintenant
               </a>
             </div>
           </div>
