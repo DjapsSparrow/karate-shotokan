@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.3.4
-- **Objectif** : Ajout du support du "drag" (glisser) sur le slider de témoignages.
+- **Version** : v1.3.5
+- **Objectif** : Défilement des témoignages deux par deux (automatique et manuel).
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
