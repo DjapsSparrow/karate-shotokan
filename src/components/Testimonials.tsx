@@ -135,7 +135,7 @@ const Testimonials = () => {
               </AnimatePresence>
               
               {/* Dots */}
-              <div className="flex justify-center gap-2 mt-8">
+              <div className="flex justify-center gap-2 mt-16">
                 {testimonials.map((_, i) => (
                   <button
                     key={i}
