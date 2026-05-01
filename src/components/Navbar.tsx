@@ -77,17 +77,19 @@ const Navbar: React.FC<NavbarProps> = ({ beltColor = "martial-red" }) => {
 
               {/* Submenu Desktop */}
               {link.submenu && (
-                <div className={`absolute top-full left-1/2 -translate-x-1/2 w-60 bg-white rounded-2xl shadow-xl border border-gray-100 p-2 transition-all duration-300 ${isProgrammesOpen ? 'opacity-100 translate-y-2 pointer-events-auto' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
-                  <div className="grid grid-cols-1 gap-1">
-                    {link.submenu.map((sub) => (
-                      <a 
-                        key={sub.name}
-                        href={sub.href}
-                        className={`px-4 py-3 rounded-xl text-xs font-bold uppercase tracking-widest text-gray-500 hover:bg-martial-gray hover:text-${beltColor} transition-all`}
-                      >
-                        {sub.name}
-                      </a>
-                    ))}
+                <div className={`absolute top-full left-1/2 -translate-x-1/2 pt-4 transition-all duration-300 ${isProgrammesOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 translate-y-2 pointer-events-none'}`}>
+                  <div className="w-60 bg-white rounded-2xl shadow-xl border border-gray-100 p-2">
+                    <div className="grid grid-cols-1 gap-1">
+                      {link.submenu.map((sub) => (
+                        <a 
+                          key={sub.name}
+                          href={sub.href}
+                          className={`px-4 py-3 rounded-xl text-xs font-bold uppercase tracking-widest text-gray-500 hover:bg-martial-gray hover:text-${beltColor} transition-all`}
+                        >
+                          {sub.name}
+                        </a>
+                      ))}
+                    </div>
                   </div>
                 </div>
               )}
