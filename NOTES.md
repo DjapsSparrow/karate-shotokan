@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.4.5
-- **Objectif** : Correction de l'ancrage du bouton de retour (BackToCourses).
+- **Version** : v1.4.6
+- **Objectif** : Optimisation mobile du StickyCTA (plus compact).
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
