@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v0.5.9
-- **Objectif** : Résolution de l'erreur ERR_TOO_MANY_REDIRECTS (conflit de slash dans .htaccess).
+- **Version** : v0.6.0
+- **Objectif** : Migration intégrale du contenu "Le Dojo" vers Draguignan (Club Léo Lagrange) avec tarifs et horaires officiels.
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
