@@ -6,7 +6,7 @@ const BackToCourses = () => {
     <div className="container-custom mt-20 mb-12">
       <div className="flex justify-center">
         <motion.a
-          href="/#formations"
+          href="/#programmes"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           whileHover={{ x: -10 }}
