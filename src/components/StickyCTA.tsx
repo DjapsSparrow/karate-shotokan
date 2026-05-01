@@ -59,7 +59,7 @@ const StickyCTA: React.FC<Props> = ({ offerUrl }) => {
                   href={offerUrl} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="btn-primary !bg-martial-red !text-white !px-12 !py-5 w-full md:w-auto text-center shadow-2xl shadow-martial-red/40 hover:scale-105 transition-transform text-xs font-black uppercase tracking-[0.15em] whitespace-nowrap"
+                  className="btn-primary !bg-martial-red !text-white !px-12 !py-3 w-full md:w-auto text-center shadow-2xl shadow-martial-red/40 hover:scale-105 transition-transform text-xs font-black uppercase tracking-[0.15em] whitespace-nowrap"
                 >
                   Commencez l'essai
                 </a>
