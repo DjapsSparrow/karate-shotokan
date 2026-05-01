@@ -50,7 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({ beltColor = "martial-red" }) => {
           <div className="w-12 h-12 flex items-center justify-center transform group-hover:scale-110 transition-transform">
             <img src="/logo.png" alt="Logo Karaté Shotokan" className="w-full h-full object-contain" />
           </div>
-          <span className="font-bold text-lg md:text-xl tracking-tight uppercase dark:text-zinc-950">
+          <span className="font-bold text-lg md:text-xl tracking-tight uppercase dark:!text-black">
             Karaté <span className={`text-${beltColor}`}>Shotokan</span>
           </span>
         </a>
@@ -66,11 +66,11 @@ const Navbar: React.FC<NavbarProps> = ({ beltColor = "martial-red" }) => {
             >
               <a 
                 href={link.href}
-                className={`text-sm font-semibold uppercase tracking-wider dark:text-zinc-950 hover:text-${beltColor} transition-colors flex items-center gap-1`}
+                className={`text-sm font-semibold uppercase tracking-wider dark:!text-black hover:text-${beltColor} transition-colors flex items-center gap-1`}
               >
                 {link.name}
                 {link.submenu && (
-                  <svg className={`w-4 h-4 dark:text-zinc-950 transition-transform duration-300 ${isProgrammesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className={`w-4 h-4 dark:!text-black transition-transform duration-300 ${isProgrammesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 )}
