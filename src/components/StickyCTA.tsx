@@ -3,9 +3,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 interface Props {
   offerUrl: string;
+  priceMonthly?: string;
+  priceYearly?: string;
 }
 
-const StickyCTA: React.FC<Props> = ({ offerUrl }) => {
+const StickyCTA: React.FC<Props> = ({ 
+  offerUrl, 
+  priceMonthly = "4,90€", 
+  priceYearly = "49€" 
+}) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -42,11 +48,11 @@ const StickyCTA: React.FC<Props> = ({ offerUrl }) => {
                 <div className="flex flex-col gap-2 w-full md:w-60">
                   <div className="grid grid-cols-2 gap-2">
                     <div className="bg-white/10 border border-white/10 p-3 rounded-xl text-center">
-                      <p className="text-xl font-black text-white leading-none">4,90€</p>
+                      <p className="text-xl font-black text-white leading-none">{priceMonthly}</p>
                       <p className="text-[8px] text-gray-400 uppercase font-bold mt-1 tracking-widest">/ mois</p>
                     </div>
                     <div className="bg-white/5 border border-white/5 p-3 rounded-xl text-center opacity-60">
-                      <p className="text-xl font-black text-white leading-none">49€</p>
+                      <p className="text-xl font-black text-white leading-none">{priceYearly}</p>
                       <p className="text-[8px] text-gray-400 uppercase font-bold mt-1 tracking-widest">/ an</p>
                     </div>
                   </div>

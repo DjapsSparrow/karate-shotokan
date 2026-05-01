@@ -1,0 +1,136 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import CurriculumList from '../components/CurriculumList';
+import StickyCTA from '../components/StickyCTA';
+
+const modules = [
+  {
+    title: "Introduction",
+    stats: "2 leçons",
+    lessons: [
+      { name: "Introduction", duration: "5:30" },
+      { name: "Le déroulé de l'examen", duration: "10:15" }
+    ]
+  },
+  {
+    title: "Les positions",
+    stats: "0 leçon",
+    lessons: [
+      { name: "Pas de nouvelles positions", duration: "-" }
+    ]
+  },
+  {
+    title: "Les déplacements",
+    stats: "3 leçons",
+    lessons: [
+      { name: "Introduction", duration: "3:45" },
+      { name: "YORI ASHI", duration: "8:30" },
+      { name: "TSUGI ASHI", duration: "7:20" }
+    ]
+  },
+  {
+    title: "Les techniques",
+    stats: "13 leçons",
+    lessons: [
+      { name: "Introduction", duration: "4:30" },
+      { name: "HAÏWAN JODAN UKÉ", duration: "10:15" },
+      { name: "JODAN TATÉ UKÉ", duration: "9:40" },
+      { name: "URA TSUKI", duration: "8:20" },
+      { name: "YOKO TSUKI", duration: "8:10" },
+      { name: "URAKEN", duration: "10:20" },
+      { name: "OSAÉ UKÉ", duration: "8:40" },
+      { name: "NUKITÉ", duration: "12:15" },
+      { name: "GIAKU TSUKI", duration: "10:30" },
+      { name: "GÉDAN UCHI BARAÏ", duration: "12:40" },
+      { name: "UCHI UDÉ UKÉ SHUDAN", duration: "10:15" },
+      { name: "SOTO UDÉ UKÉ SHUDAN", duration: "10:15" },
+      { name: "MOROTÉ UKÉ SHUDAN", duration: "12:30" },
+      { name: "YOKO GÉRI", duration: "15:20" }
+    ]
+  },
+  {
+    title: "Le kihon",
+    stats: "2 leçons",
+    lessons: [
+      { name: "Introduction", duration: "3:15" },
+      { name: "KIHON", duration: "25:20" }
+    ]
+  },
+  {
+    title: "Le kata",
+    stats: "4 leçons",
+    lessons: [
+      { name: "Introduction", duration: "5:30" },
+      { name: "HEÏAN NIDAN", duration: "15:45" },
+      { name: "Décomposition du kata", duration: "28:30" },
+      { name: "BUNKAÏ", duration: "18:15" }
+    ]
+  },
+  {
+    title: "Le Kumite",
+    stats: "3 leçons",
+    lessons: [
+      { name: "Introduction", duration: "4:15" },
+      { name: "KIHON IPPON KUMITÉ", duration: "12:20" },
+      { name: "SANBON/GOHON KUMITE", duration: "15:40" }
+    ]
+  },
+  {
+    title: "Conclusion",
+    stats: "1 leçon",
+    lessons: [
+      { name: "Synthèse", duration: "10:20" }
+    ]
+  }
+];
+
+const offerUrl = "https://ecole.fudoshin.solutions/offers/9db2619e-2484-4509-aa78-4a3afcb67640";
+---
+
+<Layout 
+  title="Aperçu du Programme — Ceinture Orange"
+  description="Découvrez le contenu détaillé de la formation ceinture orange : pivots, blocages doubles et Heian Nidan."
+>
+	<Navbar client:load />
+	
+  <main class="pt-32 pb-24 bg-[#FAFAFA]">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        
+        {/* Banner */}
+        <div class="relative h-64 md:h-80 rounded-[3rem] overflow-hidden mb-12 shadow-2xl">
+          <img 
+            src="https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80&w=2000" 
+            alt="Formation Ceinture Orange" 
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-martial-black/90 to-transparent flex flex-col justify-end p-10 md:p-16">
+            <h1 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter">Aperçu du Programme</h1>
+            <p class="text-white/60 font-bold uppercase tracking-widest text-xs mt-2">Karaté Shotokan — Ceinture Orange</p>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h2 class="text-2xl font-black uppercase tracking-tight mb-4 text-martial-black">Karaté Shotokan - Ceinture Orange</h2>
+          <p class="text-gray-600 font-medium">Cette formation a pour but de vous préparer à votre passage de grade menant vers la ceinture Orange.</p>
+        </div>
+
+        {/* Curriculum List (Interactive) */}
+        <CurriculumList client:load modules={modules} />
+
+        {/* Dynamic Sticky CTA */}
+        <StickyCTA 
+          client:load 
+          offerUrl={offerUrl} 
+          priceMonthly="6,90€" 
+          priceYearly="69€" 
+        />
+
+      </div>
+    </div>
+  </main>
+
+	<Footer client:visible />
+</Layout>

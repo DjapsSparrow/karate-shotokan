@@ -1,33 +1,160 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
-import BeltPageTemplate from '../components/BeltPageTemplate';
 import Footer from '../components/Footer';
 
-const curriculum = [
-  "Approfondissement du Kihon : perfectionnement des frappes et enchaînements dynamiques (Yoko Geri, Nukite).",
-  "Focus sur Heian Nidan : décomposition du deuxième kata avec ses changements de direction rapides.",
-  "Maîtrise du Kokutsu Dachi : stabilisation de cette position défensive essentielle.",
-  "Correction des détails critiques : mise en lumière des erreurs classiques pour une progression immédiate.",
-  "Confiance Technique : préparation complète pour l'intensité et le Kime lors de l'examen."
-];
+const previewUrl = "/ceinture-orange-apercu";
+const offerUrl = "https://ecole.fudoshin.solutions/offers/9db2619e-2484-4509-aa78-4a3afcb67640";
 ---
 
 <Layout 
-  title="Formation Ceinture Orange Karaté Shotokan — Fluidité & Technique"
+  title="Formation Ceinture Orange Karaté Shotokan — Fluidité et Technicité"
   description="Gagnez en fluidité et en technicité. Maîtrisez les nouveaux pivots, les blocages doubles et l'élégance technique du kata Heian Nidan."
 >
 	<Navbar client:load />
-	<main>
-		<BeltPageTemplate 
-      client:load
-      color="Orange"
-      hex="#FF8C00"
-      title="Gagnez en fluidité"
-      description="Cette formation vous prépare spécifiquement aux exigences du passage de grade de la ceinture orange. Confirmez votre progression au sein du style Shotokan."
-      curriculum={curriculum}
-      ctaLink="https://ecole.fudoshin.solutions/offers/9db2619e-2484-4509-aa78-4a3afcb67640"
-    />
-	</main>
+	
+  <main class="pt-32 pb-24">
+    <div class="container-custom">
+      <div class="max-w-4xl mx-auto">
+        
+        {/* Header Section */}
+        <div class="mb-16">
+          <span class="inline-block bg-orange-500/10 text-orange-600 font-bold text-xs uppercase tracking-[0.3em] px-4 py-2 rounded-full mb-8">
+            Niveau Intermédiaire
+          </span>
+          <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-8 leading-[0.9]">
+            La Ceinture <br /> <span class="text-orange-500">Orange</span>
+          </h1>
+          <p class="text-2xl font-bold text-martial-black uppercase tracking-tight italic mb-8">
+            Gagnez en fluidité et en technicité.
+          </p>
+          <div class="prose prose-lg max-w-none text-gray-600">
+            <p>
+              Cette formation vous prépare spécifiquement aux exigences du passage de grade de la ceinture orange. Maîtrisez les nouveaux pivots, les blocages doubles et l'élégance technique du kata <strong>Heian Nidan</strong> pour confirmer votre progression au sein du style Shotokan.
+            </p>
+          </div>
+        </div>
+
+        {/* Story Section */}
+        <div class="bg-martial-gray rounded-[3rem] p-10 md:p-16 mb-20 border border-gray-100 shadow-sm">
+          <div class="prose prose-lg max-w-none text-gray-600">
+            <p class="text-xl font-medium text-martial-black mb-8 italic">
+              "Après avoir posé vos bases avec la ceinture jaune, la ceinture orange représente votre premier véritable défi technique."
+            </p>
+            <p>
+              C’est ici que le karatéka commence à synchroniser ses membres supérieurs et inférieurs de manière plus complexe. Comment réussir le passage de Kokutsu Dachi (position vers l'arrière) ou maîtriser les coups de pied simultanés aux blocages ?
+            </p>
+            <p>
+              Ce programme de préparation a été structuré pour vous aider à franchir ce cap avec aisance, en mettant l'accent sur la précision du geste et la compréhension des nouvelles postures.
+            </p>
+          </div>
+        </div>
+
+        {/* The Pillars */}
+        <div class="mb-24">
+          <h2 class="text-3xl font-black uppercase mb-12 tracking-tight">1. Les axes de progression</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="p-8 bg-white border border-gray-100 rounded-3xl shadow-sm hover:border-orange-500/20 transition-colors">
+              <h3 class="text-xl font-black uppercase mb-4">Approfondissement du Kihon</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Perfectionnez vos frappes et découvrez les enchaînements plus dynamiques requis pour le grade orange (travail du Yoko Geri et du Nukite).</p>
+            </div>
+            <div class="p-8 bg-white border border-gray-100 rounded-3xl shadow-sm hover:border-orange-500/20 transition-colors">
+              <h3 class="text-xl font-black uppercase mb-4">Focus sur Heian Nidan</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Ce deuxième kata introduit des changements de direction rapides et des techniques de mains ouvertes. Nous décortiquons chaque séquence pour que votre exécution soit fluide et puissante.</p>
+            </div>
+            <div class="p-8 bg-white border border-gray-100 rounded-3xl shadow-sm hover:border-orange-500/20 transition-colors">
+              <h3 class="text-xl font-black uppercase mb-4">Maîtrise du Kokutsu Dachi</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Apprenez à stabiliser cette position défensive essentielle, souvent source de difficultés lors des premiers examens.</p>
+            </div>
+            <div class="p-8 bg-white border border-gray-100 rounded-3xl shadow-sm hover:border-orange-500/20 transition-colors">
+              <h3 class="text-xl font-black uppercase mb-4">L'esprit du grade</h3>
+              <p class="text-gray-500 text-sm leading-relaxed">Travaillez votre présence et votre Kime pour montrer votre évolution depuis la ceinture jaune.</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Why Choice */}
+        <div class="mb-24">
+          <h2 class="text-3xl font-black uppercase mb-12 tracking-tight">2. Pourquoi choisir ce programme ?</h2>
+          <div class="space-y-6">
+            <div class="flex gap-6 items-start">
+              <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-black shrink-0">1</div>
+              <div>
+                <h4 class="font-bold uppercase mb-2">Correction des détails critiques</h4>
+                <p class="text-gray-500">Nous mettons en lumière les erreurs classiques des débutants sur ce grade pour vous permettre de les éviter instantanément.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-black shrink-0">2</div>
+              <div>
+                <h4 class="font-bold uppercase mb-2">Apprentissage du kata</h4>
+                <p class="text-gray-500">Visualisez les trajectoires complexes de Heian Nidan pour ne plus jamais hésiter sur un pivot.</p>
+              </div>
+            </div>
+            <div class="flex gap-6 items-start">
+              <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-black shrink-0">3</div>
+              <div>
+                <h4 class="font-bold uppercase mb-2">Confiance Technique</h4>
+                <p class="text-gray-500">Arrivez devant vos professeurs avec une connaissance parfaite du programme, vous permettant de vous concentrer uniquement sur votre intensité.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Goal Section */}
+        <div class="bg-martial-black text-white rounded-[3rem] p-12 md:p-20 mb-24 text-center relative overflow-hidden">
+          <div class="relative z-10">
+            <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-8">3. Votre objectif : Solidifier votre Karaté</h2>
+            <p class="text-xl mb-12 font-medium opacity-80 max-w-2xl mx-auto italic">
+              "La ceinture orange est la preuve de votre persévérance. Ne vous contentez pas de passer le grade : dominez les nouvelles techniques qui feront de vous un pratiquant intermédiaire respecté."
+            </p>
+            <p class="text-orange-500 font-bold uppercase tracking-widest text-sm">
+              Affinez votre technique, maîtrisez Heian Nidan et décrochez votre ceinture orange en toute confiance.
+            </p>
+          </div>
+        </div>
+
+        {/* Access List */}
+        <div class="mb-24 bg-white border border-gray-100 rounded-[3rem] p-10 shadow-xl shadow-black/5">
+          <h3 class="text-2xl font-black uppercase mb-10 text-center">Vous aurez accès à :</h3>
+          <div class="flex flex-col md:flex-row items-center justify-between gap-8 border-b border-gray-100 pb-10 mb-10">
+            <p class="text-lg font-bold">Programme "Karaté Shotokan - Ceinture Orange" par abonnement</p>
+            <a href={previewUrl} class="btn-primary !bg-martial-black !text-white text-sm">Aperçu de la formation</a>
+          </div>
+        </div>
+
+        {/* Pricing Grid */}
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          {/* Monthly */}
+          <div class="bg-white border-2 border-gray-100 rounded-[2.5rem] p-10 flex flex-col items-center shadow-sm hover:border-orange-500 transition-all transform hover:-translate-y-2">
+            <span class="text-xs font-black uppercase tracking-[0.2em] text-gray-400 mb-4">Mensuel</span>
+            <div class="flex items-baseline gap-1 mb-8">
+              <span class="text-6xl font-black text-martial-black">6,90€</span>
+              <span class="text-gray-400 font-bold">/mois</span>
+            </div>
+            <div class="bg-orange-500/10 text-orange-600 px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest mb-10">
+              1 semaine d'essai gratuit
+            </div>
+            <a href={offerUrl} target="_blank" rel="noopener noreferrer" class="w-full btn-primary !bg-orange-500 !py-4 text-center">S'abonner</a>
+          </div>
+          
+          {/* Yearly */}
+          <div class="bg-martial-black text-white rounded-[2.5rem] p-10 flex flex-col items-center shadow-2xl relative overflow-hidden transform hover:-translate-y-2 transition-all">
+            <div class="absolute top-4 right-4 bg-orange-500 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">Meilleure offre</div>
+            <span class="text-xs font-black uppercase tracking-[0.2em] text-gray-500 mb-4">Annuel</span>
+            <div class="flex items-baseline gap-1 mb-8">
+              <span class="text-6xl font-black">69€</span>
+              <span class="text-gray-400 font-bold">/an</span>
+            </div>
+            <div class="bg-white/10 text-white px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest mb-10">
+              1 semaine d'essai gratuit
+            </div>
+            <a href={offerUrl} target="_blank" rel="noopener noreferrer" class="w-full btn-primary !bg-white !text-martial-black !py-4 text-center">S'abonner</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
 	<Footer client:visible />
 </Layout>
