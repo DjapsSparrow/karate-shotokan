@@ -1,9 +1,9 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.7.0
-- **Objectif** : Intégration de l'effet de transition animé pour le basculement Clair/Sombre.
-- **Statut** : ✅ Terminé. Implémentation du composant `AnimatedThemeToggler` utilisant la View Transitions API et Lucide-react pour un effet fluide (clip-path).
+- **Version** : v1.7.1
+- **Objectif** : Cohérence visuelle de l'Animated Theme Toggler.
+- **Statut** : ✅ Terminé. Le picto du dark mode (et son fond au survol) adopte désormais dynamiquement la couleur de la ceinture de la page courante, suivant la même logique que le texte "Shotokan".
 - **Lien** : https://prod.karate-shotokan.fr
 
 ---

@@ -107,7 +107,7 @@ const Navbar: React.FC<NavbarProps> = ({ beltColor = "martial-red" }) => {
           <div className="ml-2">
             <AnimatedThemeToggler 
               variant="circle" 
-              className="p-2.5 rounded-xl bg-martial-gray dark:bg-white/5 border border-gray-100 dark:border-white/10 text-martial-black dark:text-white hover:bg-martial-red hover:text-white dark:hover:bg-martial-red transition-all duration-300"
+              className={`p-2.5 rounded-xl bg-martial-gray dark:bg-white/5 border border-gray-100 dark:border-white/10 text-${beltColor} hover:bg-${beltColor} hover:text-white transition-all duration-300`}
             />
           </div>
         </div>
@@ -115,7 +115,7 @@ const Navbar: React.FC<NavbarProps> = ({ beltColor = "martial-red" }) => {
         <div className="flex items-center gap-2 md:hidden">
           <AnimatedThemeToggler 
             variant="circle" 
-            className="p-2.5 rounded-xl bg-martial-gray dark:bg-white/5 border border-gray-100 dark:border-white/10 text-martial-black dark:text-white hover:bg-martial-red hover:text-white dark:hover:bg-martial-red transition-all duration-300"
+            className={`p-2.5 rounded-xl bg-martial-gray dark:bg-white/5 border border-gray-100 dark:border-white/10 text-${beltColor} hover:bg-${beltColor} hover:text-white transition-all duration-300`}
           />
           <button 
             className="text-martial-black dark:text-black p-2"
