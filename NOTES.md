@@ -1,9 +1,9 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.5.7
-- **Objectif** : Correction contrastes logo et menu (Dark Mode).
-- **Statut** : ✅ Terminé. Texte "Karaté" et liens du menu passés en noir en mode sombre pour lisibilité sur fond clair.
+- **Version** : v1.5.8
+- **Objectif** : Correction finale contrastes Navbar (Noir Fixe).
+- **Statut** : ✅ Terminé. Utilisation de Zinc-950 pour le texte en mode sombre pour éviter l'inversion des variables.
 - **Lien** : https://prod.karate-shotokan.fr
 
 ---
