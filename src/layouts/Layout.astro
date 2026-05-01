@@ -62,6 +62,19 @@ const {
         v{version}
       </div>
     </div>
+
+    <script>
+      import Lenis from 'lenis';
+
+      const lenis = new Lenis({
+        autoRaf: true,
+        lerp: 0.1,
+        smoothWheel: true,
+      });
+
+      // Export lenis to window if needed by other components
+      window.lenis = lenis;
+    </script>
 	</body>
 </html>
 

@@ -1,9 +1,9 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.7.3
-- **Objectif** : Ajustement de l'apparition du bouton ScrollToTop.
-- **Statut** : ✅ Terminé. Le seuil d'apparition du bouton a été abaissé de 70% à 45% pour être accessible plus tôt lors du défilement.
+- **Version** : v1.8.0
+- **Objectif** : Implémentation d'un smooth scroll fluide et élégant (Lenis).
+- **Statut** : ✅ Terminé. Installation et configuration de la librairie `@studio-freight/lenis` au niveau global (Layout). Le bouton ScrollToTop a également été mis à jour pour exploiter l'inertie de Lenis lorsqu'il est cliqué.
 - **Lien** : https://prod.karate-shotokan.fr
 
 ---
