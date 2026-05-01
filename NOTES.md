@@ -1,9 +1,9 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.6.2
-- **Objectif** : Résolution du bug racine du Dark Mode (Tailwind v4).
-- **Statut** : ✅ Terminé. Ajout de `@custom-variant dark` dans `global.css` pour activer le dark mode par classe dans Tailwind v4. Tous les anciens correctifs temporaires ont été nettoyés.
+- **Version** : v1.6.3
+- **Objectif** : Correction des inversions de couleurs indésirables en Dark Mode (Boutons et Gradients).
+- **Statut** : ✅ Terminé. Remplacement des valeurs `martial-black` (qui devient blanc en dark mode) par `black` dans les boutons "S'abonner" et les dégradés des pages "Aperçu" pour garantir la lisibilité et un fond sombre correct.
 - **Lien** : https://prod.karate-shotokan.fr
 
 ---
