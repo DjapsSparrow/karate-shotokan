@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v0.7.3
-- **Objectif** : Simplification du bandeau d'aperçu (Bouton unique d'abonnement + bloc info tarifs).
+- **Version** : v0.7.4
+- **Objectif** : Optimisation visuelle des prix dans l'aperçu (Typo plus grosse, essai gratuit déporté).
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
