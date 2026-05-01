@@ -9,8 +9,8 @@ const Footer = () => {
       links: [
         { name: "Histoire du Karaté", href: "/le-karate" },
         { name: "Le Dojo", href: "/le-dojo" },
-        { name: "Lignage Sensei Kase", href: "/le-karate#kase" },
         { name: "Philippe Bouvier", href: "/#authority" },
+        { name: "FAQ", href: "/#faq" },
       ]
     },
     {
@@ -18,18 +18,14 @@ const Footer = () => {
       links: [
         { name: "Katas Supérieurs", href: "/katas-superieurs" },
         { name: "Ceinture Jaune", href: "/ceinture-jaune" },
-        { name: "Ceinture Orange", href: "/ceinture-orange" },
-        { name: "Ceinture Verte", href: "/ceinture-verte" },
-        { name: "Ceinture Bleue", href: "/ceinture-bleue" },
-        { name: "Ceinture Marron", href: "/ceinture-marron" },
         { name: "Ceinture Noire", href: "/ceinture-noire" },
+        { name: "Espace Élève", href: "https://fudoshin.schoolmaker.co/" },
       ]
     },
     {
       title: "Légal & Support",
       links: [
         { name: "Mentions Légales", href: "/mentions-legales" },
-        { name: "FAQ", href: "/#faq" },
         { name: "Signaler un bug", href: "mailto:contact@fudoshin.solutions" },
         { name: "Fédération (FFK)", href: "https://www.ffkarate.fr/" },
       ]

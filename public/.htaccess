@@ -59,3 +59,9 @@ Options -Indexes
 # ----------------------------------------------------------------------
 Redirect 301 /le-karate/ /le-karate
 Redirect 301 /le-dojo/ /le-dojo
+
+# Missing Belt Pages (Temporary Redirects to main sections)
+Redirect 301 /ceinture-orange /#programmes
+Redirect 301 /ceinture-verte /#programmes
+Redirect 301 /ceinture-bleue /#programmes
+Redirect 301 /ceinture-marron /#programmes
