@@ -3,6 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
+
+const previewUrl = "https://fudoshin.schoolmaker.co/offers/dc2cb6fa-53f5-45f0-a811-9d023db2ddfe/preview?program_id=ed053b13-357a-4b08-8847-ea31587d3da1";
+const offerUrl = "https://fudoshin.schoolmaker.co/offers/dc2cb6fa-53f5-45f0-a811-9d023db2ddfe";
 ---
 
 <Layout 
@@ -102,7 +105,7 @@ import { motion } from 'framer-motion';
             <div class="bg-martial-red/10 text-martial-red px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest mb-8">
               1 semaine d'essai gratuit
             </div>
-            <a href="https://fudoshin.schoolmaker.co/offers/dc2cb6fa-53f5-45f0-a811-9d023db2ddfe" class="w-full btn-primary !py-4 text-center">S'abonner</a>
+            <a href={offerUrl} target="_blank" rel="noopener noreferrer" class="w-full btn-primary !py-4 text-center">S'abonner</a>
           </div>
           
           {/* Yearly */}
@@ -116,12 +119,12 @@ import { motion } from 'framer-motion';
             <div class="bg-white/10 text-white px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest mb-8">
               1 semaine d'essai gratuit
             </div>
-            <a href="https://fudoshin.schoolmaker.co/offers/dc2cb6fa-53f5-45f0-a811-9d023db2ddfe" class="w-full btn-primary !bg-white !text-martial-black !py-4 text-center">S'abonner</a>
+            <a href={offerUrl} target="_blank" rel="noopener noreferrer" class="w-full btn-primary !bg-white !text-martial-black !py-4 text-center">S'abonner</a>
           </div>
         </div>
 
         <div class="mt-12 text-center">
-          <a href="https://fudoshin.schoolmaker.co/offers/dc2cb6fa-53f5-45f0-a811-9d023db2ddfe" class="text-martial-red font-black uppercase tracking-tighter hover:underline text-sm">
+          <a href={previewUrl} target="_blank" rel="noopener noreferrer" class="text-martial-red font-black uppercase tracking-tighter hover:underline text-sm">
             Clique ici pour l'aperçu des katas disponibles
           </a>
         </div>

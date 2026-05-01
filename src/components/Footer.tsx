@@ -57,6 +57,8 @@ const Footer = () => {
             <div className="flex gap-4">
               <a 
                 href="http://facebook.com/KarateShotokanFr" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-martial-red transition-colors"
                 aria-label="Suivez-nous sur Facebook"
               >
@@ -64,6 +66,8 @@ const Footer = () => {
               </a>
               <a 
                 href="http://instagram.com/KarateShotokanFr" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center hover:bg-martial-red transition-colors"
                 aria-label="Suivez-nous sur Instagram"
               >
@@ -77,13 +81,21 @@ const Footer = () => {
             <div key={section.title}>
               <h3 className="font-bold text-lg mb-6 uppercase tracking-wider">{section.title}</h3>
               <ul className="flex flex-col gap-4">
-                {section.links.map((link) => (
-                  <li key={link.name}>
-                    <a href={link.href} className="text-gray-400 hover:text-martial-red transition-colors text-sm font-medium">
-                      {link.name}
-                    </a>
-                  </li>
-                ))}
+                {section.links.map((link) => {
+                  const isExternal = link.href.startsWith('http') || link.href.startsWith('mailto:');
+                  return (
+                    <li key={link.name}>
+                      <a 
+                        href={link.href} 
+                        target={isExternal ? "_blank" : undefined}
+                        rel={isExternal ? "noopener noreferrer" : undefined}
+                        className="text-gray-400 hover:text-martial-red transition-colors text-sm font-medium"
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
@@ -96,7 +108,7 @@ const Footer = () => {
           </p>
           <div className="flex items-center gap-2 grayscale opacity-50">
             <span className="text-[10px] uppercase font-bold tracking-tighter">Propulsé par</span>
-            <a href="https://webomatik.fr" className="font-black text-sm">Webomatik.fr</a>
+            <a href="https://webomatik.fr" target="_blank" rel="noopener noreferrer" className="font-black text-sm">Webomatik.fr</a>
           </div>
         </div>
       </div>

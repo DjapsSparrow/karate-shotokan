@@ -72,6 +72,8 @@ const BeltPageTemplate: React.FC<BeltPageProps> = ({ color, hex, title, descript
                 </div>
                 <a 
                   href={ctaLink} 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-full btn-primary !py-4 !text-base"
                 >
                   S'inscrire maintenant

@@ -42,6 +42,8 @@ const Hero = () => {
                 whileHover={{ scale: 1.05, backgroundColor: '#050505', color: '#fff' }}
                 whileTap={{ scale: 0.95 }}
                 href="https://fudoshin.schoolmaker.co/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-secondary"
               >
                 Accéder à mon Espace

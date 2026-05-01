@@ -50,6 +50,8 @@ const Navbar = () => {
           ))}
           <a 
             href="https://fudoshin.schoolmaker.co/" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-martial-black text-white px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wide hover:bg-martial-red transition-all"
           >
             Espace Élève
