@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import BeltPageTemplate from '../components/BeltPageTemplate';
+import Footer from '../components/Footer';
+
+const curriculum = [
+  "Les positions de base : Zenkutsu-Dachi, Kokutsu-Dachi",
+  "Les techniques de défense : Age-Uke, Geden-Barai, Uchi-Uke",
+  "Les techniques d'attaque : Oi-Zuki, Gyaku-Zuki",
+  "Maîtrise du premier Kata : Heian Shodan",
+  "Introduction au Kihon et au Kumite de base"
+];
+---
+
+<Layout 
+  title="Formation Ceinture Jaune Karaté Shotokan — Apprendre les bases"
+  description="Découvrez les fondamentaux du Karaté Shotokan avec notre formation ceinture jaune. Techniques, positions et Kata Heian Shodan détaillés."
+>
+	<Navbar client:load />
+	<main>
+		<BeltPageTemplate 
+      client:load
+      color="Jaune"
+      hex="#FFD700"
+      title="Les bases fondamentales"
+      description="Le premier pas sur le chemin du karatéka. Apprenez les positions et techniques essentielles pour poser des fondations solides."
+      curriculum={curriculum}
+      ctaLink="https://ecole.fudoshin.solutions/offers/eddbdb91-3af5-4345-992e-2907abb41009"
+    />
+	</main>
+	<Footer client:visible />
+</Layout>

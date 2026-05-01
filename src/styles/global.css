@@ -1,1 +1,32 @@
 @import "tailwindcss";
+
+@theme {
+  --color-martial-black: #050505;
+  --color-martial-red: #E31B23;
+  --color-martial-white: #FFFFFF;
+  --color-martial-gray: #F8F9FA;
+  
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  
+  --breakpoint-xs: 480px;
+}
+
+@layer base {
+  body {
+    @apply bg-martial-white text-martial-black font-sans antialiased selection:bg-martial-red selection:text-white;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-6 sm:px-8 lg:px-12;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-martial-red rounded-full transition-all hover:bg-red-700 hover:scale-105 active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-martial-black border-2 border-martial-black rounded-full transition-all hover:bg-martial-black hover:text-white;
+  }
+}

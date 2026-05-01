@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import { motion } from 'framer-motion';
+---
+
+<Layout 
+  title="L'Histoire du Karaté Shotokan — Enseignement Taiji Kase"
+  description="Découvrez les origines du Karaté Shotokan, de Gichin Funakoshi à Sensei Taiji Kase. Une tradition martiale de puissance et de discipline."
+>
+	<Navbar client:load />
+	<main class="pt-32 pb-24">
+    <div className="container-custom">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-12">
+          Le Karaté <br /> <span className="text-martial-red">Shotokan</span>
+        </h1>
+        
+        <div className="prose prose-lg prose-invert text-gray-600 max-w-none">
+          <p className="text-xl font-medium text-martial-black mb-8">
+            Le Karaté-do Shotokan est bien plus qu'un sport de combat ; c'est un chemin de vie fondé sur la discipline, le respect et la recherche de la perfection technique.
+          </p>
+          
+          <h2 id="kase" className="text-3xl font-black uppercase text-martial-black mt-16 mb-6 italic">L'Enseignement de Sensei Taiji Kase</h2>
+          <div className="bg-martial-gray p-8 rounded-3xl border border-gray-100 mb-10">
+            <p>
+              Taiji Kase (1929-2004) fut l'un des plus grands maîtres du Karaté moderne. Élève direct de Yoshitaka Funakoshi, il a développé un style unique caractérisé par une puissance explosive, des techniques de mains ouvertes et une efficacité redoutable.
+            </p>
+            <p>
+              Notre école s'efforce de préserver cette lignée précieuse, en mettant l'accent sur l'enracinement, la respiration et l'utilisation optimale de l'énergie (Ki).
+            </p>
+          </div>
+
+          <h2 className="text-3xl font-black uppercase text-martial-black mt-16 mb-6">Gichin Funakoshi : Le Fondateur</h2>
+          <p>
+            Considéré comme le "père du Karaté moderne", Gichin Funakoshi a importé cet art martial d'Okinawa au Japon au début du XXe siècle. Il a instauré les principes du Shotokan, mettant l'accent sur le caractère et l'humilité.
+          </p>
+          
+          <div className="mt-20 border-t border-gray-100 pt-12">
+            <a href="/#programmes" className="btn-primary">
+              Commencer ma formation
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+	</main>
+	<Footer client:visible />
+</Layout>

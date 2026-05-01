@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar';
+import BeltPageTemplate from '../components/BeltPageTemplate';
+import Footer from '../components/Footer';
+
+const curriculum = [
+  "Perfectionnement de tous les Katas Heian",
+  "Maîtrise du Kata Tekki Shodan",
+  "Kihon avancé avec changements de direction",
+  "Jiyu-Ippon-Kumite et stratégie de combat",
+  "Préparation mentale et physique pour l'examen FFK"
+];
+---
+
+<Layout 
+  title="Formation Ceinture Noire Karaté Shotokan — Préparation Grade FFK"
+  description="Atteignez le niveau de ceinture noire 1er Dan. Un programme complet pour maîtriser les techniques supérieures et réussir votre examen fédéral."
+>
+	<Navbar client:load />
+	<main>
+		<BeltPageTemplate 
+      client:load
+      color="Noire"
+      hex="#050505"
+      title="Le début de la Maîtrise"
+      description="Préparez votre passage de grade 1er Dan en toute sérénité avec un contenu rigoureux, fidèle à la lignée de Sensei Kase."
+      curriculum={curriculum}
+      ctaLink="https://ecole.fudoshin.solutions/offers/eba985cc-b2e0-4dab-afb2-5b73cde8cbc2"
+    />
+	</main>
+	<Footer client:visible />
+</Layout>

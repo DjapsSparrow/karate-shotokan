@@ -13,7 +13,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     Header set X-Frame-Options "DENY"
     Header set X-Content-Type-Options "nosniff"
     Header set Referrer-Policy "no-referrer-when-downgrade"
-    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self';"
+    Header set Content-Security-Policy "default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; connect-src 'self' https:;"
 </IfModule>
 
 # Désactiver le listage de répertoires
@@ -30,3 +30,8 @@ Options -Indexes
     Order allow,deny
     Deny from all
 </Files>
+# ----------------------------------------------------------------------
+# | SEO & Redirections
+# ----------------------------------------------------------------------
+Redirect 301 /le-karate/ /le-karate
+Redirect 301 /le-dojo/ /le-dojo
