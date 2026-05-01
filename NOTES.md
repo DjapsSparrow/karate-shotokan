@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.3.2
-- **Objectif** : Implémentation du slider d'avis automatique (2 par 2) avec pause au hover.
+- **Version** : v1.3.3
+- **Objectif** : Ajustement de l'espacement des "dots" du slider de témoignages.
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
