@@ -12,12 +12,12 @@ const belts = [
 
 const PricingGrid = () => {
   return (
-    <section id="programmes" className="py-24 bg-white">
+    <section id="programmes" className="py-24 bg-white dark:bg-martial-black transition-colors">
       <div className="container-custom text-center mb-20">
-        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6">
+        <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6 dark:text-white">
           Formations par <span className="text-martial-red">Niveaux</span>
         </h2>
-        <p className="text-gray-500 max-w-2xl mx-auto font-medium">
+        <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto font-medium">
           Une progression structurée du débutant au confirmé. Sélectionnez votre prochain grade pour découvrir le programme complet.
         </p>
       </div>
@@ -41,7 +41,7 @@ const PricingGrid = () => {
                 visible: { opacity: 1, y: 0 }
               }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="group relative bg-martial-gray rounded-3xl p-10 flex flex-col items-center text-center transition-all hover:shadow-xl hover:shadow-black/5 overflow-hidden"
+              className="group relative bg-martial-gray dark:bg-white/5 rounded-3xl p-10 flex flex-col items-center text-center transition-all hover:shadow-xl hover:shadow-black/5 dark:hover:bg-white/10 overflow-hidden border border-transparent dark:border-white/5"
             >
               {/* Belt Visual */}
               <div 
@@ -49,16 +49,16 @@ const PricingGrid = () => {
                 style={{ backgroundColor: belt.hex }}
               />
               
-              <h3 className="text-2xl font-black uppercase mb-4 group-hover:text-martial-red transition-colors">
+              <h3 className="text-2xl font-black uppercase mb-4 group-hover:text-martial-red dark:text-white transition-colors">
                 Ceinture {belt.color}
               </h3>
-              <p className="text-gray-500 text-sm mb-8 leading-relaxed">
+              <p className="text-gray-500 dark:text-gray-400 text-sm mb-8 leading-relaxed">
                 {belt.desc}
               </p>
               
-              <div className="mt-auto pt-6 w-full border-t border-gray-200 flex items-center justify-between">
+              <div className="mt-auto pt-6 w-full border-t border-gray-200 dark:border-white/10 flex items-center justify-between">
                 <span className="text-xs font-bold uppercase tracking-widest text-martial-red">{belt.price}</span>
-                <span className="font-black text-sm uppercase tracking-tighter flex items-center gap-2">
+                <span className="font-black text-sm uppercase tracking-tighter flex items-center gap-2 dark:text-white">
                   Détails
                   <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" /></svg>
                 </span>

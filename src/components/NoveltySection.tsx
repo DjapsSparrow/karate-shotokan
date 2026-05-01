@@ -3,62 +3,60 @@ import { motion } from 'framer-motion';
 
 const NoveltySection = () => {
   return (
-    <section id="katas-superieurs" className="py-24 bg-martial-gray">
+    <section id="katas-superieurs" className="py-24 bg-[#FAFAFA] dark:bg-white/5 transition-colors">
       <div className="container-custom">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-white rounded-[2rem] p-8 md:p-16 shadow-2xl shadow-black/5 flex flex-col lg:flex-row items-center gap-12 border border-gray-100"
-        >
-          <div className="lg:w-1/2 relative">
-            <div className="absolute -top-6 -left-6 bg-martial-red text-white font-black px-6 py-2 rounded-full z-10 animate-pulse text-sm uppercase tracking-widest">
-              Nouveauté
-            </div>
-            <div className="rounded-2xl overflow-hidden aspect-video bg-gray-900 flex items-center justify-center relative group">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="relative"
+          >
+            <div className="rounded-[2.5rem] overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1552072805-2a9039d00e57?auto=format&fit=crop&q=80&w=1000" 
-                alt="Katas Supérieurs" 
-                className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700"
+                src="https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80&w=1000" 
+                alt="Nouveautés Karaté" 
+                className="w-full aspect-[4/3] object-cover"
               />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/30 group-hover:bg-martial-red transition-colors">
-                  <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-              </div>
             </div>
-          </div>
+            <div className="absolute -bottom-8 -right-8 bg-martial-red text-white p-8 rounded-3xl shadow-xl max-w-xs">
+              <p className="text-sm font-black uppercase tracking-widest mb-2">Dernière Mise à jour</p>
+              <p className="text-lg font-bold leading-tight">Nouveau module sur le timing et la distance en combat.</p>
+            </div>
+          </motion.div>
 
-          <div className="lg:w-1/2 flex flex-col gap-6">
-            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-[0.9]">
-              Les Katas <br /> <span className="text-martial-red">Supérieurs</span>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-8 leading-none dark:text-white">
+              Toujours à la <br />
+              <span className="text-martial-red">Pointe</span> du Progrès
             </h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Poussez votre pratique au niveau supérieur avec notre nouveau programme dédié aux Katas avancés. 
-              Une décomposition pas-à-pas, les points de vigilance et les bunkaïs secrets révélés.
+            <p className="text-gray-500 dark:text-gray-400 font-medium mb-10 leading-relaxed">
+              Nous enrichissons régulièrement notre catalogue pour vous offrir le meilleur de l'enseignement martial. Chaque module est conçu pour être clair, précis et immédiatement applicable.
             </p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
-              {['6 Katas Avancés', 'Vues Multi-Angles', 'Bunkaï Détaillés', 'Accès Illimité'].map((item) => (
-                <li key={item} className="flex items-center gap-2 text-sm font-bold uppercase tracking-tight">
-                  <svg className="w-5 h-5 text-martial-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                  </svg>
-                  {item}
-                </li>
+            
+            <div className="space-y-6">
+              {[
+                "Vidéos en résolution 4K pour une clarté totale",
+                "Analyses détaillées sous plusieurs angles",
+                "Fiches récapitulatives téléchargeables",
+                "Suivi de progression personnalisé"
+              ].map((item, index) => (
+                <div key={index} className="flex items-center gap-4">
+                  <div className="w-6 h-6 rounded-full bg-martial-red/10 dark:bg-martial-red/20 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-3 h-3 text-martial-red" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <span className="font-bold text-martial-black dark:text-white uppercase text-sm tracking-wide">{item}</span>
+                </div>
               ))}
-            </ul>
-            <motion.a 
-              whileHover={{ x: 10 }}
-              href="/katas-superieurs" 
-              className="inline-flex items-center gap-4 text-xl font-black uppercase tracking-tighter group"
-            >
-              Découvrir le programme
-              <span className="w-12 h-12 bg-martial-black text-white rounded-full flex items-center justify-center group-hover:bg-martial-red transition-colors">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
-              </span>
-            </motion.a>
-          </div>
-        </motion.div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

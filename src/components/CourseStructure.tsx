@@ -53,8 +53,10 @@ const LessonCard = ({ lesson, index }: { lesson: typeof lessons[0], index: numbe
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.05 }}
-      className={`group bg-martial-gray rounded-3xl p-6 transition-all duration-300 border border-transparent ${
-        isOpen ? 'bg-white shadow-xl shadow-black/5 border-gray-100' : 'hover:bg-white hover:shadow-lg'
+      className={`group rounded-3xl p-6 transition-all duration-300 border border-transparent ${
+        isOpen 
+          ? 'bg-white dark:bg-white/10 shadow-xl shadow-black/5 border-gray-100 dark:border-white/10' 
+          : 'bg-martial-gray dark:bg-white/5 hover:bg-white dark:hover:bg-white/10 hover:shadow-lg'
       }`}
     >
       <button 
@@ -62,14 +64,14 @@ const LessonCard = ({ lesson, index }: { lesson: typeof lessons[0], index: numbe
         className="w-full text-left flex items-center justify-between gap-4"
       >
         <div className="flex items-center gap-4">
-          <span className="flex-shrink-0 w-8 h-8 bg-white text-martial-red font-black text-[10px] flex items-center justify-center rounded-full shadow-sm">
+          <span className="flex-shrink-0 w-8 h-8 bg-white dark:bg-martial-black text-martial-red font-black text-[10px] flex items-center justify-center rounded-full shadow-sm">
             {lesson.number}
           </span>
-          <h3 className="text-lg font-black uppercase tracking-tight text-martial-black group-hover:text-martial-red transition-colors">
+          <h3 className="text-lg font-black uppercase tracking-tight text-martial-black dark:text-white group-hover:text-martial-red transition-colors">
             {lesson.title}
           </h3>
         </div>
-        <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${isOpen ? 'bg-martial-red text-white rotate-180' : 'bg-white text-gray-400 group-hover:text-martial-red'}`}>
+        <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all ${isOpen ? 'bg-martial-red text-white rotate-180' : 'bg-white dark:bg-white/10 text-gray-400 dark:text-gray-500 group-hover:text-martial-red'}`}>
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M19 9l-7 7-7-7" />
           </svg>
@@ -87,7 +89,7 @@ const LessonCard = ({ lesson, index }: { lesson: typeof lessons[0], index: numbe
           >
             <div className="pt-4 pb-2">
               <div className="w-8 h-1 bg-martial-red/20 rounded-full mb-4"></div>
-              <p className="text-gray-500 text-sm font-medium leading-relaxed">
+              <p className="text-gray-500 dark:text-gray-400 text-sm font-medium leading-relaxed">
                 {lesson.description}
               </p>
             </div>
@@ -100,7 +102,7 @@ const LessonCard = ({ lesson, index }: { lesson: typeof lessons[0], index: numbe
 
 const CourseStructure = () => {
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="py-24 bg-white dark:bg-martial-black transition-colors overflow-hidden">
       <div className="container-custom">
         <div className="max-w-5xl mx-auto">
           <motion.div 
@@ -110,7 +112,7 @@ const CourseStructure = () => {
             className="mb-16 text-center md:text-left"
           >
             <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter text-martial-red leading-none mb-4">
-              Structure <br /> <span className="text-martial-black">des formations</span>
+              Structure <br /> <span className="text-martial-black dark:text-white transition-colors">des formations</span>
             </h2>
             <div className="w-20 h-2 bg-martial-red rounded-full mx-auto md:mx-0"></div>
           </motion.div>
