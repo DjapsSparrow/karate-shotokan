@@ -41,7 +41,7 @@ const Navbar: React.FC<NavbarProps> = ({ beltColor = "martial-red" }) => {
   return (
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/80 dark:bg-black/80 backdrop-blur-md py-4 shadow-sm' : 'bg-transparent py-6'
+        isScrolled ? 'bg-white/90 dark:bg-zinc-950 backdrop-blur-md py-4 shadow-lg' : 'bg-transparent py-6'
       }`}
     >
       <div className="container-custom flex items-center justify-between">
@@ -50,7 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({ beltColor = "martial-red" }) => {
           <div className="w-12 h-12 flex items-center justify-center transform group-hover:scale-110 transition-transform">
             <img src="/logo.png" alt="Logo Karaté Shotokan" className="w-full h-full object-contain" />
           </div>
-          <span className="font-bold text-lg md:text-xl tracking-tight uppercase dark:!text-black">
+          <span className="font-bold text-lg md:text-xl tracking-tight uppercase dark:text-white">
             Karaté <span className={`text-${beltColor}`}>Shotokan</span>
           </span>
         </a>
@@ -66,11 +66,11 @@ const Navbar: React.FC<NavbarProps> = ({ beltColor = "martial-red" }) => {
             >
               <a 
                 href={link.href}
-                className={`text-sm font-semibold uppercase tracking-wider dark:!text-black hover:text-${beltColor} transition-colors flex items-center gap-1`}
+                className={`text-sm font-semibold uppercase tracking-wider dark:text-white hover:text-${beltColor} transition-colors flex items-center gap-1`}
               >
                 {link.name}
                 {link.submenu && (
-                  <svg className={`w-4 h-4 dark:!text-black transition-transform duration-300 ${isProgrammesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className={`w-4 h-4 dark:text-white transition-transform duration-300 ${isProgrammesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 )}
