@@ -59,11 +59,8 @@ Options -Indexes
     Order allow,deny
     Deny from all
 </Files>
+# SEO & Redirections
 # ----------------------------------------------------------------------
-# | SEO & Redirections
-# ----------------------------------------------------------------------
-Redirect 301 /le-karate/ /le-karate
-Redirect 301 /le-dojo/ /le-dojo
 
 # Missing Belt Pages (Temporary Redirects to main sections)
 Redirect 301 /ceinture-orange /#programmes
