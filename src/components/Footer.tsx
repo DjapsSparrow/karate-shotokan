@@ -17,6 +17,7 @@ const Footer = () => {
       links: [
         { name: "Ceinture Jaune", href: "/ceinture-jaune" },
         { name: "Ceinture Orange", href: "/ceinture-orange" },
+        { name: "Ceinture Verte", href: "/ceinture-verte" },
         { name: "Ceinture Noire", href: "/ceinture-noire" },
         { name: "Katas Supérieurs", href: "/katas-superieurs" },
       ]
