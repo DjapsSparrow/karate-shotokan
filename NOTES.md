@@ -1,10 +1,9 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v0.4.0
-- **Objectif** : Refonte Conversion & Performance.
-- **Stack** : Astro v5, React 19, Tailwind CSS 4, Framer Motion.
-- **Statut** : ✅ Terminé. Site live (v0.4.0), sécurisé et performant.
+- **Version** : v0.5.2
+- **Objectif** : Finalisation du tunnel de vente "Katas Supérieurs".
+- **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
 ---
