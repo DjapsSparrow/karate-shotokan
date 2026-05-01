@@ -46,12 +46,13 @@ const Testimonials = () => {
   const [isPaused, setIsPaused] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
+  // We scroll 2 by 2
   const nextSlide = () => {
-    setIndex((prev) => (prev + 1) % testimonials.length);
+    setIndex((prev) => (prev + 2) % testimonials.length);
   };
 
   const prevSlide = () => {
-    setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setIndex((prev) => (prev - 2 + testimonials.length) % testimonials.length);
   };
 
   useEffect(() => {
