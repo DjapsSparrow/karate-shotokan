@@ -42,8 +42,8 @@ const Footer = () => {
           {/* Brand Col */}
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-martial-red rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">K</span>
+              <div className="w-14 h-14 flex items-center justify-center">
+                <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
               </div>
               <span className="font-bold text-xl tracking-tight uppercase">
                 Karaté <span className="text-martial-red">Shotokan</span>

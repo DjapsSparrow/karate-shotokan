@@ -29,8 +29,8 @@ const Navbar = () => {
       <div className="container-custom flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 bg-martial-red rounded-lg flex items-center justify-center transform group-hover:rotate-12 transition-transform">
-            <span className="text-white font-bold text-xl">K</span>
+          <div className="w-12 h-12 flex items-center justify-center transform group-hover:scale-110 transition-transform">
+            <img src="/logo.png" alt="Logo Karaté Shotokan" className="w-full h-full object-contain" />
           </div>
           <span className="font-bold text-xl tracking-tight uppercase hidden sm:block">
             Karaté <span className="text-martial-red">Shotokan</span>

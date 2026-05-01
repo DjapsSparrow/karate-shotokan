@@ -1,19 +1,14 @@
-# PHASE 1: ÉTAT ACTUEL
+# 📝 Notes de Projet — Karate Shotokan
 
-**Date** : 2026-05-01
-**Projet** : Karate Shotokan
-**État de stabilité** : Initialisation réussie — v0.1.0.
+### État actuel
+- **Version** : v0.2.0
+- **Statut** : ✅ Redesign terminé et déployé.
+- **Lien** : https://prod.karate-shotokan.fr
 
-**Dernières avancées** :
-- **Séquence Genesis** : Initialisation complète effectuée.
-- **Stack** : Astro v5, React 19, Tailwind CSS 4, Framer Motion.
-- **Sécurité** : `.htaccess` configuré avec headers HSTS/CSP et verrouillage des fichiers sensibles.
-- **Infrastructure** : Dépôt GitHub [DjapsSparrow/karate-shotokan](https://github.com/DjapsSparrow/karate-shotokan) créé et synchronisé.
-- **Déploiement** : Workflow CI/CD prêt pour Infomaniak (Rsync/SSH).
+### Historique des phases
+1. **Infrastructure (v0.1.0)** : Astro + Tailwind + SSH Fix.
+2. **Refonte Conversion (v0.2.0)** : Landing page + Pages Ceintures + SEO 301.
 
-**Objectif prochain** : Définition de l'identité visuelle et premier jet de la landing page.
-
----
-
-# PHASE 2: HISTORIQUE
-(Vide - Initialisation du projet)
+### Apprentissages clés
+- **SSH Secrets** : Toujours utiliser `env` + `sshpass -e` pour éviter la corruption shell des caractères spéciaux ($$).
+- **SEO Preservation** : Création de pages de vente internes pour transformer un site "vitrine" en machine à conversion tout en gardant les URLs WordPress historiques.
