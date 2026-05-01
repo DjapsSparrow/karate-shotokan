@@ -36,7 +36,7 @@ const Navbar: React.FC<NavbarProps> = ({ beltColor = "martial-red" }) => {
           <div className="w-12 h-12 flex items-center justify-center transform group-hover:scale-110 transition-transform">
             <img src="/logo.png" alt="Logo Karaté Shotokan" className="w-full h-full object-contain" />
           </div>
-          <span className="font-bold text-xl tracking-tight uppercase hidden sm:block">
+          <span className="font-bold text-lg md:text-xl tracking-tight uppercase">
             Karaté <span className={`text-${beltColor}`}>Shotokan</span>
           </span>
         </a>
