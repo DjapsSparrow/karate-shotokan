@@ -31,6 +31,36 @@ const testimonials = [
     role: "Ceinture Blanche", 
     content: "Cette formation en ligne est un très bon programme d’accompagnement pour progresser rapidement. C’est une très bonne initiative, étant donné le contexte actuel. Je remercie Philippe et Yann ainsi que Thomas pour la réalisation de cette formation en ligne.",
     rating: 5
+  },
+  { 
+    name: "Harold Sercy", 
+    role: "Ceinture Blanche", 
+    content: "Les formations sont la pour nous apprendre et pour donner le meilleur de soi.",
+    rating: 5
+  },
+  { 
+    name: "Santiago Picos", 
+    role: "Ceinture Noire", 
+    content: "Je suis très heureux d'avoir commencé dans votre dojo de karaté shotokan. La formation en ligne est une première pour moi et une plateforme très complète, et j'espère en profiter. Merci beaucoup.",
+    rating: 5
+  },
+  { 
+    name: "Marie Bonnerue Viola", 
+    role: "Ceinture Marron", 
+    content: "Je trouve la formation très intéressante et complète (vidéos, commentaires, écrits) pour pouvoir effectuer un travail en toute autonomie et dans tout les grades. Formation au top 👍👍👍",
+    rating: 5
+  },
+  { 
+    name: "Frédéric Durand", 
+    role: "Ceinture Blanche", 
+    content: "Très bon outil pédagogique ,il me permets de revoir des katas que j'avais appris il y a fort longtemps .Très bonne présentation du KARATE",
+    rating: 5
+  },
+  { 
+    name: "Jean Crepy", 
+    role: "Ceinture Noire", 
+    content: "Tout ce qu'il faut pour bien apprendre, les vidéos et explications sont très claires",
+    rating: 5
   }
 ];
 
@@ -46,7 +76,6 @@ const Testimonials = () => {
   const [isPaused, setIsPaused] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  // We scroll 2 by 2
   const nextSlide = () => {
     setIndex((prev) => (prev + 2) % testimonials.length);
   };
@@ -121,7 +150,7 @@ const Testimonials = () => {
                 >
                   {getVisibleTestimonials().map((t, i) => (
                     <div
-                      key={`${t.name}-${i}`}
+                      key={`${t.name}-${index}-${i}`}
                       className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-xl shadow-black/5 relative flex flex-col h-full select-none pointer-events-none md:pointer-events-auto"
                     >
                       <div className="flex gap-1 mb-6">
@@ -154,11 +183,14 @@ const Testimonials = () => {
               {/* Dots */}
               <div className="flex justify-center gap-2 mt-16">
                 {testimonials.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setIndex(i)}
-                    className={`w-2 h-2 rounded-full transition-all ${index === i ? 'bg-martial-black w-6' : 'bg-gray-200 hover:bg-gray-300'}`}
-                  />
+                  // Only show dots for every 2 items to match the step
+                  i % 2 === 0 && (
+                    <button
+                      key={i}
+                      onClick={() => setIndex(i)}
+                      className={`w-2 h-2 rounded-full transition-all ${index === i ? 'bg-martial-black w-6' : 'bg-gray-200 hover:bg-gray-300'}`}
+                    />
+                  )
                 ))}
               </div>
             </div>
