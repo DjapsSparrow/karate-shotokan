@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v0.5.3
-- **Objectif** : Ajout de la section "Structure des Formations".
+- **Version** : v0.5.4
+- **Objectif** : Optimisation UI de la section "Structure des Formations" (Grille 2 colonnes + Accordéons).
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
