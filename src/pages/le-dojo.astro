@@ -5,32 +5,56 @@ import Footer from '../components/Footer';
 
 const schedules = [
   {
-    city: "Mérignies",
-    address: "Salle polyvalente (rue de la Poste)",
-    days: [
-      { day: "Mercredi", slots: ["15h30 - 16h15 (Éveil)", "16h15 - 17h15 (Enfants)", "17h15 - 18h15 (Enfants)", "18h15 - 19h30 (Ados/Adultes)"] }
+    days: "Mardi & Vendredi",
+    slots: [
+      { age: "6 - 8 ans", time: "17h00 – 18h00" },
+      { age: "9 ans et plus", time: "18h00 – 19h00" },
+      { age: "Ados (14+) / Adultes", time: "19h00 – 21h00" }
     ]
   },
   {
-    city: "Mons-en-Pévèle",
-    address: "Dojo (rue du Moulin)",
-    days: [
-      { day: "Lundi", slots: ["17h30 - 18h30 (Enfants)", "18h30 - 20h00 (Ados/Adultes)"] },
-      { day: "Samedi", slots: ["10h00 - 11h00 (Enfants)", "11h00 - 12h00 (Ados/Adultes)"] }
+    days: "Mercredi",
+    slots: [
+      { age: "6 - 8 ans", time: "09h30 – 10h30" },
+      { age: "4 - 5 ans (Baby Karaté)", time: "10h30 – 11h15" },
+      { age: "2 - 3 ans (Éveil au sport)", time: "11h15 – 12h00" }
+    ]
+  },
+  {
+    days: "Samedi",
+    slots: [
+      { age: "Compétiteurs + Grades", time: "17h00 – 18h30" }
     ]
   }
 ];
 
-const classes = [
-  { name: "Éveil", age: "4 - 6 ans", desc: "Une approche ludique pour développer la motricité et la concentration." },
-  { name: "Enfants", age: "7 - 12 ans", desc: "Apprentissage des bases techniques et des valeurs martiales." },
-  { name: "Ados / Adultes", age: "+ 13 ans", desc: "Perfectionnement technique, condition physique et self-défense." }
+const pricing = [
+  { 
+    title: "Licence Club & FFK", 
+    price: "77€", 
+    desc: "Total annuel (40€ club + 37€ FFK). Un seul chèque à l'ordre du Club Léo Lagrange." 
+  },
+  { 
+    title: "Baby / Éveil", 
+    price: "3x 30€", 
+    desc: "1 cours par semaine. Chèques à l'ordre de Philippe Bouvier." 
+  },
+  { 
+    title: "Enfants", 
+    price: "3x 50€", 
+    desc: "2 cours par semaine. Chèques à l'ordre de Philippe Bouvier." 
+  },
+  { 
+    title: "Adultes / Ados", 
+    price: "3x 70€", 
+    desc: "Dès 14 ans. Chèques à l'ordre de Philippe Bouvier." 
+  }
 ];
 ---
 
 <Layout 
-  title="Le Club de la Grange — Karaté à Mérignies & Mons-en-Pévèle"
-  description="Rejoignez le Club de la Grange pour pratiquer le Karaté Shotokan à Mérignies et Mons-en-Pévèle. Cours pour tous niveaux, de l'éveil aux adultes."
+  title="Le Dojo Draguignan — Club Léo Lagrange Karaté"
+  description="Rejoignez le Club Léo Lagrange à Draguignan pour pratiquer le Karaté Shotokan avec Philippe Bouvier. Cours pour tous âges, de l'éveil aux adultes."
 >
 	<Navbar client:load />
 	
@@ -40,73 +64,64 @@ const classes = [
       <div class="relative rounded-[3rem] overflow-hidden bg-martial-black aspect-[21/9] flex items-center justify-center">
         <img 
           src="https://images.unsplash.com/photo-1552072805-2a9039d00e57?auto=format&fit=crop&q=80&w=2000" 
-          alt="Club de la Grange" 
-          class="absolute inset-0 w-full h-full object-cover opacity-40"
+          alt="Club Léo Lagrange Draguignan" 
+          class="absolute inset-0 w-full h-full object-cover opacity-40 grayscale"
         />
         <div class="relative z-10 text-center px-6">
-          <span class="text-martial-red font-bold text-sm uppercase tracking-[0.4em] mb-4 block">Mérignies & Mons-en-Pévèle</span>
+          <span class="text-martial-red font-bold text-sm uppercase tracking-[0.4em] mb-4 block">Draguignan</span>
           <h1 class="text-5xl md:text-8xl font-black text-white uppercase tracking-tighter leading-none mb-6">
-            Club de <br /> <span class="text-martial-red">la Grange</span>
+            Club Léo <br /> <span class="text-martial-red">Lagrange</span>
           </h1>
-          <p class="text-white/80 text-xl font-medium italic">S'épanouir par le Karaté</p>
+          <p class="text-white/80 text-xl font-medium italic">Un lieu d'entraînement, d'échanges et d'évolution.</p>
         </div>
       </div>
     </section>
 
-    {/* Les Cours */}
+    {/* Tarifs & Inscriptions */}
     <section id="cours" class="container-custom mb-32">
-      <div class="flex flex-col md:flex-row gap-16 items-center">
-        <div class="md:w-1/2">
-          <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-8">
-            Les <span class="text-martial-red">Cours</span>
-          </h2>
-          <div class="space-y-6">
-            {classes.map((c) => (
-              <div class="bg-martial-gray p-8 rounded-3xl border border-gray-100 hover:border-martial-red/20 transition-colors group">
-                <div class="flex items-center justify-between mb-2">
-                  <h3 class="text-xl font-black uppercase text-martial-black group-hover:text-martial-red transition-colors">{c.name}</h3>
-                  <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">{c.age}</span>
-                </div>
-                <p class="text-gray-500 text-sm leading-relaxed">{c.desc}</p>
-              </div>
-            ))}
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4">
+          Licences & <span class="text-martial-red">Prestations</span>
+        </h2>
+        <p class="text-gray-500 max-w-2xl mx-auto">Détails des tarifs pour la saison. Inscriptions directement au club.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {pricing.map((item) => (
+          <div class="bg-martial-gray p-10 rounded-[2.5rem] border border-gray-100 flex flex-col items-center text-center">
+            <h3 class="text-lg font-black uppercase text-martial-black mb-4">{item.title}</h3>
+            <div class="text-3xl font-black text-martial-red mb-6">{item.price}</div>
+            <p class="text-gray-500 text-xs leading-relaxed">{item.desc}</p>
           </div>
-        </div>
-        <div class="md:w-1/2">
-          <div class="rounded-[2.5rem] overflow-hidden shadow-2xl">
-            <img src="/assets/katas/intro.png" alt="Pratique du Karaté" class="w-full h-auto" />
-          </div>
-        </div>
+        ))}
       </div>
     </section>
 
     {/* Les Horaires */}
-    <section id="horaires" class="bg-martial-black py-24 text-white rounded-[4rem] mb-32">
-      <div class="container-custom">
+    <section id="horaires" class="bg-martial-black py-24 text-white rounded-[4rem] mb-32 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-5 pointer-events-none grayscale">
+        <img src="/assets/katas/intro.png" alt="Texture" class="w-full h-full object-cover" />
+      </div>
+      <div class="container-custom relative z-10">
         <div class="text-center mb-16">
           <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4">
             Nos <span class="text-martial-red">Horaires</span>
           </h2>
-          <p class="text-gray-400 font-medium uppercase tracking-widest text-xs">Saison 2023 - 2024</p>
+          <p class="text-gray-400 font-medium uppercase tracking-widest text-xs">Toutes les semaines (hors jours fériés & vacances)</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {schedules.map((s) => (
             <div class="bg-white/5 border border-white/10 p-10 rounded-[3rem] backdrop-blur-sm">
-              <h3 class="text-2xl font-black uppercase text-martial-red mb-2">{s.city}</h3>
-              <p class="text-gray-400 text-sm mb-8 italic">{s.address}</p>
-              <div class="space-y-6">
-                {s.days.map((d) => (
-                  <div>
-                    <h4 class="font-bold uppercase tracking-widest text-martial-red text-xs mb-3">{d.day}</h4>
-                    <ul class="space-y-2">
-                      {d.slots.map((slot) => (
-                        <li class="text-sm font-medium border-l-2 border-martial-red/30 pl-4 py-1">{slot}</li>
-                      ))}
-                    </ul>
-                  </div>
+              <h3 class="text-xl font-black uppercase text-martial-red mb-8 border-b border-white/10 pb-4">{s.days}</h3>
+              <ul class="space-y-6">
+                {s.slots.map((slot) => (
+                  <li class="flex flex-col gap-1">
+                    <span class="text-gray-400 text-xs font-bold uppercase tracking-widest">{slot.age}</span>
+                    <span class="text-lg font-black">{slot.time}</span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           ))}
         </div>
@@ -115,32 +130,41 @@ const classes = [
 
     {/* Accès */}
     <section id="acces" class="container-custom">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4">
-          Où nous <span class="text-martial-red">trouver ?</span>
-        </h2>
-      </div>
-      <div class="bg-martial-gray rounded-[3rem] p-4 border border-gray-100 overflow-hidden shadow-inner">
-        <div class="rounded-[2.5rem] overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 aspect-video md:aspect-[21/9]">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10168.324209581898!2d3.1166667!3d50.4833333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d1e5e5e5e5e5%3A0x5e5e5e5e5e5e5e5e!2sM%C3%A9rignies%2C%20France!5e0!3m2!1sfr!2sfr!4v1620000000000!5m2!1sfr!2sfr" 
-            width="100%" 
-            height="100%" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy"
-          ></iframe>
+      <div class="flex flex-col md:flex-row gap-16 items-center">
+        <div class="md:w-1/3">
+          <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-8">
+            Où nous <br /> <span class="text-martial-red">trouver ?</span>
+          </h2>
+          <div class="space-y-6">
+            <div class="bg-martial-gray p-8 rounded-3xl border border-gray-100">
+              <h4 class="font-bold uppercase tracking-widest text-xs text-martial-red mb-2">Adresse</h4>
+              <p class="font-black text-xl uppercase tracking-tighter text-martial-black">Section Karaté</p>
+              <p class="text-gray-500">Boulevard des fleurs<br />83300 DRAGUIGNAN</p>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-2/3 w-full">
+          <div class="bg-martial-gray rounded-[3rem] p-4 border border-gray-100 overflow-hidden shadow-inner aspect-video">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2879.356403981898!2d6.4666667!3d43.5333333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ce31e5e5e5e5e5%3A0x5e5e5e5e5e5e5e5e!2sBoulevard%20des%20Fleurs%2C%2083300%20Draguignan!5e0!3m2!1sfr!2sfr!4v1620000000000!5m2!1sfr!2sfr" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy"
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>
 
     {/* CTA Online */}
     <section class="container-custom mt-32 text-center">
-      <div class="bg-martial-red text-white rounded-[3rem] p-12 md:p-20 relative overflow-hidden">
+      <div class="bg-martial-black text-white rounded-[3rem] p-12 md:p-20 relative overflow-hidden">
         <div class="relative z-10">
-          <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-8">Pas de club près de chez vous ?</h2>
-          <p class="text-xl mb-12 font-medium opacity-90">Découvrez nos formations en ligne accessibles partout.</p>
-          <a href="/#programmes" class="btn-primary !bg-white !text-martial-red !px-12 !py-5">Voir les cours en ligne</a>
+          <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-8">Vous préférez apprendre <br /> de chez vous ?</h2>
+          <p class="text-xl mb-12 font-medium opacity-60">Découvrez nos formations vidéo haute définition.</p>
+          <a href="/#programmes" class="btn-primary !bg-martial-red !text-white !px-12 !py-5">Accéder au dojo virtuel</a>
         </div>
       </div>
     </section>
