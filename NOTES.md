@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v0.6.1
-- **Objectif** : Remplacement de "Lignage Kase" par "Le dojo" dans le footer pour une meilleure clarté.
+- **Version** : v0.7.0
+- **Objectif** : Extraction et intégration des programmes officiels pour toutes les ceintures (Jaune à Noire) via SchoolMaker.
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
