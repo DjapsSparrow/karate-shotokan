@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v0.5.5
-- **Objectif** : Audit des liens du footer, création de la page Légal et gestion des redirections 301.
+- **Version** : v0.5.6
+- **Objectif** : Correction des liens morts, passage de className à class (Astro) et configuration Apache pour URLs propres.
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
