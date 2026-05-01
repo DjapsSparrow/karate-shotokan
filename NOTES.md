@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.3.0
-- **Objectif** : Création des pages Ceinture Noire 1° Dan (Vente + Aperçu) et finalisation de la gamme de formation par grade.
+- **Version** : v1.3.1
+- **Objectif** : Clarification de l'accès cumulatif aux formations (accès aux niveaux inférieurs inclus).
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
