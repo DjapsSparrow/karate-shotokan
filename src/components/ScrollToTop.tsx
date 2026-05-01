@@ -12,8 +12,8 @@ const ScrollToTop = () => {
       const winHeight = window.innerHeight;
       const scrollPercent = scrollTop / (docHeight - winHeight);
       
-      // Show button if scrolled past 70% of the document
-      if (scrollPercent > 0.7) {
+      // Show button if scrolled past 45% of the document
+      if (scrollPercent > 0.45) {
         setIsVisible(true);
       } else {
         setIsVisible(false);

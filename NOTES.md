@@ -1,9 +1,9 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.7.2
-- **Objectif** : Ajout d'un bouton de retour en haut (ScrollToTop).
-- **Statut** : ✅ Terminé. Implémentation d'un bouton flottant (composant React + Framer Motion) qui apparaît de manière fluide après avoir défilé 70% de la page et permet de remonter en douceur.
+- **Version** : v1.7.3
+- **Objectif** : Ajustement de l'apparition du bouton ScrollToTop.
+- **Statut** : ✅ Terminé. Le seuil d'apparition du bouton a été abaissé de 70% à 45% pour être accessible plus tôt lors du défilement.
 - **Lien** : https://prod.karate-shotokan.fr
 
 ---
