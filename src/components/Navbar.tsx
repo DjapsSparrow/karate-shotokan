@@ -14,8 +14,8 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Programmes', href: '#programmes' },
-    { name: 'Katas Supérieurs', href: '#katas-superieurs' },
+    { name: 'Programmes', href: '/#programmes' },
+    { name: 'Katas Supérieurs', href: '/katas-superieurs' },
     { name: 'Histoire', href: '/le-karate' },
     { name: 'Le Dojo', href: '/le-dojo' },
   ];
