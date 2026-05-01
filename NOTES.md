@@ -1,8 +1,8 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v0.5.8
-- **Objectif** : Refonte de la page "Le Dojo" (Club de la Grange) et restructuration du footer selon le nouveau contenu.
+- **Version** : v0.5.9
+- **Objectif** : Résolution de l'erreur ERR_TOO_MANY_REDIRECTS (conflit de slash dans .htaccess).
 - **Statut** : ✅ Terminé. Assets corrigés, aperçu natif déployé.
 - **Lien** : https://prod.karate-shotokan.fr
 
