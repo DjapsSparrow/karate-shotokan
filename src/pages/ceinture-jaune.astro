@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import BackToCourses from '../components/BackToCourses';
 import { motion } from 'framer-motion';
 
 const previewUrl = "/ceinture-jaune-apercu";
@@ -157,5 +158,6 @@ const offerUrl = "https://ecole.fudoshin.solutions/offers/eddbdb91-3af5-4345-992
       </div>
     </div>
   </main>
+  <BackToCourses client:visible />
 	<Footer client:visible />
 </Layout>
