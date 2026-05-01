@@ -61,6 +61,12 @@ const testimonials = [
     role: "Ceinture Noire", 
     content: "Tout ce qu'il faut pour bien apprendre, les vidéos et explications sont très claires",
     rating: 5
+  },
+  { 
+    name: "Mihai Grigore", 
+    role: "Ceinture Blanche", 
+    content: "Dans le contexte épidémiologique actuel, je trouve que c'est un très bon outil, une méthode qui m'a permis de rester connecté au dojo et continuer à évoluer malgré les absences forcées",
+    rating: 5
   }
 ];
 
