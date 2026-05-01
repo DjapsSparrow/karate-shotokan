@@ -41,7 +41,7 @@ const Navbar: React.FC<NavbarProps> = ({ beltColor = "martial-red" }) => {
   return (
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 dark:!bg-[#050505] backdrop-blur-md py-4 shadow-xl' : 'bg-transparent py-6'
+        isScrolled ? 'bg-white/90 dark:bg-zinc-950 backdrop-blur-md py-4 shadow-lg' : 'bg-transparent py-6'
       }`}
     >
       <div className="container-custom flex items-center justify-between">
@@ -100,7 +100,7 @@ const Navbar: React.FC<NavbarProps> = ({ beltColor = "martial-red" }) => {
             href="https://fudoshin.schoolmaker.co/" 
             target="_blank"
             rel="noopener noreferrer"
-            className={`bg-zinc-950 text-white dark:!bg-white dark:!text-black px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wide hover:bg-${beltColor} dark:hover:bg-martial-red dark:hover:text-white transition-all ml-4 shadow-md`}
+            className={`bg-zinc-950 text-white dark:bg-white dark:text-black px-6 py-2.5 rounded-full text-sm font-bold uppercase tracking-wide hover:bg-${beltColor} dark:hover:bg-martial-red dark:hover:text-white transition-all ml-4`}
           >
             Espace Élève
           </a>

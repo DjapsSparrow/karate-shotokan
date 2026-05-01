@@ -1,9 +1,9 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.6.1
-- **Objectif** : Correction radicale Navbar Dark Mode (Forçage Hex).
-- **Statut** : ✅ Terminé. Utilisation de !important et d'une valeur hexadécimale fixe (#050505) pour garantir le fond noir en mode sombre.
+- **Version** : v1.6.2
+- **Objectif** : Résolution du bug racine du Dark Mode (Tailwind v4).
+- **Statut** : ✅ Terminé. Ajout de `@custom-variant dark` dans `global.css` pour activer le dark mode par classe dans Tailwind v4. Tous les anciens correctifs temporaires ont été nettoyés.
 - **Lien** : https://prod.karate-shotokan.fr
 
 ---

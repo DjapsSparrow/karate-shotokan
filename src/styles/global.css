@@ -26,6 +26,8 @@
   }
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --martial-black: #050505;
   --martial-red: #E31B23;
