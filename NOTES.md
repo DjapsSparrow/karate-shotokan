@@ -22,3 +22,4 @@
 ## 🧠 Apprentissages Techniques
 - **Caching** : Toujours incrémenter le `package.json` pour vérifier le déploiement réel via le badge de version.
 - **Content** : Les pages de vente longues (Katas Supérieurs) sont préférables à des sections courtes pour la conversion.
+- **UX** : Pour les menus hover, supprimer l'espace mort (gap) entre le parent et le menu via du padding pour éviter les fermetures intempestives.
