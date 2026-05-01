@@ -8,17 +8,24 @@ const Footer = () => {
       title: "L'École",
       links: [
         { name: "L'Histoire", href: "/le-karate" },
-        { name: "Le Dojo", href: "/le-dojo" },
+        { name: "Lignage Kase", href: "/le-karate#kase" },
         { name: "Philippe Bouvier", href: "/#authority" },
       ]
     },
     {
       title: "Formations",
       links: [
-        { name: "Katas Supérieurs", href: "/katas-superieurs" },
-        { name: "Programmes", href: "/#programmes" },
         { name: "Ceinture Jaune", href: "/ceinture-jaune" },
         { name: "Ceinture Noire", href: "/ceinture-noire" },
+        { name: "Katas Supérieurs", href: "/katas-superieurs" },
+      ]
+    },
+    {
+      title: "Le Club",
+      links: [
+        { name: "Les Cours", href: "/le-dojo#cours" },
+        { name: "Les Horaires", href: "/le-dojo#horaires" },
+        { name: "Accès & Plan", href: "/le-dojo#acces" },
       ]
     },
     {

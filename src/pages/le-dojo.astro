@@ -2,49 +2,149 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+
+const schedules = [
+  {
+    city: "Mérignies",
+    address: "Salle polyvalente (rue de la Poste)",
+    days: [
+      { day: "Mercredi", slots: ["15h30 - 16h15 (Éveil)", "16h15 - 17h15 (Enfants)", "17h15 - 18h15 (Enfants)", "18h15 - 19h30 (Ados/Adultes)"] }
+    ]
+  },
+  {
+    city: "Mons-en-Pévèle",
+    address: "Dojo (rue du Moulin)",
+    days: [
+      { day: "Lundi", slots: ["17h30 - 18h30 (Enfants)", "18h30 - 20h00 (Ados/Adultes)"] },
+      { day: "Samedi", slots: ["10h00 - 11h00 (Enfants)", "11h00 - 12h00 (Ados/Adultes)"] }
+    ]
+  }
+];
+
+const classes = [
+  { name: "Éveil", age: "4 - 6 ans", desc: "Une approche ludique pour développer la motricité et la concentration." },
+  { name: "Enfants", age: "7 - 12 ans", desc: "Apprentissage des bases techniques et des valeurs martiales." },
+  { name: "Ados / Adultes", age: "+ 13 ans", desc: "Perfectionnement technique, condition physique et self-défense." }
+];
 ---
 
 <Layout 
-  title="Le Dojo Virtuel — Apprendre le Karaté chez soi"
-  description="Transformez votre espace en dojo. Notre plateforme vous permet de pratiquer le Karaté Shotokan n'importe où, avec une pédagogie adaptée au travail en ligne."
+  title="Le Club de la Grange — Karaté à Mérignies & Mons-en-Pévèle"
+  description="Rejoignez le Club de la Grange pour pratiquer le Karaté Shotokan à Mérignies et Mons-en-Pévèle. Cours pour tous niveaux, de l'éveil aux adultes."
 >
 	<Navbar client:load />
-	<main class="pt-32 pb-24">
-    <div class="container-custom">
-      <div class="max-w-4xl mx-auto">
-        <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-12 text-center">
-          Le <span class="text-martial-red">Dojo</span> Virtuel
-        </h1>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-20">
-          <div class="bg-martial-gray p-10 rounded-[2.5rem] border border-gray-100">
-            <h3 class="text-2xl font-black uppercase mb-6">Pratique au Quotidien</h3>
-            <p class="text-gray-600 leading-relaxed">
-              Le dojo n'est pas qu'un lieu physique, c'est un état d'esprit. Grâce à nos formations vidéo, vous pouvez transformer votre salon ou votre jardin en espace d'entraînement sacré.
-            </p>
-          </div>
-          <div class="bg-martial-gray p-10 rounded-[2.5rem] border border-gray-100">
-            <h3 class="text-2xl font-black uppercase mb-6">Accompagnement</h3>
-            <p class="text-gray-600 leading-relaxed">
-              Même à distance, vous n'êtes pas seul. Philippe Bouvier décompose chaque mouvement pour que vous puissiez corriger vos erreurs et progresser avec la même rigueur qu'en club.
-            </p>
+	
+  <main class="pt-32 pb-24">
+    {/* Hero Section */}
+    <section class="container-custom mb-24">
+      <div class="relative rounded-[3rem] overflow-hidden bg-martial-black aspect-[21/9] flex items-center justify-center">
+        <img 
+          src="https://images.unsplash.com/photo-1552072805-2a9039d00e57?auto=format&fit=crop&q=80&w=2000" 
+          alt="Club de la Grange" 
+          class="absolute inset-0 w-full h-full object-cover opacity-40"
+        />
+        <div class="relative z-10 text-center px-6">
+          <span class="text-martial-red font-bold text-sm uppercase tracking-[0.4em] mb-4 block">Mérignies & Mons-en-Pévèle</span>
+          <h1 class="text-5xl md:text-8xl font-black text-white uppercase tracking-tighter leading-none mb-6">
+            Club de <br /> <span class="text-martial-red">la Grange</span>
+          </h1>
+          <p class="text-white/80 text-xl font-medium italic">S'épanouir par le Karaté</p>
+        </div>
+      </div>
+    </section>
+
+    {/* Les Cours */}
+    <section id="cours" class="container-custom mb-32">
+      <div class="flex flex-col md:flex-row gap-16 items-center">
+        <div class="md:w-1/2">
+          <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-8">
+            Les <span class="text-martial-red">Cours</span>
+          </h2>
+          <div class="space-y-6">
+            {classes.map((c) => (
+              <div class="bg-martial-gray p-8 rounded-3xl border border-gray-100 hover:border-martial-red/20 transition-colors group">
+                <div class="flex items-center justify-between mb-2">
+                  <h3 class="text-xl font-black uppercase text-martial-black group-hover:text-martial-red transition-colors">{c.name}</h3>
+                  <span class="text-xs font-bold text-gray-400 uppercase tracking-widest">{c.age}</span>
+                </div>
+                <p class="text-gray-500 text-sm leading-relaxed">{c.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
-
-        <div class="mt-20 relative rounded-[3rem] overflow-hidden aspect-video">
-          <img 
-            src="https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80&w=1200" 
-            alt="Dojo traditionnel" 
-            class="w-full h-full object-cover grayscale opacity-80"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-martial-black/80 to-transparent flex items-end p-12">
-            <p class="text-white text-xl font-light italic">
-              "L'esprit est le même, que vous soyez sur un tatami ou chez vous. La sincérité de l'effort est ce qui compte."
-            </p>
+        <div class="md:w-1/2">
+          <div class="rounded-[2.5rem] overflow-hidden shadow-2xl">
+            <img src="/assets/katas/intro.png" alt="Pratique du Karaté" class="w-full h-auto" />
           </div>
         </div>
       </div>
-    </div>
-	</main>
+    </section>
+
+    {/* Les Horaires */}
+    <section id="horaires" class="bg-martial-black py-24 text-white rounded-[4rem] mb-32">
+      <div class="container-custom">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4">
+            Nos <span class="text-martial-red">Horaires</span>
+          </h2>
+          <p class="text-gray-400 font-medium uppercase tracking-widest text-xs">Saison 2023 - 2024</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {schedules.map((s) => (
+            <div class="bg-white/5 border border-white/10 p-10 rounded-[3rem] backdrop-blur-sm">
+              <h3 class="text-2xl font-black uppercase text-martial-red mb-2">{s.city}</h3>
+              <p class="text-gray-400 text-sm mb-8 italic">{s.address}</p>
+              <div class="space-y-6">
+                {s.days.map((d) => (
+                  <div>
+                    <h4 class="font-bold uppercase tracking-widest text-martial-red text-xs mb-3">{d.day}</h4>
+                    <ul class="space-y-2">
+                      {d.slots.map((slot) => (
+                        <li class="text-sm font-medium border-l-2 border-martial-red/30 pl-4 py-1">{slot}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Accès */}
+    <section id="acces" class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-4">
+          Où nous <span class="text-martial-red">trouver ?</span>
+        </h2>
+      </div>
+      <div class="bg-martial-gray rounded-[3rem] p-4 border border-gray-100 overflow-hidden shadow-inner">
+        <div class="rounded-[2.5rem] overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 aspect-video md:aspect-[21/9]">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10168.324209581898!2d3.1166667!3d50.4833333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c2d1e5e5e5e5e5%3A0x5e5e5e5e5e5e5e5e!2sM%C3%A9rignies%2C%20France!5e0!3m2!1sfr!2sfr!4v1620000000000!5m2!1sfr!2sfr" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    {/* CTA Online */}
+    <section class="container-custom mt-32 text-center">
+      <div class="bg-martial-red text-white rounded-[3rem] p-12 md:p-20 relative overflow-hidden">
+        <div class="relative z-10">
+          <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter mb-8">Pas de club près de chez vous ?</h2>
+          <p class="text-xl mb-12 font-medium opacity-90">Découvrez nos formations en ligne accessibles partout.</p>
+          <a href="/#programmes" class="btn-primary !bg-white !text-martial-red !px-12 !py-5">Voir les cours en ligne</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
 	<Footer client:visible />
 </Layout>
