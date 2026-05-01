@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import CurriculumList from '../components/CurriculumList';
 
 const modules = [
   {
@@ -130,48 +131,19 @@ const offerUrl = "https://ecole.fudoshin.solutions/offers/eddbdb91-3af5-4345-992
           </div>
         </div>
 
-        {/* Curriculum List */}
-        <div class="space-y-6">
-          {modules.map((module) => (
-            <div class="bg-white border border-gray-100 rounded-[2rem] overflow-hidden shadow-sm">
-              <div class="px-8 py-6 bg-martial-gray border-b border-gray-100 flex items-center justify-between">
-                <div>
-                  <h2 class="font-black text-lg uppercase tracking-tight text-martial-black">{module.title}</h2>
-                  <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest mt-1">{module.stats}</p>
-                </div>
-                <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center border border-gray-200">
-                  <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </div>
-              </div>
-              <div class="p-4">
-                <ul class="space-y-1">
-                  {module.lessons.map((lesson) => (
-                    <li class="flex items-center justify-between p-4 rounded-xl hover:bg-martial-gray transition-colors group">
-                      <div class="flex items-center gap-4">
-                        <div class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center text-gray-400 group-hover:bg-martial-red group-hover:text-white transition-colors">
-                          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
-                        </div>
-                        <span class="text-sm font-medium text-gray-700 group-hover:text-martial-black transition-colors">{lesson.name}</span>
-                      </div>
-                      <span class="text-xs font-bold text-gray-400 font-mono">{lesson.duration}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Curriculum List (Interactive) */}
+        <CurriculumList client:load modules={modules} />
 
         {/* Sticky CTA */}
         <div class="mt-16 sticky bottom-8 z-50">
           <div class="bg-martial-black text-white p-6 md:p-8 rounded-[2.5rem] shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8 border border-white/10 backdrop-blur-md bg-opacity-95">
             <div class="text-center lg:text-left">
               <p class="text-martial-red font-black uppercase text-[10px] tracking-[0.3em] mb-1">Prêt à commencer ?</p>
-              <h3 class="text-xl md:text-2xl font-bold uppercase tracking-tight">Accédez à l'intégralité du programme</h3>
+              <h3 class="text-lg md:text-xl font-bold uppercase tracking-tight max-w-[300px]">L'intégralité du programme pour seulement</h3>
             </div>
             
             <div class="flex flex-col md:flex-row items-center gap-6 w-full lg:w-auto">
-              {/* Informational Pricing Display (Non-clickable) */}
+              {/* Informational Pricing Display */}
               <div class="flex flex-col gap-3 w-full md:w-72">
                 <div class="grid grid-cols-2 gap-3">
                   <div class="bg-white/10 border border-white/10 p-3 rounded-xl text-center">
@@ -193,9 +165,9 @@ const offerUrl = "https://ecole.fudoshin.solutions/offers/eddbdb91-3af5-4345-992
                 href={offerUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="btn-primary !bg-martial-red !text-white !px-12 !py-6 w-full md:w-auto text-center shadow-2xl shadow-martial-red/40 hover:scale-105 transition-transform text-lg font-black uppercase tracking-tighter"
+                class="btn-primary !bg-martial-red !text-white !px-10 !py-4 w-full md:w-auto text-center shadow-2xl shadow-martial-red/40 hover:scale-105 transition-transform text-sm font-black uppercase tracking-widest whitespace-nowrap"
               >
-                Commencer l'essai
+                Commencez l'essai
               </a>
             </div>
           </div>
