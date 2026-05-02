@@ -16,7 +16,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <span className="inline-block bg-martial-red/10 text-red-700 dark:text-martial-red font-bold text-xs uppercase tracking-[0.3em] px-4 py-2 rounded-full mb-8">
               Enseignement Traditionnel
@@ -54,7 +54,7 @@ const Hero = () => {
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
+            transition={{ delay: 0.2, duration: 0.8 }}
             className="mt-20 flex items-center gap-12 border-t border-gray-100 dark:border-white/10 pt-10 grayscale opacity-40 dark:text-white"
           >
             <div className="flex flex-col">

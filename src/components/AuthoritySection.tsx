@@ -59,7 +59,7 @@ const AuthoritySection = () => {
                       <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg uppercase tracking-wide mb-1">{item.title}</h4>
+                      <h3 className="font-bold text-lg uppercase tracking-wide mb-1">{item.title}</h3>
                       <p className="text-gray-500 dark:text-gray-400 text-sm">{item.desc}</p>
                     </div>
                   </div>

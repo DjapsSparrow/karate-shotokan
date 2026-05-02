@@ -109,8 +109,9 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
+        <h2 className="sr-only">Informations de bas de page</h2>
         <div className="pt-12 border-t border-gray-900 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="text-gray-600 dark:text-gray-400 text-xs">
+          <p className="text-gray-700 dark:text-gray-300 text-xs font-medium">
             © {currentYear} Karaté Shotokan. Tous droits réservés.
           </p>
           <div className="flex items-center gap-2 grayscale opacity-50">
