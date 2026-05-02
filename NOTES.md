@@ -2,13 +2,12 @@
 
 # PHASE 1: ÉTAT ACTUEL
 - **Date** : 02 Mai 2026
-- **État de stabilité** : ✅ v1.8.8 stable — Optimisation extrême des Performances et Accessibilité.
-- **Fichiers modifiés** : Composants UI (`Hero.tsx`, `Footer.tsx`, etc.), Pages Aperçu, `global.css`, `Layout.astro`, `astro.config.mjs`, `package.json`.
-- **Résumé de Session (v1.8.3 -> v1.8.8)** :
-  - **Images** : Migration vers le composant `<Image />` d'Astro (WebP/AVIF auto) et optimisation des images Unsplash.
-  - **Accessibilité (100/100)** : Renforcement des contrastes globaux, réorganisation sémantique des balises (h1-h4) et ajout d'attributs ARIA.
-  - **Performance Mobile (90/100)** : Amélioration majeure du FCP (1.5s) via l'auto-hébergement de la police (`@fontsource-variable/outfit`) et du LCP (3.2s) via l'allègement des animations sur mobile.
-- **Objectif prochain** : Articles de blog SEO.
+- **État de stabilité** : ✅ v1.8.9 stable — Intégration du Trailer Vidéo Premium.
+- **Fichiers modifiés** : `src/components/VideoTrailer.tsx`, `src/pages/index.astro`, `package.json`, `NOTES.md`.
+- **Résumé de Session (v1.8.8 -> v1.8.9)** :
+  - **Vidéo** : Intégration du trailer HD auto-hébergé (`/video/trailer.mp4`) avec encart premium `ShineBorder` sur la home page.
+  - **Cache** : Incrément de version pour forcer le rafraîchissement côté client.
+- **Objectif prochain** : Remplacement des photos (Philippe Bouvier, bannières ceintures) et articles de blog SEO.
 
 ---
 
