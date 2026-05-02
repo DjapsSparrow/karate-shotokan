@@ -2,11 +2,10 @@
 
 # PHASE 1: ÉTAT ACTUEL
 - **Date** : 02 Mai 2026
-- **État de stabilité** : ✅ v1.9.0 stable — Portrait officiel de Philippe Bouvier intégré.
-- **Fichiers modifiés** : `src/components/AuthoritySection.tsx`, `src/pages/index.astro`, `package.json`, `NOTES.md`, `src/assets/images/philippe-bouvier.jpg`.
-- **Résumé de Session (v1.8.9 -> v1.9.0)** :
-  - **Portrait** : Remplacement du placeholder par la photo officielle de Philippe Bouvier dans la section Autorité.
-  - **Optimisation** : Passage par le pipeline d'importation Astro pour garantir l'optimisation des assets.
+- **État de stabilité** : ✅ v1.9.1 stable — Ajustement layout VideoTrailer.
+- **Fichiers modifiés** : `src/components/VideoTrailer.tsx`, `package.json`, `NOTES.md`.
+- **Résumé de Session (v1.9.0 -> v1.9.1)** :
+  - **Vidéo** : Déplacement du titre et de la description au-dessus du lecteur pour une meilleure hiérarchie visuelle.
 - **Objectif prochain** : Remplacement des bannières de ceintures et articles de blog SEO.
 
 ---
