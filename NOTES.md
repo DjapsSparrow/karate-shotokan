@@ -2,11 +2,12 @@
 
 # PHASE 1: ÉTAT ACTUEL
 - **Date** : 02 Mai 2026
-- **État de stabilité** : ✅ v1.9.1 stable — Ajustement layout VideoTrailer.
-- **Fichiers modifiés** : `src/components/VideoTrailer.tsx`, `package.json`, `NOTES.md`.
-- **Résumé de Session (v1.9.0 -> v1.9.1)** :
-  - **Vidéo** : Déplacement du titre et de la description au-dessus du lecteur pour une meilleure hiérarchie visuelle.
-- **Objectif prochain** : Remplacement des bannières de ceintures et articles de blog SEO.
+- **État de stabilité** : ✅ v1.9.2 stable — Mise à jour visuelle NoveltySection.
+- **Fichiers modifiés** : `src/components/NoveltySection.tsx`, `src/pages/index.astro`, `package.json`, `NOTES.md`, `src/assets/images/katas-superieurs.jpg`.
+- **Résumé de Session (v1.9.1 -> v1.9.2)** :
+  - **NoveltySection** : Remplacement du placeholder vidéo par l'image officielle des Katas Supérieurs.
+  - **UX** : Suppression de l'icône "Play" trompeuse et amélioration du contraste de l'image.
+- **Objectif prochain** : Remplacement des bannières de ceintures restantes et articles de blog SEO.
 
 ---
 

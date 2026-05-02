@@ -2,7 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import ShineBorder from './ShineBorder';
 
-const NoveltySection = () => {
+interface NoveltySectionProps {
+  imageSrc?: string;
+}
+
+const NoveltySection = ({ imageSrc }: NoveltySectionProps) => {
   return (
     <section id="katas-superieurs" className="py-24 bg-martial-gray">
       <div className="container-custom">
@@ -21,17 +25,12 @@ const NoveltySection = () => {
             <div className="absolute -top-6 -left-6 bg-martial-red text-white font-black px-6 py-2 rounded-full z-10 animate-pulse text-sm uppercase tracking-widest">
               Nouveauté
             </div>
-            <div className="rounded-2xl overflow-hidden aspect-video bg-gray-900 flex items-center justify-center relative group">
+            <div className="rounded-2xl overflow-hidden aspect-video bg-gray-900 relative group border-4 border-white/10">
               <img 
-                src="https://images.unsplash.com/photo-1552072805-2a9039d00e57?auto=format&fit=crop&q=80&w=1000" 
+                src={imageSrc || "https://images.unsplash.com/photo-1552072805-2a9039d00e57?auto=format&fit=crop&q=80&w=1000"} 
                 alt="Katas Supérieurs" 
-                className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/30 group-hover:bg-martial-red transition-colors">
-                  <svg className="w-8 h-8 ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                </div>
-              </div>
             </div>
           </div>
 
