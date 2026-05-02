@@ -2,10 +2,12 @@
 
 # PHASE 1: ÉTAT ACTUEL
 - **Date** : 02 Mai 2026
-- **État de stabilité** : ✅ v1.8.8 stable — Fontes auto-hébergées.
-- **Fichiers modifiés** : `Layout.astro`, `global.css`, `package.json`, `NOTES.md`.
-- **Résumé de Session (v1.8.8)** :
-  - **Performance (LCP)** : Remplacement de Google Fonts par l'auto-hébergement via `@fontsource-variable/outfit` pour supprimer le délai de connexion externe et améliorer le FCP/LCP.
+- **État de stabilité** : ✅ v1.8.8 stable — Optimisation extrême des Performances et Accessibilité.
+- **Fichiers modifiés** : Composants UI (`Hero.tsx`, `Footer.tsx`, etc.), Pages Aperçu, `global.css`, `Layout.astro`, `astro.config.mjs`, `package.json`.
+- **Résumé de Session (v1.8.3 -> v1.8.8)** :
+  - **Images** : Migration vers le composant `<Image />` d'Astro (WebP/AVIF auto) et optimisation des images Unsplash.
+  - **Accessibilité (100/100)** : Renforcement des contrastes globaux, réorganisation sémantique des balises (h1-h4) et ajout d'attributs ARIA.
+  - **Performance Mobile (90/100)** : Amélioration majeure du FCP (1.5s) via l'auto-hébergement de la police (`@fontsource-variable/outfit`) et du LCP (3.2s) via l'allègement des animations sur mobile.
 - **Objectif prochain** : Articles de blog SEO.
 
 ---
@@ -30,3 +32,4 @@
 ## 🧠 Apprentissages Techniques
 - **Caching** : Les fichiers HTML doivent avoir un `ExpiresByType` à 0s.
 - **Images** : Toujours utiliser `<Image />` d'Astro au lieu de `<img>` pour bénéficier du format WebP automatique et du lazy-loading natif.
+- **Polices** : Privilégier l'auto-hébergement (ex: `@fontsource`) plutôt que Google Fonts pour améliorer drastiquement le temps de connexion initial (FCP) sur mobile.
