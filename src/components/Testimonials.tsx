@@ -118,6 +118,7 @@ const Testimonials = () => {
   return (
     <section id="faq" className="py-24 bg-martial-gray overflow-hidden">
       <div className="container-custom">
+        <h2 className="sr-only">Témoignages et Statistiques</h2>
         <div className="flex flex-col lg:flex-row gap-20 items-center">
           {/* Stats */}
           <div className="lg:w-1/4 grid grid-cols-2 gap-4 shrink-0">
@@ -194,8 +195,11 @@ const Testimonials = () => {
                     <button
                       key={i}
                       onClick={() => setIndex(i)}
-                      className={`w-2 h-2 rounded-full transition-all ${index === i ? 'bg-martial-black w-6' : 'bg-gray-200 dark:bg-white/10 hover:bg-gray-300 dark:hover:bg-white/20'}`}
-                    />
+                      aria-label={`Aller au témoignage ${i / 2 + 1}`}
+                      className={`w-4 h-4 rounded-full transition-all flex items-center justify-center group`}
+                    >
+                      <span className={`rounded-full transition-all ${index === i ? 'bg-martial-black dark:bg-white w-8 h-2' : 'bg-gray-300 dark:bg-white/20 w-2 h-2 group-hover:bg-gray-400'}`} />
+                    </button>
                   )
                 ))}
               </div>

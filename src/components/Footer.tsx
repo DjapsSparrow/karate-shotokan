@@ -110,7 +110,7 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="pt-12 border-t border-gray-900 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="text-gray-500 dark:text-gray-600 text-xs">
+          <p className="text-gray-600 dark:text-gray-400 text-xs">
             © {currentYear} Karaté Shotokan. Tous droits réservés.
           </p>
           <div className="flex items-center gap-2 grayscale opacity-50">

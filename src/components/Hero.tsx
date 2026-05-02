@@ -18,7 +18,7 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <span className="inline-block bg-martial-red/10 text-martial-red font-bold text-xs uppercase tracking-[0.3em] px-4 py-2 rounded-full mb-8">
+            <span className="inline-block bg-martial-red/10 text-red-700 dark:text-martial-red font-bold text-xs uppercase tracking-[0.3em] px-4 py-2 rounded-full mb-8">
               Enseignement Traditionnel
             </span>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.9] mb-8 tracking-tighter dark:text-white">

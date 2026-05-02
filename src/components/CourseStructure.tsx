@@ -87,7 +87,7 @@ const LessonCard = ({ lesson, index }: { lesson: typeof lessons[0], index: numbe
           >
             <div className="pt-4 pb-2">
               <div className="w-8 h-1 bg-martial-red/20 rounded-full mb-4"></div>
-              <p className="text-gray-500 dark:text-gray-400 text-sm font-medium leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 text-sm font-medium leading-relaxed">
                 {lesson.description}
               </p>
             </div>

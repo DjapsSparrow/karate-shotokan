@@ -2,11 +2,11 @@
 
 # PHASE 1: ÉTAT ACTUEL
 - **Date** : 02 Mai 2026
-- **État de stabilité** : ✅ v1.8.3 stable — Optimisation des performances.
-- **Fichiers modifiés** : `astro.config.mjs`, `le-dojo.astro`, pages d'aperçu, `package.json`, `NOTES.md`.
-- **Résumé de Session (v1.8.3)** :
-  - **Performance** : Audit PageSpeed Insights (86 Mobile / 99 Desktop). Migration des images vers `src/assets` et utilisation systématique du composant `<Image />` d'Astro pour l'auto-optimisation (Sharp).
-  - **Assets** : Configuration du domaine Unsplash dans `astro.config.mjs` pour permettre l'optimisation des images distantes.
+- **État de stabilité** : ✅ v1.8.4 stable — Accessibilité 100/100.
+- **Fichiers modifiés** : `Hero.tsx`, `Footer.tsx`, `Layout.astro`, `Testimonials.tsx`, `CourseStructure.tsx`, `package.json`, `NOTES.md`.
+- **Résumé de Session (v1.8.4)** :
+  - **Accessibilité** : Optimisation des contrastes (badge Hero, copyright Footer, version Layout). Ajout d'aria-labels sur les contrôles de slider. Correction de la hiérarchie des titres (h2 caché pour SEO/A11y). Augmentation des zones de clic sur mobile.
+  - **Performance** : Score PageSpeed maintenu à 99/100.
 - **Objectif prochain** : Articles de blog SEO.
 
 ---
