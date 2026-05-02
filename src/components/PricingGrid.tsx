@@ -18,7 +18,7 @@ const PricingGrid = () => {
         <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-6 dark:text-white">
           Formations par <span className="text-martial-red">Niveaux</span>
         </h2>
-        <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto font-medium">
+        <p className="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto font-medium">
           Une progression structurée du débutant au confirmé. Sélectionnez votre prochain grade pour découvrir le programme complet.
         </p>
       </div>
@@ -59,7 +59,7 @@ const PricingGrid = () => {
               <h3 className="text-2xl font-black uppercase mb-4 dark:text-white group-hover:text-martial-red transition-colors">
                 Ceinture {belt.color}
               </h3>
-              <p className="text-gray-500 dark:text-gray-400 text-sm mb-8 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-8 leading-relaxed">
                 {belt.desc}
               </p>
               

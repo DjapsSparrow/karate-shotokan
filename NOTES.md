@@ -2,11 +2,11 @@
 
 # PHASE 1: ÉTAT ACTUEL
 - **Date** : 02 Mai 2026
-- **État de stabilité** : ✅ v1.8.4 stable — Accessibilité 100/100.
-- **Fichiers modifiés** : `Hero.tsx`, `Footer.tsx`, `Layout.astro`, `Testimonials.tsx`, `CourseStructure.tsx`, `package.json`, `NOTES.md`.
-- **Résumé de Session (v1.8.4)** :
-  - **Accessibilité** : Optimisation des contrastes (badge Hero, copyright Footer, version Layout). Ajout d'aria-labels sur les contrôles de slider. Correction de la hiérarchie des titres (h2 caché pour SEO/A11y). Augmentation des zones de clic sur mobile.
-  - **Performance** : Score PageSpeed maintenu à 99/100.
+- **État de stabilité** : ✅ v1.8.6 stable — Accessibilité 100/100 visée.
+- **Fichiers modifiés** : Global (Contrastes), `Hero.tsx`, `package.json`, `NOTES.md`.
+- **Résumé de Session (v1.8.6)** :
+  - **Accessibilité** : Correction globale des contrastes (text-gray-500/400 vers 700/300) sur tous les composants majeurs (Hero, Novelty, Authority, Pricing).
+  - **Performance** : Accélération de l'animation Hero (LCP) et pré-connexion Google Fonts. Main-thread optimisé.
 - **Objectif prochain** : Articles de blog SEO.
 
 ---

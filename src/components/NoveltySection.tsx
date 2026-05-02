@@ -39,13 +39,13 @@ const NoveltySection = () => {
             <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tighter leading-[0.9] dark:text-white">
               Les Katas <br /> <span className="text-martial-red">Supérieurs</span>
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
+            <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
               Poussez votre pratique au niveau supérieur avec notre nouveau programme dédié aux Katas avancés. 
               Une décomposition pas-à-pas, les points de vigilance et les bunkaïs secrets révélés.
             </p>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
               {['6 Katas Avancés', 'Vues Multi-Angles', 'Bunkaï Détaillés', 'Accès Illimité'].map((item) => (
-                <li key={item} className="flex items-center gap-2 text-sm font-bold uppercase tracking-tight dark:text-gray-300">
+                <li key={item} className="flex items-center gap-2 text-sm font-bold uppercase tracking-tight text-gray-700 dark:text-gray-200">
                   <svg className="w-5 h-5 text-martial-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                   </svg>

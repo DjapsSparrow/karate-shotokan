@@ -25,7 +25,7 @@ const Hero = () => {
               Apprendre le Karaté <br /> 
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-martial-black to-martial-red/70 dark:from-white dark:to-martial-red">Shotokan</span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl font-light leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-10 max-w-2xl font-light leading-relaxed">
               Maîtrisez la discipline selon l'enseignement de <span className="font-semibold text-martial-black dark:text-white">Sensei Taiji Kase</span>. Accès 24/7, contenu certifié FFK et progression sans engagement.
             </p>
             
