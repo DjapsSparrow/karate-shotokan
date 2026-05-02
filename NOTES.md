@@ -1,9 +1,9 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 ## 🏁 ÉTAT DE REPRISE (À copier dans un nouveau chat)
-- **Version** : v1.8.0
-- **Objectif** : Implémentation d'un smooth scroll fluide et élégant (Lenis).
-- **Statut** : ✅ Terminé. Installation et configuration de la librairie `@studio-freight/lenis` au niveau global (Layout). Le bouton ScrollToTop a également été mis à jour pour exploiter l'inertie de Lenis lorsqu'il est cliqué.
+- **Version** : v1.8.1
+- **Objectif** : Correction du décalage visuel sur la page Katas Supérieurs.
+- **Statut** : ✅ Terminé. Réorganisation de la structure HTML pour assurer la cohérence avec les pages de ceintures et corriger l'espacement du cartouche gris.
 - **Lien** : https://prod.karate-shotokan.fr
 
 ---
