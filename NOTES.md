@@ -2,12 +2,12 @@
 
 # PHASE 1: ÉTAT ACTUEL
 - **Date** : 02 Mai 2026
-- **État de stabilité** : ✅ v1.8.9 stable — Intégration du Trailer Vidéo Premium.
-- **Fichiers modifiés** : `src/components/VideoTrailer.tsx`, `src/pages/index.astro`, `package.json`, `NOTES.md`.
-- **Résumé de Session (v1.8.8 -> v1.8.9)** :
-  - **Vidéo** : Intégration du trailer HD auto-hébergé (`/video/trailer.mp4`) avec encart premium `ShineBorder` sur la home page.
-  - **Cache** : Incrément de version pour forcer le rafraîchissement côté client.
-- **Objectif prochain** : Remplacement des photos (Philippe Bouvier, bannières ceintures) et articles de blog SEO.
+- **État de stabilité** : ✅ v1.9.0 stable — Portrait officiel de Philippe Bouvier intégré.
+- **Fichiers modifiés** : `src/components/AuthoritySection.tsx`, `src/pages/index.astro`, `package.json`, `NOTES.md`, `src/assets/images/philippe-bouvier.jpg`.
+- **Résumé de Session (v1.8.9 -> v1.9.0)** :
+  - **Portrait** : Remplacement du placeholder par la photo officielle de Philippe Bouvier dans la section Autorité.
+  - **Optimisation** : Passage par le pipeline d'importation Astro pour garantir l'optimisation des assets.
+- **Objectif prochain** : Remplacement des bannières de ceintures et articles de blog SEO.
 
 ---
 

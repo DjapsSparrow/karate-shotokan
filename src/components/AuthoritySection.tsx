@@ -1,7 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const AuthoritySection = () => {
+interface AuthoritySectionProps {
+  imageSrc?: string;
+}
+
+const AuthoritySection = ({ imageSrc }: AuthoritySectionProps) => {
   return (
     <section id="authority" className="py-24 bg-martial-deep-black text-white overflow-hidden relative">
       {/* Texture Background */}
@@ -24,7 +28,7 @@ const AuthoritySection = () => {
             <div className="relative inline-block mb-12">
               <div className="absolute -inset-4 border border-martial-red rounded-2xl rotate-3 opacity-30"></div>
               <img 
-                src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&q=80&w=800" 
+                src={imageSrc || "https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&q=80&w=800"} 
                 alt="Philippe Bouvier" 
                 className="rounded-xl w-full h-[600px] object-cover relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
               />

@@ -9,6 +9,7 @@ import PricingGrid from '../components/PricingGrid';
 import AuthoritySection from '../components/AuthoritySection';
 import Testimonials from '../components/Testimonials';
 import Footer from '../components/Footer';
+import philippeImage from '../assets/images/philippe-bouvier.jpg';
 ---
 
 <Layout>
@@ -19,7 +20,7 @@ import Footer from '../components/Footer';
 		<CourseStructure client:visible />
 		<VideoTrailer client:visible />
 		<PricingGrid client:visible />
-		<AuthoritySection client:visible />
+		<AuthoritySection client:visible imageSrc={philippeImage.src} />
 		<Testimonials client:visible />
 	</main>
 	<Footer client:visible />
