@@ -175,7 +175,7 @@ const Testimonials = () => {
                           {t.name.charAt(0)}
                         </div>
                         <div>
-                          <h4 className="font-bold text-xs uppercase tracking-wider">{t.name}</h4>
+                          <h3 className="font-bold text-xs uppercase tracking-wider">{t.name}</h3>
                           <span className="text-[10px] text-gray-400 dark:text-gray-500 font-bold uppercase tracking-tighter">{t.role}</span>
                         </div>
                       </div>

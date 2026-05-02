@@ -14,9 +14,10 @@ const Hero = () => {
       <div className="container-custom">
         <div className="max-w-4xl">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            className="md:motion-safe:animate-none"
           >
             <span className="inline-block bg-martial-red/10 text-red-700 dark:text-martial-red font-bold text-xs uppercase tracking-[0.3em] px-4 py-2 rounded-full mb-8">
               Enseignement Traditionnel
