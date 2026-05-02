@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prod.karate-shotokan.fr/sitemap-index.xml

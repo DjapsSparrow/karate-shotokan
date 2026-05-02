@@ -2,16 +2,18 @@
 
 # PHASE 1: ÉTAT ACTUEL
 - **Date** : 02 Mai 2026
-- **État de stabilité** : ✅ v1.9.3 stable — Mise à jour visuelle Page Dojo.
-- **Fichiers modifiés** : `src/pages/le-dojo.astro`, `package.json`, `NOTES.md`, `src/assets/images/dojo-interieur.jpg`.
-- **Résumé de Session (v1.9.2 -> v1.9.3)** :
-  - **Le Dojo** : Remplacement du banner générique par l'image officielle de l'intérieur du dojo.
-  - **Design** : Retrait du mode noir et blanc pour laisser transparaître les tons boisés chaleureux du dojo.
+- **État de stabilité** : ✅ v1.9.4 stable — Audit SEO complet & Nouveau Skill SEO.
+- **Fichiers modifiés** : `src/layouts/Layout.astro`, `astro.config.mjs`, `public/robots.txt`, `package.json`, `NOTES.md`, `/skills/seo.md`.
+- **Résumé de Session (v1.9.3 -> v1.9.4)** :
+  - **SEO Infrastructure** : Activation du Sitemap, création du `robots.txt` et configuration de l'URL `site`.
+  - **SEO Social** : Implémentation des balises OpenGraph (Facebook/LinkedIn) et Twitter Cards dans le Layout.
+  - **Skill Global** : Création du skill `seo.md` pour systématiser ces contrôles sur tous les futurs projets.
 - **Objectif prochain** : Remplacement des bannières de ceintures restantes et articles de blog SEO.
 
 ---
 
 ## 📜 Journal des Versions (Changelog)
+- **v1.9.4** (02/05/2026) : Audit SEO complet, sitemap, robots.txt et meta-données sociales. Création du skill global `seo.md`.
 - **v1.9.3** (02/05/2026) : Remplacement du banner "Club Léo Lagrange" par la photo de l'intérieur du dojo.
 - **v1.9.2** (02/05/2026) : Remplacement du placeholder "Katas Supérieurs" par l'image officielle et retrait de l'icône Play.
 - **v1.9.1** (02/05/2026) : Ajustement du layout `VideoTrailer` (titre/description au-dessus du lecteur).
