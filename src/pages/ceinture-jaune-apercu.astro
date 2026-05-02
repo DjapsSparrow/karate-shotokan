@@ -5,6 +5,8 @@ import Footer from '../components/Footer';
 import CurriculumList from '../components/CurriculumList';
 import StickyCTA from '../components/StickyCTA';
 import BackToCourses from '../components/BackToCourses';
+import { Image } from 'astro:assets';
+import heroApercu from '../assets/images/hero-apercu.jpg';
 
 const modules = [
   {
@@ -115,10 +117,11 @@ const offerUrl = "https://ecole.fudoshin.solutions/offers/eddbdb91-3af5-4345-992
         
         {/* Banner */}
         <div class="relative h-64 md:h-80 rounded-[3rem] overflow-hidden mb-12 shadow-2xl">
-          <img 
-            src="/images/hero-apercu.jpg" 
+          <Image 
+            src={heroApercu} 
             alt="Formation Ceinture Jaune" 
             class="w-full h-full object-cover"
+            loading="eager"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex flex-col justify-end p-10 md:p-16">
             <h1 class="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter">Aperçu du Programme</h1>

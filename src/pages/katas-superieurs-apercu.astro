@@ -3,6 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ShineBorder from '../components/ShineBorder';
+import { Image } from 'astro:assets';
+import bannerImg from '../assets/katas/banner.png';
+import introImg from '../assets/katas/intro.png';
+import groupImg from '../assets/katas/group.png';
+import conclusionImg from '../assets/katas/conclusion.png';
 
 const offerUrl = "https://fudoshin.schoolmaker.co/offers/dc2cb6fa-53f5-45f0-a811-9d023db2ddfe";
 
@@ -39,7 +44,7 @@ const dan3Katas = [
         
         {/* Banner */}
         <div class="rounded-[2.5rem] overflow-hidden shadow-2xl mb-12 border border-white">
-          <img src="/assets/katas/banner.png" alt="Karaté Shotokan Banner" class="w-full h-auto" />
+          <Image src={bannerImg} alt="Karaté Shotokan Banner" class="w-full h-auto" loading="eager" />
         </div>
 
         {/* Title Section */}
@@ -69,7 +74,7 @@ const dan3Katas = [
             <h2 class="text-2xl font-black uppercase tracking-tight dark:text-white">Introduction</h2>
           </div>
           <div class="rounded-2xl overflow-hidden mb-8">
-            <img src="/assets/katas/intro.png" alt="Introduction" class="w-full h-auto" />
+            <Image src={introImg} alt="Introduction" class="w-full h-auto" />
           </div>
           <p class="text-gray-600 dark:text-gray-400 mb-6 font-medium">Dans cette formation, nous allons vous enseigner tous les katas supérieurs.</p>
           <div class="flex items-center gap-6 text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest border-t border-gray-50 dark:border-white/10 pt-6">
@@ -86,7 +91,7 @@ const dan3Katas = [
             <h2 class="text-2xl font-black uppercase tracking-tight dark:text-white">Les katas du 2e dan</h2>
           </div>
           <div class="rounded-2xl overflow-hidden mb-8">
-            <img src="/assets/katas/group.png" alt="2e Dan Katas" class="w-full h-auto" />
+            <Image src={groupImg} alt="2e Dan Katas" class="w-full h-auto" />
           </div>
           <p class="text-gray-600 dark:text-gray-400 mb-8 font-medium">Nous allons passer en revue les différents katas qui vous permettront d'obtenir votre 2e dan.</p>
           
@@ -113,7 +118,7 @@ const dan3Katas = [
             <h2 class="text-2xl font-black uppercase tracking-tight dark:text-white">Les katas du 3e dan</h2>
           </div>
           <div class="rounded-2xl overflow-hidden mb-8">
-            <img src="/assets/katas/group.png" alt="3e Dan Katas" class="w-full h-auto" />
+            <Image src={groupImg} alt="3e Dan Katas" class="w-full h-auto" />
           </div>
           <p class="text-gray-600 dark:text-gray-400 mb-8 font-medium">Nous allons passer en revue les différents katas qui vous permettront d'obtenir votre 3e dan.</p>
           
@@ -140,7 +145,7 @@ const dan3Katas = [
             <h2 class="text-2xl font-black uppercase tracking-tight dark:text-white">Conclusion</h2>
           </div>
           <div class="rounded-2xl overflow-hidden mb-8">
-            <img src="/assets/katas/conclusion.png" alt="Conclusion" class="w-full h-auto" />
+            <Image src={conclusionImg} alt="Conclusion" class="w-full h-auto" />
           </div>
           <div class="flex items-center justify-between p-4 rounded-xl border border-martial-red/20 bg-martial-gray dark:bg-white/5 mb-8">
             <div class="flex items-center gap-4">

@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import CurriculumList from '../components/CurriculumList';
 import StickyCTA from '../components/StickyCTA';
 import BackToCourses from '../components/BackToCourses';
+import { Image } from 'astro:assets';
 
 const modules = [
   {
@@ -96,9 +97,12 @@ const offerUrl = "https://ecole.fudoshin.solutions/offers/20697fe9-e447-4082-b33
         
         {/* Banner */}
         <div class="relative h-64 md:h-80 rounded-[3rem] overflow-hidden mb-12 shadow-2xl">
-          <img 
+          <Image 
             src="https://images.unsplash.com/photo-1555597673-b21d5c935865?auto=format&fit=crop&q=80&w=2000" 
             alt="Formation Ceinture Verte" 
+            width={2000}
+            height={857}
+            loading="eager"
             class="w-full h-full object-cover"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent flex flex-col justify-end p-10 md:p-16">
