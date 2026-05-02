@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Image } from 'astro:assets';
+import dojoInterieur from '../assets/images/dojo-interieur.jpg';
 
 const schedules = [
   {
@@ -64,12 +65,12 @@ const pricing = [
     <section class="container-custom mb-24">
       <div class="relative rounded-[3rem] overflow-hidden bg-martial-deep-black aspect-[21/9] flex items-center justify-center">
         <Image 
-          src="https://images.unsplash.com/photo-1552072805-2a9039d00e57?auto=format&fit=crop&q=80&w=2000" 
+          src={dojoInterieur} 
           alt="Club Léo Lagrange Draguignan" 
           width={2000}
           height={857}
           loading="eager"
-          class="absolute inset-0 w-full h-full object-cover opacity-40 grayscale"
+          class="absolute inset-0 w-full h-full object-cover opacity-30"
         />
         <div class="relative z-10 text-center px-6">
           <span class="text-martial-red font-bold text-sm uppercase tracking-[0.4em] mb-4 block">Draguignan</span>
