@@ -12,7 +12,8 @@ const AuthoritySection = ({ imageSrc }: AuthoritySectionProps) => {
       <div className="absolute inset-0 opacity-10 pointer-events-none grayscale contrast-150">
         <img 
           src="https://images.unsplash.com/photo-1549413203-049830c25a07?auto=format&fit=crop&q=80&w=2000" 
-          alt="Texture" 
+          alt="" 
+          aria-hidden="true"
           className="w-full h-full object-cover"
         />
       </div>

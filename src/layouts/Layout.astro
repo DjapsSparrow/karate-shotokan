@@ -26,7 +26,29 @@ const {
 		
 		<title>{title}</title>
 		<meta name="description" content={description} />
+		<meta name="keywords" content="karaté shotokan, philippe bouvier, formation karaté ligne, taiji kase, passage de grade karaté, ceinture noire karaté, bunkai, kata" />
 		<link rel="canonical" href={new URL(Astro.url.pathname, "https://karate-shotokan.fr").href} />
+
+		<!-- JSON-LD Structured Data -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "OnlineCourse",
+				"name": "Formation Karaté Shotokan — Philippe Bouvier",
+				"description": "Apprenez le Karaté Shotokan avec Philippe Bouvier, 7e Dan FFK. Enseignement traditionnel hérité de Sensei Taiji Kase.",
+				"provider": {
+					"@type": "Person",
+					"name": "Philippe Bouvier",
+					"jobTitle": "7e Dan FFK",
+					"url": "https://karate-shotokan.fr"
+				},
+				"offers": {
+					"@type": "Offer",
+					"category": "Education",
+					"availability": "https://schema.org/InStock"
+				}
+			}
+		</script>
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />

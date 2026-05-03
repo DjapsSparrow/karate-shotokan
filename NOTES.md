@@ -2,7 +2,7 @@
 
 # PHASE 1: ÉTAT ACTUEL
 - **Date** : 03 Mai 2026
-- **État de stabilité** : ✅ v2.1.1 Launch — Nettoyage complet des anciennes URLs (Robots/Layout).
+- **État de stabilité** : ✅ v2.2.0 SEO+ — Données structurées JSON-LD et optimisations accessibilité.
 - **Fichiers modifiés** : `astro.config.mjs`, `.github/workflows/deploy.yml`, `package.json`, `NOTES.md`.
 - **Résumé de Session (v1.9.6 -> v2.0.0)** :
 -   **LANCEMENT OFFICIEL** : Migration de l'infrastructure de déploiement vers le domaine de production final. 
@@ -13,6 +13,7 @@
 ---
 
 ## 📜 Journal des Versions (Changelog)
+- **v2.2.0** (03/05/2026) : Implémentation du SEO Avancé. Ajout du schéma JSON-LD `OnlineCourse`, meta keywords ciblés et corrections d'accessibilité (ARIA).
 - **v2.1.1** (03/05/2026) : Nettoyage final des URLs de production. Mise à jour de `robots.txt`, canoniques et balises sociales pour pointer vers le domaine final.
 - **v2.1.0** (03/05/2026) : Optimisation massive des performances. Mise en place de `astro:assets` pour générer des variantes WebP redimensionnées pour toutes les images clés. Réduction du poids de la home page.
 - **v2.0.2** (03/05/2026) : Masquage du filigrane Tigre sur mobile pour améliorer la lisibilité du texte.
