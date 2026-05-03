@@ -2,7 +2,7 @@
 
 # PHASE 1: ÉTAT ACTUEL
 - **Date** : 03 Mai 2026
-- **État de stabilité** : ✅ v2.2.5 stable — Version déplacée dans le Footer.
+- **État de stabilité** : ✅ v2.2.6 stable — Schéma Sitelinks (JSON-LD hasPart).
 - **Fichiers modifiés** : `astro.config.mjs`, `.github/workflows/deploy.yml`, `package.json`, `NOTES.md`.
 - **Résumé de Session (v1.9.6 -> v2.0.0)** :
 -   **LANCEMENT OFFICIEL** : Migration de l'infrastructure de déploiement vers le domaine de production final. 
@@ -13,6 +13,7 @@
 ---
 
 ## 📜 Journal des Versions (Changelog)
+- **v2.2.6** (03/05/2026) : Ajout du schéma `hasPart` dans les données structurées pour favoriser l'affichage des Sitelinks (liens des ceintures) dans Google.
 - **v2.2.5** (03/05/2026) : Suppression du widget de version flottant. La note de version est désormais intégrée discrètement dans le Footer.
 - **v2.2.4** (03/05/2026) : Harmonisation globale du comportement du curseur (pointer) sur tous les éléments interactifs (liens, boutons, labels).
 - **v2.2.3** (03/05/2026) : Correction de la couleur du texte Copyright dans le Footer pour une meilleure visibilité sur fond sombre.
