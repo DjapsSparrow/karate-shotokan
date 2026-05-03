@@ -2,7 +2,7 @@
 
 # PHASE 1: ÉTAT ACTUEL
 - **Date** : 03 Mai 2026
-- **État de stabilité** : ✅ v2.0.2 Launch — Tigre masqué sur mobile.
+- **État de stabilité** : ✅ v2.1.0 Performance — Pipeline d'optimisation d'images WebP (Astro Assets).
 - **Fichiers modifiés** : `astro.config.mjs`, `.github/workflows/deploy.yml`, `package.json`, `NOTES.md`.
 - **Résumé de Session (v1.9.6 -> v2.0.0)** :
 -   **LANCEMENT OFFICIEL** : Migration de l'infrastructure de déploiement vers le domaine de production final. 
@@ -13,6 +13,7 @@
 ---
 
 ## 📜 Journal des Versions (Changelog)
+- **v2.1.0** (03/05/2026) : Optimisation massive des performances. Mise en place de `astro:assets` pour générer des variantes WebP redimensionnées pour toutes les images clés. Réduction du poids de la home page.
 - **v2.0.2** (03/05/2026) : Masquage du filigrane Tigre sur mobile pour améliorer la lisibilité du texte.
 - **v2.0.1** (03/05/2026) : Optimisation de la visibilité du Tigre en Dark Mode (opacité passée à 20%).
 - **v2.0.0** (03/05/2026) : LANCEMENT OFFICIEL. Migration vers `karate-shotokan.fr`.

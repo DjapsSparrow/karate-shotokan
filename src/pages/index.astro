@@ -9,20 +9,28 @@ import PricingGrid from '../components/PricingGrid';
 import AuthoritySection from '../components/AuthoritySection';
 import Testimonials from '../components/Testimonials';
 import Footer from '../components/Footer';
+import { getImage } from "astro:assets";
+
+// Assets
 import philippeImage from '../assets/images/philippe-bouvier.jpg';
 import kataImage from '../assets/images/katas-superieurs.jpg';
 import tigerLogo from '../assets/images/shotokan-tiger.jpg';
+
+// Optimisations
+const optimizedTiger = await getImage({ src: tigerLogo, format: 'webp', width: 1000 });
+const optimizedKata = await getImage({ src: kataImage, format: 'webp', width: 800 });
+const optimizedPhilippe = await getImage({ src: philippeImage, format: 'webp', width: 800 });
 ---
 
 <Layout>
 	<Navbar client:load />
 	<main>
-		<Hero client:load imageSrc={tigerLogo.src} />
-		<NoveltySection client:visible imageSrc={kataImage.src} />
+		<Hero client:load imageSrc={optimizedTiger.src} />
+		<NoveltySection client:visible imageSrc={optimizedKata.src} />
 		<CourseStructure client:visible />
 		<VideoTrailer client:visible />
 		<PricingGrid client:visible />
-		<AuthoritySection client:visible imageSrc={philippeImage.src} />
+		<AuthoritySection client:visible imageSrc={optimizedPhilippe.src} />
 		<Testimonials client:visible />
 	</main>
 	<Footer client:visible />
