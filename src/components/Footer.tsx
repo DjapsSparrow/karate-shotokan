@@ -36,7 +36,6 @@ const Footer = () => {
       title: "Support & Légal",
       links: [
         { name: "Espace Élève", href: "https://fudoshin.schoolmaker.co/" },
-        { name: "FAQ", href: "/#faq" },
         { name: "Mentions Légales", href: "/mentions-legales" },
         { name: "Contact", href: "mailto:contact@karate-shotokan.fr" },
       ]

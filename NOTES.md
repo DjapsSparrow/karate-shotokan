@@ -2,7 +2,7 @@
 
 # PHASE 1: ÉTAT ACTUEL
 - **Date** : 03 Mai 2026
-- **État de stabilité** : ✅ v2.2.1 stable — Harmonisation du Footer (5 colonnes).
+- **État de stabilité** : ✅ v2.2.2 stable — Retrait lien FAQ Footer.
 - **Fichiers modifiés** : `astro.config.mjs`, `.github/workflows/deploy.yml`, `package.json`, `NOTES.md`.
 - **Résumé de Session (v1.9.6 -> v2.0.0)** :
 -   **LANCEMENT OFFICIEL** : Migration de l'infrastructure de déploiement vers le domaine de production final. 
@@ -13,6 +13,7 @@
 ---
 
 ## 📜 Journal des Versions (Changelog)
+- **v2.2.2** (03/05/2026) : Retrait du lien FAQ dans le Footer car la section n'est pas utilisée.
 - **v2.2.1** (03/05/2026) : Harmonisation visuelle du Footer pour afficher les 5 colonnes sur une seule ligne (Desktop).
 - **v2.2.0** (03/05/2026) : Implémentation du SEO Avancé. Ajout du schéma JSON-LD `OnlineCourse`, meta keywords ciblés et corrections d'accessibilité (ARIA).
 - **v2.1.1** (03/05/2026) : Nettoyage final des URLs de production. Mise à jour de `robots.txt`, canoniques et balises sociales pour pointer vers le domaine final.
