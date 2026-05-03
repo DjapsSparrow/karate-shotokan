@@ -1,14 +1,20 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Hero = () => {
+interface HeroProps {
+  imageSrc?: string;
+}
+
+const Hero = ({ imageSrc }: HeroProps) => {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Decorative Elements */}
-      <div className="absolute top-0 right-0 -z-10 w-1/2 h-full opacity-5 pointer-events-none">
-        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-          <path className="fill-martial-black dark:fill-white" d="M44.7,-76.4C58.3,-69.2,70.1,-57.4,77.6,-43.8C85.1,-30.2,88.3,-15.1,87.6,-0.4C86.9,14.3,82.4,28.6,74.9,41.2C67.4,53.8,56.9,64.7,44.3,72.4C31.7,80.1,17.1,84.5,1.9,81.3C-13.3,78.1,-29.1,67.3,-41.7,56.3C-54.3,45.3,-63.7,34.1,-71.4,20.8C-79.1,7.5,-85.1,-7.9,-83.4,-22.6C-81.7,-37.3,-72.3,-51.3,-59.8,-59C-47.3,-66.7,-31.7,-68.1,-17.8,-75.6C-3.9,-83.1,8.3,-96.7,21.5,-96.6C34.7,-96.5,48.9,-82.7,44.7,-76.4Z" transform="translate(100 100)" />
-        </svg>
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 -z-10 w-1/2 h-[80%] opacity-5 pointer-events-none flex justify-end items-center overflow-hidden">
+        <img 
+          src={imageSrc || "/src/assets/images/shotokan-tiger.jpg"} 
+          alt="Shotokan Tiger" 
+          className="h-full w-auto object-contain translate-x-1/4 dark:invert"
+        />
       </div>
 
       <div className="container-custom">

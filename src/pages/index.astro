@@ -11,12 +11,13 @@ import Testimonials from '../components/Testimonials';
 import Footer from '../components/Footer';
 import philippeImage from '../assets/images/philippe-bouvier.jpg';
 import kataImage from '../assets/images/katas-superieurs.jpg';
+import tigerLogo from '../assets/images/shotokan-tiger.jpg';
 ---
 
 <Layout>
 	<Navbar client:load />
 	<main>
-		<Hero client:load />
+		<Hero client:load imageSrc={tigerLogo.src} />
 		<NoveltySection client:visible imageSrc={kataImage.src} />
 		<CourseStructure client:visible />
 		<VideoTrailer client:visible />

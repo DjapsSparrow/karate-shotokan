@@ -1,18 +1,18 @@
 # 📝 Notes de Projet — Karate Shotokan
 
 # PHASE 1: ÉTAT ACTUEL
-- **Date** : 02 Mai 2026
-- **État de stabilité** : ✅ v1.9.4 stable — Audit SEO complet & Nouveau Skill SEO.
-- **Fichiers modifiés** : `src/layouts/Layout.astro`, `astro.config.mjs`, `public/robots.txt`, `package.json`, `NOTES.md`, `/skills/seo.md`.
-- **Résumé de Session (v1.9.3 -> v1.9.4)** :
-  - **SEO Infrastructure** : Activation du Sitemap, création du `robots.txt` et configuration de l'URL `site`.
-  - **SEO Social** : Implémentation des balises OpenGraph (Facebook/LinkedIn) et Twitter Cards dans le Layout.
-  - **Skill Global** : Création du skill `seo.md` pour systématiser ces contrôles sur tous les futurs projets.
+- **Date** : 03 Mai 2026
+- **État de stabilité** : ✅ v1.9.5 stable — Filigrane Tigre Shotokan (Tora no Maki) dans le Hero.
+- **Fichiers modifiés** : `src/components/Hero.tsx`, `src/pages/index.astro`, `src/assets/images/shotokan-tiger.jpg`, `package.json`, `NOTES.md`.
+- **Résumé de Session (v1.9.4 -> v1.9.5)** :
+-   **Branding Hero** : Remplacement de la forme géométrique grise par le Tigre Shotokan historique (Tora no Maki) en filigrane (opacité 5%) pour renforcer l'identité traditionnelle dès l'accueil.
+-   **Refactoring** : Mise en place d'un système de props `imageSrc` pour le composant Hero afin de faciliter la gestion des assets.
 - **Objectif prochain** : Remplacement des bannières de ceintures restantes et articles de blog SEO.
 
 ---
 
 ## 📜 Journal des Versions (Changelog)
+- **v1.9.5** (03/05/2026) : Intégration du Tigre Shotokan (Tora no Maki) en filigrane dans le Hero. Correction de l'asset et refactoring des props.
 - **v1.9.4** (02/05/2026) : Audit SEO complet, sitemap, robots.txt et meta-données sociales. Création du skill global `seo.md`.
 - **v1.9.3** (02/05/2026) : Remplacement du banner "Club Léo Lagrange" par la photo de l'intérieur du dojo.
 - **v1.9.2** (02/05/2026) : Remplacement du placeholder "Katas Supérieurs" par l'image officielle et retrait de l'icône Play.
