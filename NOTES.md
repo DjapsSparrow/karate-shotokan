@@ -8,7 +8,8 @@
 -   **LANCEMENT OFFICIEL** : Migration de l'infrastructure de déploiement vers le domaine de production final. 
 -   **SEO Sync** : Mise à jour de l'URL `site` dans Astro pour garantir un sitemap et des balises canoniques corrects.
 -   **Déploiement** : Redirection du flux Rsync vers le dossier racine final sur Infomaniak.
-- **Objectif prochain** : Articles de blog SEO et remplacement des bannières de ceintures restantes.
+- **Objectif prochain** : Articles de blog SEO (structure /content/) et remplacement des bannières de ceintures restantes.
+- **Dernière action** : Correction des labels de prix et mise à jour des statistiques globales (7 formations, 200+ vidéos, 13 katas).
 
 ---
 

@@ -17,3 +17,7 @@
 - **Problème** : Google affichait un résultat simple sans les liens secondaires vers les formations.
 - **Solution** : Enrichir le schéma `OnlineCourse` avec la propriété `hasPart` listant explicitement les pages stratégiques (ceintures).
 - **Règle d'or** : Utiliser les données structurées non seulement pour les informations de base, mais aussi pour suggérer la structure de navigation souhaitée dans les résultats de recherche.
+## [2026-05-03] - Cohérence du Modèle Économique
+- **Problème** : Confusion entre le contenu "Offert" (Jaune) et "Premium" (autres ceintures).
+- **Solution** : Harmoniser tous les grades (Jaune à Marron) sous le label "Premium" pour éviter les frictions lors du passage à la caisse.
+- **Règle d'or** : Toujours confirmer le statut "Offert" vs "Premium" lors de l'ajout d'une nouvelle formation.
