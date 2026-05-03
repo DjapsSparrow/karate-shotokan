@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import ShineBorder from './ShineBorder';
 
 const belts = [
-  { color: 'Jaune', hex: '#FFD700', slug: '/ceinture-jaune', price: 'Offert', desc: 'Les bases fondamentales et l\'esprit du Shotokan.' },
+  { color: 'Jaune', hex: '#FFD700', slug: '/ceinture-jaune', price: 'Premium', desc: 'Les bases fondamentales et l\'esprit du Shotokan.' },
   { color: 'Orange', hex: '#FF8C00', slug: '/ceinture-orange', price: 'Premium', desc: 'Développez votre puissance et vos déplacements.' },
   { color: 'Verte', hex: '#228B22', slug: '/ceinture-verte', price: 'Premium', desc: 'Maîtrisez la fluidité et les enchaînements complexes.' },
   { color: 'Bleue', hex: '#0000FF', slug: '/ceinture-bleue', price: 'Premium', desc: 'Précision technique et anticipation du combat.' },

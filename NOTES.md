@@ -2,8 +2,8 @@
 
 # PHASE 1: ÉTAT ACTUEL
 - **Date** : 03 Mai 2026
-- **État de stabilité** : ✅ v2.2.6 stable — Schéma Sitelinks (JSON-LD hasPart).
-- **Fichiers modifiés** : `astro.config.mjs`, `.github/workflows/deploy.yml`, `package.json`, `NOTES.md`.
+- **État de stabilité** : ✅ v2.2.7 stable — Retour client : Stats & Ceinture Jaune.
+- **Fichiers modifiés** : `src/components/PricingGrid.tsx`, `src/components/Testimonials.tsx`, `src/components/Hero.tsx`, `package.json`, `NOTES.md`.
 - **Résumé de Session (v1.9.6 -> v2.0.0)** :
 -   **LANCEMENT OFFICIEL** : Migration de l'infrastructure de déploiement vers le domaine de production final. 
 -   **SEO Sync** : Mise à jour de l'URL `site` dans Astro pour garantir un sitemap et des balises canoniques corrects.
@@ -13,6 +13,7 @@
 ---
 
 ## 📜 Journal des Versions (Changelog)
+- **v2.2.7** (03/05/2026) : Correction du label "Ceinture Jaune" (Offert -> Premium) et mise à jour des statistiques globales (7 formations, 200+ vidéos, 13 katas).
 - **v2.2.6** (03/05/2026) : Ajout du schéma `hasPart` dans les données structurées pour favoriser l'affichage des Sitelinks (liens des ceintures) dans Google.
 - **v2.2.5** (03/05/2026) : Suppression du widget de version flottant. La note de version est désormais intégrée discrètement dans le Footer.
 - **v2.2.4** (03/05/2026) : Harmonisation globale du comportement du curseur (pointer) sur tous les éléments interactifs (liens, boutons, labels).

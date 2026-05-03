@@ -71,9 +71,9 @@ const testimonials = [
 ];
 
 const stats = [
-  { label: "Formations", value: "6" },
-  { label: "Vidéos HD", value: "182" },
-  { label: "Katas", value: "6" },
+  { label: "Formations", value: "7" },
+  { label: "Vidéos HD", value: "200+" },
+  { label: "Katas", value: "13" },
   { label: "Élèves", value: "1000+" },
 ];
 

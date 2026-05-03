@@ -69,7 +69,7 @@ const Hero = ({ imageSrc }: HeroProps) => {
               <span className="text-xs uppercase tracking-widest font-bold opacity-60">Grade FFK</span>
             </div>
             <div className="flex flex-col">
-              <span className="text-3xl font-black">+180</span>
+              <span className="text-3xl font-black">200+</span>
               <span className="text-xs uppercase tracking-widest font-bold opacity-60">Vidéos HD</span>
             </div>
             <div className="flex flex-col">
