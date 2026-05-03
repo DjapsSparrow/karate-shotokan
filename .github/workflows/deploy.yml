@@ -29,4 +29,4 @@ jobs:
           SSHPASS: ${{ secrets.SSH_PASSWORD }}
         run: |
           sudo apt-get install -y sshpass
-          sshpass -e rsync -avz -e "ssh -o StrictHostKeyChecking=no" dist/ ky6gz_karate-shotokan@128.65.195.221:sites/prod.karate-shotokan.fr/
+          sshpass -e rsync -avz -e "ssh -o StrictHostKeyChecking=no" dist/ ky6gz_karate-shotokan@128.65.195.221:sites/karate-shotokan.fr/

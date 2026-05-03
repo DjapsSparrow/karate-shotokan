@@ -2,16 +2,18 @@
 
 # PHASE 1: ÉTAT ACTUEL
 - **Date** : 03 Mai 2026
-- **État de stabilité** : ✅ v1.9.6 stable — Correction position du Tigre (Tora no Maki).
-- **Fichiers modifiés** : `src/components/Hero.tsx`, `src/pages/index.astro`, `src/assets/images/shotokan-tiger.jpg`, `package.json`, `NOTES.md`.
-- **Résumé de Session (v1.9.4 -> v1.9.5)** :
--   **Branding Hero** : Remplacement de la forme géométrique grise par le Tigre Shotokan historique (Tora no Maki) en filigrane (opacité 5%) pour renforcer l'identité traditionnelle dès l'accueil.
--   **Refactoring** : Mise en place d'un système de props `imageSrc` pour le composant Hero afin de faciliter la gestion des assets.
-- **Objectif prochain** : Remplacement des bannières de ceintures restantes et articles de blog SEO.
+- **État de stabilité** : ✅ v2.0.0 Launch — Migration vers le domaine final `karate-shotokan.fr`.
+- **Fichiers modifiés** : `astro.config.mjs`, `.github/workflows/deploy.yml`, `package.json`, `NOTES.md`.
+- **Résumé de Session (v1.9.6 -> v2.0.0)** :
+-   **LANCEMENT OFFICIEL** : Migration de l'infrastructure de déploiement vers le domaine de production final. 
+-   **SEO Sync** : Mise à jour de l'URL `site` dans Astro pour garantir un sitemap et des balises canoniques corrects.
+-   **Déploiement** : Redirection du flux Rsync vers le dossier racine final sur Infomaniak.
+- **Objectif prochain** : Articles de blog SEO et remplacement des bannières de ceintures restantes.
 
 ---
 
 ## 📜 Journal des Versions (Changelog)
+- **v2.0.0** (03/05/2026) : LANCEMENT OFFICIEL. Migration vers `karate-shotokan.fr`.
 - **v1.9.6** (03/05/2026) : Correction du positionnement du Tigre pour éviter qu'il ne soit coupé sur les bords.
 - **v1.9.5** (03/05/2026) : Intégration du Tigre Shotokan (Tora no Maki) en filigrane dans le Hero. Correction de l'asset et refactoring des props.
 - **v1.9.4** (02/05/2026) : Audit SEO complet, sitemap, robots.txt et meta-données sociales. Création du skill global `seo.md`.

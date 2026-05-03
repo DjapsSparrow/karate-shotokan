@@ -8,7 +8,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://prod.karate-shotokan.fr',
+  site: 'https://karate-shotokan.fr',
   integrations: [react(), sitemap()],
   image: {
     remotePatterns: [{ protocol: 'https', hostname: 'images.unsplash.com' }],
