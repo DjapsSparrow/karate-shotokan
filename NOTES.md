@@ -2,7 +2,7 @@
 
 # PHASE 1: ÉTAT ACTUEL
 - **Date** : 03 Mai 2026
-- **État de stabilité** : ✅ v2.0.0 Launch — Migration vers le domaine final `karate-shotokan.fr`.
+- **État de stabilité** : ✅ v2.0.1 Launch — Ajustement visibilité Tigre en Dark Mode.
 - **Fichiers modifiés** : `astro.config.mjs`, `.github/workflows/deploy.yml`, `package.json`, `NOTES.md`.
 - **Résumé de Session (v1.9.6 -> v2.0.0)** :
 -   **LANCEMENT OFFICIEL** : Migration de l'infrastructure de déploiement vers le domaine de production final. 
@@ -13,6 +13,7 @@
 ---
 
 ## 📜 Journal des Versions (Changelog)
+- **v2.0.1** (03/05/2026) : Optimisation de la visibilité du Tigre en Dark Mode (opacité passée à 20%).
 - **v2.0.0** (03/05/2026) : LANCEMENT OFFICIEL. Migration vers `karate-shotokan.fr`.
 - **v1.9.6** (03/05/2026) : Correction du positionnement du Tigre pour éviter qu'il ne soit coupé sur les bords.
 - **v1.9.5** (03/05/2026) : Intégration du Tigre Shotokan (Tora no Maki) en filigrane dans le Hero. Correction de l'asset et refactoring des props.
