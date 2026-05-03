@@ -9,7 +9,7 @@ const Hero = ({ imageSrc }: HeroProps) => {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Decorative Elements */}
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 -z-10 w-1/2 h-[85%] opacity-5 dark:opacity-20 pointer-events-none flex justify-center items-center">
+      <div className="hidden md:flex absolute top-1/2 right-0 -translate-y-1/2 -z-10 w-1/2 h-[85%] opacity-5 dark:opacity-20 pointer-events-none justify-center items-center">
         <img 
           src={imageSrc || "/src/assets/images/shotokan-tiger.jpg"} 
           alt="Shotokan Tiger" 
