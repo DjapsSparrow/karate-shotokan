@@ -1,4 +1,5 @@
 import React from 'react';
+import { version } from '../../package.json';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -111,7 +112,7 @@ const Footer = () => {
         <h2 className="sr-only">Informations de bas de page</h2>
         <div className="pt-12 border-t border-gray-900 dark:border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-gray-400 dark:text-gray-500 text-xs font-semibold">
-            © {currentYear} Karaté Shotokan. Tous droits réservés.
+            v{version} © {currentYear} Karaté Shotokan. Tous droits réservés.
           </p>
           <div className="flex items-center gap-2 grayscale opacity-50">
             <span className="text-[10px] uppercase font-bold tracking-tighter">Propulsé par</span>
