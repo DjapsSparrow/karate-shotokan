@@ -9,11 +9,11 @@ const Hero = ({ imageSrc }: HeroProps) => {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Decorative Elements */}
-      <div className="absolute top-1/2 right-0 -translate-y-1/2 -z-10 w-1/2 h-[80%] opacity-5 pointer-events-none flex justify-end items-center overflow-hidden">
+      <div className="absolute top-1/2 right-0 -translate-y-1/2 -z-10 w-1/2 h-[85%] opacity-5 pointer-events-none flex justify-center items-center">
         <img 
           src={imageSrc || "/src/assets/images/shotokan-tiger.jpg"} 
           alt="Shotokan Tiger" 
-          className="h-full w-auto object-contain translate-x-1/4 dark:invert"
+          className="h-full w-auto object-contain dark:invert"
         />
       </div>
 

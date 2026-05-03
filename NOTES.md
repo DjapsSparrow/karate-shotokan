@@ -2,7 +2,7 @@
 
 # PHASE 1: ÉTAT ACTUEL
 - **Date** : 03 Mai 2026
-- **État de stabilité** : ✅ v1.9.5 stable — Filigrane Tigre Shotokan (Tora no Maki) dans le Hero.
+- **État de stabilité** : ✅ v1.9.6 stable — Correction position du Tigre (Tora no Maki).
 - **Fichiers modifiés** : `src/components/Hero.tsx`, `src/pages/index.astro`, `src/assets/images/shotokan-tiger.jpg`, `package.json`, `NOTES.md`.
 - **Résumé de Session (v1.9.4 -> v1.9.5)** :
 -   **Branding Hero** : Remplacement de la forme géométrique grise par le Tigre Shotokan historique (Tora no Maki) en filigrane (opacité 5%) pour renforcer l'identité traditionnelle dès l'accueil.
@@ -12,6 +12,7 @@
 ---
 
 ## 📜 Journal des Versions (Changelog)
+- **v1.9.6** (03/05/2026) : Correction du positionnement du Tigre pour éviter qu'il ne soit coupé sur les bords.
 - **v1.9.5** (03/05/2026) : Intégration du Tigre Shotokan (Tora no Maki) en filigrane dans le Hero. Correction de l'asset et refactoring des props.
 - **v1.9.4** (02/05/2026) : Audit SEO complet, sitemap, robots.txt et meta-données sociales. Création du skill global `seo.md`.
 - **v1.9.3** (02/05/2026) : Remplacement du banner "Club Léo Lagrange" par la photo de l'intérieur du dojo.
