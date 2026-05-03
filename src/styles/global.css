@@ -46,6 +46,10 @@
   body {
     @apply bg-martial-white text-martial-black font-sans antialiased transition-colors duration-300 selection:bg-martial-red selection:text-white;
   }
+
+  a, button, [role="button"], input[type="submit"], input[type="button"], label {
+    @apply cursor-pointer;
+  }
 }
 
 @layer components {
