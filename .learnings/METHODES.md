@@ -8,4 +8,12 @@
 ## [2026-05-02] - Cohérence Branding Dynamique (beltColor)
 - **Problème** : Les icônes globales (ex: Theme Toggler) avaient une couleur fixe qui jurait avec le code couleur spécifique de chaque page de ceinture.
 - **Solution** : Passer la variable `beltColor` au composant `Navbar` et l'utiliser dans les classes Tailwind (`text-${beltColor}`, `hover:bg-${beltColor}`) du picto de bascule de thème.
-- **Règle d'or** : Pour un site à forte identité visuelle changeante, s'assurer que tous les éléments fixes de l'interface (Header, Toggler, Footer) héritent du contexte de couleur de la page.
+## [2026-05-03] - Optimisation Performance Mobile (WebP Pipeline)
+- **Problème** : Les images JPEG d'origine plombaient le score mobile (~70) à cause d'un LCP trop élevé.
+- **Solution** : Implémenter `astro:assets` via `getImage()` pour générer des variantes WebP redimensionnées à la volée. 
+- **Règle d'or** : Ne jamais servir d'images brutes en production. Toujours passer par le pipeline Astro pour garantir des formats modernes (WebP/Avif) et des tailles adaptées.
+
+## [2026-05-03] - Optimisation SEO Sitelinks (JSON-LD hasPart)
+- **Problème** : Google affichait un résultat simple sans les liens secondaires vers les formations.
+- **Solution** : Enrichir le schéma `OnlineCourse` avec la propriété `hasPart` listant explicitement les pages stratégiques (ceintures).
+- **Règle d'or** : Utiliser les données structurées non seulement pour les informations de base, mais aussi pour suggérer la structure de navigation souhaitée dans les résultats de recherche.
