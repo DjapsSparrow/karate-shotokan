@@ -32,4 +32,4 @@ jobs:
         run: |
           sudo apt-get install -y sshpass rsync
           export SSHPASS=$SSH_PASSWORD
-          sshpass -e rsync -rlvz --delete -e "ssh -o StrictHostKeyChecking=no" dist/ $SSH_USER@$SSH_HOST:sites/karate-shotokan.webomatik.org/ || true
+          sshpass -e rsync -rlvz --delete -e "ssh -o StrictHostKeyChecking=no" dist/ $SSH_USER@$SSH_HOST:sites/karate-shotokan.fr/ || true
